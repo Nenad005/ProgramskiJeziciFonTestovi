@@ -1,0 +1,1949 @@
+[
+  {
+    "id": "csharp-osnove-q01",
+    "type": "choice",
+    "prompt": "<p>Za dati kod, koja su tvrđenja tačna?</p><pre><code>class Zivotinja { }\nclass Pas : Zivotinja { }\n\nZivotinja z = new Pas();</code></pre>",
+    "options": [
+      "Statički tip promenljive <code>z</code> je <code>Pas</code>.",
+      "Statički tip promenljive <code>z</code> je <code>Zivotinja</code>.",
+      "Statički tip određuje stvarni tip kreiranog objekta.",
+      "Stvarni tip utiče na izbor implementacije virtualne metode.",
+      "Cast menja stvarni objekat iz tipa <code>Pas</code> u drugi tip."
+    ],
+    "correct": [
+      1,
+      3
+    ],
+    "explanation": "Statički tip je Zivotinja i određuje šta kompajler vidi. Stvarni tip je Pas i utiče na virtualni dispatch i uspeh downcast-a.",
+    "originalNumber": 1,
+    "lessonId": "csharp-osnove",
+    "sourceTestId": "csharp-osnove-1",
+    "tags": [
+      "inheritance",
+      "virtual-dispatch",
+      "method-hiding",
+      "casting",
+      "compile-time"
+    ]
+  },
+  {
+    "id": "csharp-osnove-q02",
+    "type": "choice",
+    "prompt": "<p>Koje od navedenih naredbi se kompajliraju?</p><pre><code>class A { }\nclass B : A { }\nclass C : B { }</code></pre>",
+    "options": [
+      "<code>A a = new B();</code>",
+      "<code>B b = new A();</code>",
+      "<code>B c = (B)new A();</code>",
+      "<code>List&lt;A&gt; d = new List&lt;B&gt;();</code>",
+      "<code>A[] e = new B[2];</code>"
+    ],
+    "correct": [
+      0,
+      2,
+      4
+    ],
+    "explanation": "Upcast je implicitno dozvoljen. Eksplicitni cast u opciji c se kompajlira, ali pada pri izvršavanju. Liste su invariantne, dok su nizovi kovarijantni.",
+    "originalNumber": 2,
+    "lessonId": "csharp-osnove",
+    "sourceTestId": "csharp-osnove-1",
+    "tags": [
+      "inheritance",
+      "generics",
+      "casting",
+      "collections",
+      "compile-time",
+      "runtime"
+    ]
+  },
+  {
+    "id": "csharp-osnove-q03",
+    "type": "choice",
+    "prompt": "<p>Šta se ispisuje na ekranu?</p><pre><code>class A\n{\n    public virtual string M() => \"A\";\n    public string N() => \"A\";\n}\nclass B : A\n{\n    public override string M() => \"B\";\n    public new string N() => \"B\";\n}\n\nA x = new B();\nConsole.Write(x.M() + x.N());</code></pre>",
+    "options": [
+      "<code>AA</code>",
+      "<code>AB</code>",
+      "<code>BA</code>",
+      "<code>BB</code>",
+      "Kod nije ispravan"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Virtualna M bira B.M prema stvarnom tipu, a skrivena N bira A.N prema statičkom tipu reference.",
+    "originalNumber": 3,
+    "lessonId": "csharp-osnove",
+    "sourceTestId": "csharp-osnove-1",
+    "tags": [
+      "virtual-dispatch",
+      "method-hiding",
+      "program-output"
+    ]
+  },
+  {
+    "id": "csharp-osnove-q04",
+    "type": "choice",
+    "prompt": "<p>Šta je rezultat izvršavanja sledećeg koda?</p><pre><code>class A { }\nclass B : A { }\n\nA[] niz = new B[1];\nniz[0] = new A();</code></pre>",
+    "options": [
+      "Kod se ne kompajlira zbog prve dodele.",
+      "Kod se izvršava bez greške.",
+      "Nastaje <code>InvalidCastException</code>.",
+      "Nastaje <code>ArrayTypeMismatchException</code>.",
+      "Nastaje <code>IndexOutOfRangeException</code>."
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Kovarijansa dozvoljava A[] referencu na B[], ali runtime sprečava upis objekta A u stvarni niz tipa B[].",
+    "originalNumber": 4,
+    "lessonId": "csharp-osnove",
+    "sourceTestId": "csharp-osnove-1",
+    "tags": [
+      "casting",
+      "collections",
+      "exceptions",
+      "compile-time",
+      "runtime"
+    ]
+  },
+  {
+    "id": "csharp-osnove-q05",
+    "type": "choice",
+    "prompt": "<p>Šta se ispisuje na ekranu?</p><pre><code>class A\n{\n    public A() => M();\n    public virtual void M() { }\n}\nclass B : A\n{\n    private int x;\n    public B() => x = 10;\n    public override void M() => Console.Write(x);\n}\n\nnew B();</code></pre>",
+    "options": [
+      "<code>0</code>",
+      "<code>10</code>",
+      "Ništa",
+      "<code>NullReferenceException</code>",
+      "Kod nije ispravan"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Bazni konstruktor virtualno poziva B.M pre tela konstruktora B, pa x još ima podrazumevanu vrednost 0.",
+    "originalNumber": 5,
+    "lessonId": "csharp-osnove",
+    "sourceTestId": "csharp-osnove-1",
+    "tags": [
+      "inheritance",
+      "virtual-dispatch",
+      "constructors",
+      "exceptions",
+      "value-vs-reference",
+      "program-output"
+    ]
+  },
+  {
+    "id": "csharp-osnove-q06",
+    "type": "choice",
+    "prompt": "<p>Koje od navedenih naredbi su ispravne?</p>",
+    "options": [
+      "<code>long a = 10;</code>",
+      "<code>int b = 12.9;</code>",
+      "<code>int c = (int)12.9;</code>",
+      "<code>byte d = 100;</code>",
+      "<code>int x = 100; byte e = x;</code>",
+      "<code>double f = (long)10;</code>"
+    ],
+    "correct": [
+      0,
+      2,
+      3,
+      5
+    ],
+    "explanation": "Dozvoljene su implicitne proširujuće konverzije, eksplicitni double→int i konstantna vrednost 100 koja staje u byte. int promenljiva se ne sužava implicitno u byte.",
+    "originalNumber": 6,
+    "lessonId": "csharp-osnove",
+    "sourceTestId": "csharp-osnove-1",
+    "tags": [
+      "casting",
+      "numeric-types",
+      "value-vs-reference"
+    ]
+  },
+  {
+    "id": "csharp-osnove-q07",
+    "type": "choice",
+    "prompt": "<p>Šta važi za sledeći kod?</p><pre><code>byte a = 10;\nbyte b = 20;\nbyte c = a + b;</code></pre>",
+    "options": [
+      "Ispisuje se 30.",
+      "Kod nije ispravan jer rezultat izraza <code>a + b</code> ima tip <code>int</code>.",
+      "Nastaje <code>OverflowException</code>.",
+      "Kod je ispravan zato što rezultat staje u <code>byte</code>.",
+      "Rezultat zavisi od <code>checked</code> konteksta."
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Aritmetika malih celobrojnih tipova daje int, bez obzira na to što je konkretan rezultat 30.",
+    "originalNumber": 7,
+    "lessonId": "csharp-osnove",
+    "sourceTestId": "csharp-osnove-1",
+    "tags": [
+      "numeric-types",
+      "exceptions",
+      "program-output"
+    ]
+  },
+  {
+    "id": "csharp-osnove-q08",
+    "type": "choice",
+    "prompt": "<p>Koje su vrednosti promenljivih <code>a</code>, <code>b</code> i <code>c</code>?</p><pre><code>double a = 5 / 2;\ndouble b = 5 / 2.0;\ndouble c = (double)5 / 2;</code></pre>",
+    "options": [
+      "<code>2.5, 2.5, 2.5</code>",
+      "<code>2.0, 2.0, 2.5</code>",
+      "<code>2.0, 2.5, 2.5</code>",
+      "<code>2, 2, 2</code>",
+      "Kod nije ispravan"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Desna strana se računa pre konverzije u odredišni tip. Samo prvi izraz obavlja celobrojno deljenje.",
+    "originalNumber": 8,
+    "lessonId": "csharp-osnove",
+    "sourceTestId": "csharp-osnove-1",
+    "tags": [
+      "casting",
+      "numeric-types",
+      "value-vs-reference"
+    ]
+  },
+  {
+    "id": "csharp-osnove-q09",
+    "type": "choice",
+    "prompt": "<p>Šta je rezultat izvršavanja sledećeg koda?</p><pre><code>int x = 300;\nbyte a = unchecked((byte)x);\nbyte b = checked((byte)x);</code></pre>",
+    "options": [
+      "<code>a</code> je 44, a zatim nastaje <code>OverflowException</code>.",
+      "I <code>a</code> i <code>b</code> imaju vrednost 44.",
+      "Kod se ne kompajlira.",
+      "<code>a</code> je 255, a <code>b</code> je 300.",
+      "Prva dodela baca <code>OverflowException</code>."
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Unchecked sužavanje zadržava nižih osam bitova (44), dok checked konverzija vrednosti 300 u byte baca OverflowException.",
+    "originalNumber": 9,
+    "lessonId": "csharp-osnove",
+    "sourceTestId": "csharp-osnove-1",
+    "tags": [
+      "casting",
+      "numeric-types",
+      "exceptions",
+      "value-vs-reference",
+      "compile-time",
+      "runtime"
+    ]
+  },
+  {
+    "id": "csharp-osnove-q10",
+    "type": "choice",
+    "prompt": "<p>Koja tvrđenja o boxing-u i unboxing-u su tačna?</p>",
+    "options": [
+      "Boxing celobrojne vrednosti pravi boxed kopiju.",
+      "Promena originalne <code>int</code> promenljive menja već boxed vrednost.",
+      "Direktan unboxing zahteva isti boxed value tip.",
+      "Boxed <code>int</code> se može direktno unbox-ovati cast-om u <code>long</code>.",
+      "Boxed <code>int</code> se može unbox-ovati u <code>int</code>, pa implicitno konvertovati u <code>long</code>."
+    ],
+    "correct": [
+      0,
+      2,
+      4
+    ],
+    "explanation": "Boxing kopira vrednost. Unboxing mora prvo pogoditi tačan boxed tip; nakon toga je dozvoljena obična numerička konverzija.",
+    "originalNumber": 10,
+    "lessonId": "csharp-osnove",
+    "sourceTestId": "csharp-osnove-1",
+    "tags": [
+      "casting",
+      "numeric-types",
+      "value-vs-reference"
+    ]
+  },
+  {
+    "id": "csharp-osnove-q11",
+    "type": "choice",
+    "prompt": "<p>Šta se dešava pri izvršavanju?</p><pre><code>object o = 5;\nlong x = (long)o;\nConsole.Write(x);</code></pre>",
+    "options": [
+      "Ispisuje <code>5</code>.",
+      "Ispisuje <code>5L</code>.",
+      "Nastaje <code>InvalidCastException</code>.",
+      "Nastaje <code>OverflowException</code>.",
+      "Kod nije ispravan"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Objekat sadrži boxed int, a direktno unboxing-ovanje u long zahteva boxed long. Ispravno bi bilo long x = (int)o.",
+    "originalNumber": 11,
+    "lessonId": "csharp-osnove",
+    "sourceTestId": "csharp-osnove-1",
+    "tags": [
+      "casting",
+      "numeric-types",
+      "exceptions",
+      "program-output",
+      "runtime"
+    ]
+  },
+  {
+    "id": "csharp-osnove-q12",
+    "type": "choice",
+    "prompt": "<p>Koje od navedenih naredbi su ispravne?</p><pre><code>enum Status { Novi = 1, Gotov = 2 }</code></pre>",
+    "options": [
+      "<code>Status a = (Status)2;</code>",
+      "<code>Status b = (Status)99;</code>",
+      "<code>int c = (int)Status.Novi;</code>",
+      "<code>int? d = null;</code>",
+      "<code>int? d = null; int e = d;</code>",
+      "<code>int? d = null; int f = d ?? 0;</code>"
+    ],
+    "correct": [
+      0,
+      1,
+      2,
+      3,
+      5
+    ],
+    "explanation": "Enum dozvoljava eksplicitnu konverziju i vrednosti bez deklarisanog imena. Nullable int ne prelazi implicitno u int, ali ?? daje nenullable rezultat.",
+    "originalNumber": 12,
+    "lessonId": "csharp-osnove",
+    "sourceTestId": "csharp-osnove-1",
+    "tags": [
+      "casting",
+      "nullable",
+      "value-vs-reference"
+    ]
+  },
+  {
+    "id": "csharp-osnove-q13",
+    "type": "choice",
+    "prompt": "<p>Šta se ispisuje na ekranu?</p><pre><code>class A { }\nclass B : A { }\nclass C : B { }\n\nA x = new C();\nConsole.Write($\"${x is A} ${x is B} ${x is C} ${null is A}\");</code></pre>",
+    "options": [
+      "<code>True True True False</code>",
+      "<code>True False False False</code>",
+      "<code>False False True True</code>",
+      "<code>True True True True</code>",
+      "Kod nije ispravan"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Objekat C je kompatibilan sa C i svim njegovim baznim tipovima. Provera tipa nad null uvek vraća false.",
+    "originalNumber": 13,
+    "lessonId": "csharp-osnove",
+    "sourceTestId": "csharp-osnove-1",
+    "tags": [
+      "inheritance",
+      "casting",
+      "nullable",
+      "program-output"
+    ]
+  },
+  {
+    "id": "csharp-osnove-q14",
+    "type": "choice",
+    "prompt": "<p>Šta je rezultat izvršavanja?</p><pre><code>class A { }\nclass B : A { public int x = 5; }\n\nA a = new A();\nB? b = a as B;\nConsole.Write(b.x);</code></pre>",
+    "options": [
+      "Ispisuje <code>0</code>.",
+      "Ispisuje <code>5</code>.",
+      "Nastaje <code>InvalidCastException</code>.",
+      "Nastaje <code>NullReferenceException</code>.",
+      "Kod se ne kompajlira zbog operatora <code>as</code>."
+    ],
+    "correct": [
+      3
+    ],
+    "explanation": "Neuspešan as vraća null. Sledeći pristup članu kroz null zatim izaziva NullReferenceException.",
+    "originalNumber": 14,
+    "lessonId": "csharp-osnove",
+    "sourceTestId": "csharp-osnove-1",
+    "tags": [
+      "casting",
+      "exceptions",
+      "nullable",
+      "program-output",
+      "compile-time",
+      "runtime"
+    ]
+  },
+  {
+    "id": "csharp-osnove-q15",
+    "type": "choice",
+    "prompt": "<p>Koja tvrđenja su tačna?</p>",
+    "options": [
+      "<code>var</code> odlaže proveru članova do izvršavanja.",
+      "<code>dynamic</code> odlaže izbor člana i overload-a do izvršavanja.",
+      "Poziv nepostojećeg člana kroz <code>dynamic</code> može izazvati <code>RuntimeBinderException</code>.",
+      "<code>dynamic</code> omogućava naredbu <code>new I()</code> kada je <code>I</code> interfejs.",
+      "Promenljiva tipa <code>dynamic</code> može tokom izvršavanja prvo sadržati broj, a zatim string."
+    ],
+    "correct": [
+      1,
+      2,
+      4
+    ],
+    "explanation": "var je statički tipiziran. dynamic odlaže vezivanje, ali ne omogućava instanciranje interfejsa ili apstraktne klase.",
+    "originalNumber": 15,
+    "lessonId": "csharp-osnove",
+    "sourceTestId": "csharp-osnove-1",
+    "tags": [
+      "method-hiding",
+      "interfaces",
+      "abstract-classes",
+      "exceptions",
+      "overload-resolution",
+      "runtime"
+    ]
+  },
+  {
+    "id": "csharp-osnove-q16",
+    "type": "choice",
+    "prompt": "<p>Koja tvrđenja o nizovima i listama su tačna?</p>",
+    "options": [
+      "Niz ima svojstvo <code>Length</code>.",
+      "Lista ima svojstvo <code>Count</code>.",
+      "Novi <code>int[3]</code> nema nijedan element dok se ne pozove <code>Add</code>.",
+      "Nova <code>List&lt;int&gt;()</code> ima nula elemenata.",
+      "Elementi novog <code>int</code> niza imaju podrazumevanu vrednost 0.",
+      "Lista ima fiksnu dužinu."
+    ],
+    "correct": [
+      0,
+      1,
+      3,
+      4
+    ],
+    "explanation": "Niz ima fiksnu dužinu i već postojeće podrazumevane elemente. Lista je promenljive veličine i počinje prazna.",
+    "originalNumber": 16,
+    "lessonId": "csharp-osnove",
+    "sourceTestId": "csharp-osnove-1",
+    "tags": [
+      "generics",
+      "collections",
+      "value-vs-reference",
+      "properties-indexers"
+    ]
+  },
+  {
+    "id": "csharp-osnove-q17",
+    "type": "choice",
+    "prompt": "<p>Šta se ispisuje?</p><pre><code>List&lt;int&gt; lista = new(10);\nConsole.Write(lista.Count);</code></pre>",
+    "options": [
+      "<code>0</code>",
+      "<code>10</code>",
+      "<code>null</code>",
+      "<code>ArgumentOutOfRangeException</code>",
+      "Kod nije ispravan"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Prosleđena vrednost postavlja početni Capacity, ne Count. Lista još nema elemente.",
+    "originalNumber": 17,
+    "lessonId": "csharp-osnove",
+    "sourceTestId": "csharp-osnove-1",
+    "tags": [
+      "generics",
+      "collections",
+      "linq",
+      "exceptions",
+      "nullable",
+      "value-vs-reference",
+      "program-output"
+    ]
+  },
+  {
+    "id": "csharp-osnove-q18",
+    "type": "choice",
+    "prompt": "<p>Šta se ispisuje na ekranu?</p><pre><code>class K\n{\n    private int x;\n    public K(int v) { x = v; Console.Write(x); }\n    public int X { set { x = value; Console.Write(x); } }\n}\n\nK k = new K(1) { X = 2 };</code></pre>",
+    "options": [
+      "<code>12</code>",
+      "<code>21</code>",
+      "<code>2</code>",
+      "Ništa",
+      "Kod nije ispravan"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Prvo se izvršava konstruktor, a zatim dodele iz objektnog inicijalizatora sleva nadesno.",
+    "originalNumber": 18,
+    "lessonId": "csharp-osnove",
+    "sourceTestId": "csharp-osnove-1",
+    "tags": [
+      "constructors",
+      "program-output",
+      "runtime"
+    ]
+  },
+  {
+    "id": "csharp-osnove-q19",
+    "type": "choice",
+    "prompt": "<p>Koji je redosled instance inicijalizacije za izraz <code>new B()</code>, gde je <code>B : A</code>?</p>",
+    "options": [
+      "Telo B konstruktora, telo A konstruktora, inicijalizatori polja.",
+      "Podrazumevane vrednosti, inicijalizatori polja B, inicijalizatori polja A, telo A konstruktora, telo B konstruktora.",
+      "Podrazumevane vrednosti, telo A konstruktora, inicijalizatori polja A, telo B konstruktora, inicijalizatori polja B.",
+      "Inicijalizatori polja A, inicijalizatori polja B, telo B konstruktora, telo A konstruktora.",
+      "Redosled nikada nije određen."
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Lekcija izričito navodi: default celog objekta, inicijalizatori B pa A, zatim tela konstruktora A pa B.",
+    "originalNumber": 19,
+    "lessonId": "csharp-osnove",
+    "sourceTestId": "csharp-osnove-1",
+    "tags": [
+      "constructors",
+      "value-vs-reference"
+    ]
+  },
+  {
+    "id": "csharp-osnove-q20",
+    "type": "choice",
+    "prompt": "<p>Šta sadrži lista nakon izraza <code>new B()</code>?</p><pre><code>class A\n{\n    protected readonly List&lt;int&gt; L = new();\n    public A() : this(4) { L.Add(1); }\n    public A(int x) { L.Add(x); }\n}\nclass B : A\n{\n    public B() : base(7) { L.Add(2); }\n}</code></pre>",
+    "options": [
+      "<code>4, 1, 7, 2</code>",
+      "<code>1, 4, 2</code>",
+      "<code>7, 2</code>",
+      "<code>2, 7</code>",
+      "Kod nije ispravan"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "B eksplicitno poziva A(int) sa 7, a zatim njegovo telo dodaje 2. A() u ovom lancu nije pozvan.",
+    "originalNumber": 20,
+    "lessonId": "csharp-osnove",
+    "sourceTestId": "csharp-osnove-1",
+    "tags": [
+      "accessibility",
+      "inheritance",
+      "constructors",
+      "generics",
+      "collections"
+    ]
+  },
+  {
+    "id": "csharp-osnove-q21",
+    "type": "choice",
+    "prompt": "<p>Šta važi za sledeći kod?</p><pre><code>int[] a = { 10, 20, 30, 40 };\nConsole.Write(a[^1]);\nConsole.Write(a[^0]);</code></pre>",
+    "options": [
+      "Ispisuje <code>4010</code>.",
+      "Ispisuje <code>4040</code>.",
+      "Ispisuje <code>40</code>, pa nastaje <code>IndexOutOfRangeException</code>.",
+      "Kod se ne kompajlira zbog <code>^0</code>.",
+      "Nastaje izuzetak pre prvog ispisa."
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "^1 je poslednji element. ^0 predstavlja poziciju odmah iza kraja i nije validan indeks elementa.",
+    "originalNumber": 21,
+    "lessonId": "csharp-osnove",
+    "sourceTestId": "csharp-osnove-1",
+    "tags": [
+      "exceptions",
+      "program-output",
+      "compile-time"
+    ]
+  },
+  {
+    "id": "csharp-osnove-q22",
+    "type": "choice",
+    "prompt": "<p>Koje su vrednosti promenljivih <code>p</code>, <code>q</code> i <code>r</code>?</p><pre><code>List&lt;int&gt; a = new() { 1, 2, 3, 4 };\nint p = a.Count(x => x % 2 == 0);\nint q = a.Where(x => x % 2 == 0).Count();\nint r = a.Select(x => x % 2 == 0).Count();</code></pre>",
+    "options": [
+      "<code>2, 2, 2</code>",
+      "<code>2, 2, 4</code>",
+      "<code>4, 2, 2</code>",
+      "<code>2, 4, 4</code>",
+      "Kod nije ispravan"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Count sa uslovom i Where broje parne elemente. Select pravi četiri bool rezultata, a završni Count broji sva četiri.",
+    "originalNumber": 22,
+    "lessonId": "csharp-osnove",
+    "sourceTestId": "csharp-osnove-1",
+    "tags": [
+      "generics",
+      "collections",
+      "linq",
+      "value-vs-reference"
+    ]
+  },
+  {
+    "id": "csharp-osnove-q23",
+    "type": "choice",
+    "prompt": "<p>U kojim slučajevima je lokalna promenljiva <code>x</code> sigurno dodeljena pre poslednje naredbe? Pretpostavi da je <code>uslov</code> tipa <code>bool</code> i da postoji odgovarajuća metoda <code>Postavi(out int x)</code>.</p>",
+    "options": [
+      "<code>int x; Console.Write(x);</code>",
+      "<code>int x; Postavi(out x); Console.Write(x);</code>",
+      "<code>int x; while (uslov) x = 1; Console.Write(x);</code>",
+      "<code>int x = 0; Console.Write(x);</code>",
+      "<code>int x; bool b = uslov &amp;&amp; Postavi(out x); Console.Write(x);</code>"
+    ],
+    "correct": [
+      1,
+      3
+    ],
+    "explanation": "out poziv bezuslovno proizvodi vrednost, a eksplicitna inicijalizacija je dovoljna. Petlja i desna strana && možda se ne izvrše.",
+    "originalNumber": 23,
+    "lessonId": "csharp-osnove",
+    "sourceTestId": "csharp-osnove-1",
+    "tags": [
+      "value-vs-reference",
+      "program-output"
+    ]
+  },
+  {
+    "id": "csharp-osnove-q24",
+    "type": "choice",
+    "prompt": "<p>Koja tvrđenja o parametrima <code>ref</code>, <code>out</code> i <code>in</code> su tačna?</p>",
+    "options": [
+      "<code>ref</code> argument mora biti dodeljen pre poziva.",
+      "<code>out</code> argument mora biti dodeljen pre poziva.",
+      "Metoda mora dodeliti <code>out</code> parametar na svakom normalnom izlazu.",
+      "Metoda može ponovo dodeliti <code>in</code> parametar.",
+      "<code>in List&lt;int&gt;</code> sprečava poziv <code>Add</code> nad prosleđenom listom.",
+      "<code>ref</code> može omogućiti metodi da zameni promenljivu pozivaoca."
+    ],
+    "correct": [
+      0,
+      2,
+      5
+    ],
+    "explanation": "ref zahteva ulaznu vrednost, out je proizvodi, a in sprečava ponovnu dodelu parametra, ne mutiranje referenciranog objekta.",
+    "originalNumber": 24,
+    "lessonId": "csharp-osnove",
+    "sourceTestId": "csharp-osnove-1",
+    "tags": [
+      "generics",
+      "collections",
+      "value-vs-reference"
+    ]
+  },
+  {
+    "id": "csharp-osnove-q25",
+    "type": "choice",
+    "prompt": "<p>Šta vraća poziv <code>M(3)</code>?</p><pre><code>static int M(int x)\n{\n    int y;\n    Postavi();\n    return ++y;\n\n    void Postavi() => y = x + 2;\n}</code></pre>",
+    "options": [
+      "<code>3</code>",
+      "<code>5</code>",
+      "<code>6</code>",
+      "Kod nije ispravan jer <code>y</code> nije inicijalizovan pri deklaraciji",
+      "Rezultat nije određen"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Pozvana lokalna funkcija bezuslovno postavlja y na 5 pre operatora ++, pa se vraća 6.",
+    "originalNumber": 25,
+    "lessonId": "csharp-osnove",
+    "sourceTestId": "csharp-osnove-1",
+    "tags": [
+      "language-fundamentals"
+    ]
+  },
+  {
+    "id": "csharp-osnove-q26",
+    "type": "choice",
+    "prompt": "<p>Šta važi za sledeći fragment? Pretpostavi da deklarisana metoda <code>RizicnaOperacija()</code> vraća <code>int</code>.</p><pre><code>int x;\ntry\n{\n    x = RizicnaOperacija();\n}\ncatch\n{\n}\nConsole.Write(x);</code></pre>",
+    "options": [
+      "Kod je ispravan i x je uvek 0 ako nastane izuzetak.",
+      "Kod nije ispravan jer x nije sigurno dodeljen na putanji kroz catch.",
+      "Nastaje <code>NullReferenceException</code>.",
+      "Nastaje <code>InvalidOperationException</code>.",
+      "Kod je ispravan ako je x lokalna promenljiva."
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Izuzetak može nastati pre završene dodele. Prazan catch zato ostavlja putanju na kojoj lokalni x nema vrednost.",
+    "originalNumber": 26,
+    "lessonId": "csharp-osnove",
+    "sourceTestId": "csharp-osnove-1",
+    "tags": [
+      "exceptions",
+      "value-vs-reference",
+      "program-output"
+    ]
+  },
+  {
+    "id": "csharp-osnove-q27",
+    "type": "choice",
+    "prompt": "<p>Šta se ispisuje?</p><pre><code>struct S { public int X; }\nclass K { public int X; }\n\nS s1 = new() { X = 1 };\nS s2 = s1;\ns2.X = 9;\n\nK k1 = new() { X = 1 };\nK k2 = k1;\nk2.X = 9;\n\nConsole.Write($\"${s1.X} ${k1.X}\");</code></pre>",
+    "options": [
+      "<code>1 1</code>",
+      "<code>9 9</code>",
+      "<code>1 9</code>",
+      "<code>9 1</code>",
+      "Kod nije ispravan"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Struct dodela kopira vrednost, dok dodela klasne reference pravi još jednu referencu ka istom objektu.",
+    "originalNumber": 27,
+    "lessonId": "csharp-osnove",
+    "sourceTestId": "csharp-osnove-1",
+    "tags": [
+      "value-vs-reference",
+      "program-output"
+    ]
+  },
+  {
+    "id": "csharp-osnove-q28",
+    "type": "choice",
+    "prompt": "<p>Šta se ispisuje?</p><pre><code>struct Paket\n{\n    public List&lt;int&gt; Brojevi;\n}\n\nPaket a = new() { Brojevi = new List&lt;int&gt;() };\nPaket b = a;\nb.Brojevi.Add(5);\nConsole.Write(a.Brojevi.Count);</code></pre>",
+    "options": [
+      "<code>0</code>",
+      "<code>1</code>",
+      "<code>5</code>",
+      "<code>NullReferenceException</code>",
+      "Kod nije ispravan"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Struct se kopira plitko. Obe kopije polja Brojevi pokazuju na istu listu.",
+    "originalNumber": 28,
+    "lessonId": "csharp-osnove",
+    "sourceTestId": "csharp-osnove-1",
+    "tags": [
+      "generics",
+      "collections",
+      "linq",
+      "exceptions",
+      "value-vs-reference",
+      "program-output"
+    ]
+  },
+  {
+    "id": "csharp-osnove-q29",
+    "type": "choice",
+    "prompt": "<p>Šta se ispisuje?</p><pre><code>static void Promeni(List&lt;int&gt; x)\n{\n    x.Add(1);\n    x = new List&lt;int&gt; { 9 };\n}\n\nList&lt;int&gt; a = new();\nPromeni(a);\nConsole.Write($\"${a.Count} ${a[0]}\");</code></pre>",
+    "options": [
+      "<code>0 9</code>",
+      "<code>1 9</code>",
+      "<code>1 1</code>",
+      "<code>2 1</code>",
+      "Kod nije ispravan"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Add menja objekat pozivaoca. Kasnija dodela novog objekta menja samo lokalnu kopiju reference x.",
+    "originalNumber": 29,
+    "lessonId": "csharp-osnove",
+    "sourceTestId": "csharp-osnove-1",
+    "tags": [
+      "generics",
+      "collections",
+      "linq",
+      "value-vs-reference",
+      "program-output"
+    ]
+  },
+  {
+    "id": "csharp-osnove-q30",
+    "type": "choice",
+    "prompt": "<p>Koji tipovi mogu biti argument za <code>Vrednosti&lt;T&gt;</code>, a koji za <code>Objekti&lt;T&gt;</code>?</p><pre><code>class Vrednosti&lt;T&gt; where T : struct { }\nclass Objekti&lt;T&gt; where T : class { }</code></pre>",
+    "options": [
+      "<code>Vrednosti&lt;int&gt;</code>",
+      "<code>Vrednosti&lt;int?&gt;</code>",
+      "<code>Vrednosti&lt;Status&gt;</code>, gde je Status enum",
+      "<code>Objekti&lt;string&gt;</code>",
+      "<code>Objekti&lt;int&gt;</code>",
+      "<code>Objekti&lt;int?&gt;</code>"
+    ],
+    "correct": [
+      0,
+      2,
+      3
+    ],
+    "explanation": "struct ograničenje prihvata nenullable value tipove, uključujući int i enum, ali ne int?. class prihvata reference tipove kao string.",
+    "originalNumber": 30,
+    "lessonId": "csharp-osnove",
+    "sourceTestId": "csharp-osnove-1",
+    "tags": [
+      "generics",
+      "nullable",
+      "value-vs-reference"
+    ]
+  },
+  {
+    "id": "csharp-osnove-q31",
+    "type": "short",
+    "prompt": "<p>Šta se ispisuje na ekranu?</p><pre><code>class A\n{\n    public int x = 10;\n    public virtual int Prva() { x += 2; return 1; }\n    public int Druga() => 3;\n}\nclass B : A\n{\n    public override int Prva() { x += 5; return 7; }\n    public new int Druga() => 4;\n}\n\nA a = new B();\nB b = new B();\nint broj = a.Prva() - a.Druga();\nbroj += b.Prva() - b.Druga();\nConsole.Write(broj + a.x + b.x);</code></pre>",
+    "answers": [
+      "37"
+    ],
+    "displayAnswer": "37",
+    "explanation": "Za a: 7-3 i x=15. Za b: 7-4 i x=15. Konačno 4+3+15+15 = 37.",
+    "originalNumber": 31,
+    "lessonId": "csharp-osnove",
+    "sourceTestId": "csharp-osnove-1",
+    "tags": [
+      "virtual-dispatch",
+      "method-hiding",
+      "program-output"
+    ]
+  },
+  {
+    "id": "csharp-osnove-q32",
+    "type": "short",
+    "prompt": "<p>Šta se ispisuje?</p><pre><code>class A { }\nclass B : A { }\nclass C : B { }\n\nA x = new C();\nB? y = x as B;\nC z = (C)y;\nConsole.Write($\"${x is B}${y is C}${z is A}\");</code></pre>",
+    "answers": [
+      "truetruetrue"
+    ],
+    "displayAnswer": "TrueTrueTrue",
+    "explanation": "Stvarni objekat je C. as B uspeva, cast u C uspeva, a isti objekat je kompatibilan i sa A.",
+    "originalNumber": 32,
+    "lessonId": "csharp-osnove",
+    "sourceTestId": "csharp-osnove-1",
+    "tags": [
+      "casting",
+      "program-output"
+    ]
+  },
+  {
+    "id": "csharp-osnove-q33",
+    "type": "short",
+    "prompt": "<p>Šta se ispisuje?</p><pre><code>double a = 7 / 2;\ndouble b = 7 / 2.0;\nint c = (int)-3.9;\nConsole.Write($\"${a == 3}|${b == 3.5}|${c}\");</code></pre>",
+    "answers": [
+      "true|true|-3"
+    ],
+    "displayAnswer": "True|True|-3",
+    "explanation": "Prvo deljenje je celobrojno, drugo realno, a konverzija double u int odbacuje razlomljeni deo prema nuli. Poređenja uklanjaju zavisnost ispisa od decimalnog separatora sistema.",
+    "originalNumber": 33,
+    "lessonId": "csharp-osnove",
+    "sourceTestId": "csharp-osnove-1",
+    "tags": [
+      "casting",
+      "numeric-types",
+      "program-output"
+    ]
+  },
+  {
+    "id": "csharp-osnove-q34",
+    "type": "short",
+    "prompt": "<p>Šta se ispisuje?</p><pre><code>int x = 5;\nobject o = x;\nx = 9;\nlong y = (int)o;\nConsole.Write($\"${o}${x}${y}\");</code></pre>",
+    "answers": [
+      "595"
+    ],
+    "displayAnswer": "595",
+    "explanation": "Boxing čuva kopiju 5. Originalni x postaje 9, a o se unbox-uje u int pa proširuje u long vrednosti 5.",
+    "originalNumber": 34,
+    "lessonId": "csharp-osnove",
+    "sourceTestId": "csharp-osnove-1",
+    "tags": [
+      "casting",
+      "numeric-types",
+      "value-vs-reference",
+      "program-output"
+    ]
+  },
+  {
+    "id": "csharp-osnove-q35",
+    "type": "short",
+    "prompt": "<p>Šta se ispisuje?</p><pre><code>int[] niz = new int[2];\nList&lt;int&gt; lista = new(10);\nlista.Add(niz[0] + 4);\nConsole.Write($\"${niz.Length},${lista.Count},${lista.Capacity},${lista[0]}\");</code></pre>",
+    "answers": [
+      "2,1,10,4"
+    ],
+    "displayAnswer": "2,1,10,4",
+    "explanation": "Niz ima dva default elementa. Lista počinje prazna sa kapacitetom 10, pa nakon Add ima jedan element vrednosti 4.",
+    "originalNumber": 35,
+    "lessonId": "csharp-osnove",
+    "sourceTestId": "csharp-osnove-1",
+    "tags": [
+      "method-hiding",
+      "generics",
+      "collections",
+      "linq",
+      "value-vs-reference",
+      "program-output"
+    ]
+  },
+  {
+    "id": "csharp-osnove-q36",
+    "type": "short",
+    "prompt": "<p>Šta se ispisuje?</p><pre><code>class A\n{\n    protected readonly List&lt;int&gt; L = new();\n    public A() : this(4) { L.Add(1); }\n    public A(int x) { L.Add(x); }\n}\nclass B : A\n{\n    public B() : base() { L.Add(2); }\n    public void Ispisi() => Console.Write(string.Join(\",\", L));\n}\n\nnew B().Ispisi();</code></pre>",
+    "answers": [
+      "4,1,2"
+    ],
+    "displayAnswer": "4,1,2",
+    "explanation": "base() pokreće A(), koji prvo poziva A(4), zatim dodaje 1. Na kraju telo B() dodaje 2.",
+    "originalNumber": 36,
+    "lessonId": "csharp-osnove",
+    "sourceTestId": "csharp-osnove-1",
+    "tags": [
+      "accessibility",
+      "inheritance",
+      "constructors",
+      "generics",
+      "collections",
+      "program-output"
+    ]
+  },
+  {
+    "id": "csharp-osnove-q37",
+    "type": "short",
+    "prompt": "<p>Šta se ispisuje?</p><pre><code>struct T { public int X; }\n\nT[] niz = { new T { X = 1 } };\nList&lt;T&gt; lista = new() { new T { X = 2 } };\n\nT a = niz[0];\na.X = 7;\nT b = lista[0];\nb.X = 8;\n\nConsole.Write($\"${niz[0].X}${lista[0].X}${a.X}${b.X}\");</code></pre>",
+    "answers": [
+      "1278"
+    ],
+    "displayAnswer": "1278",
+    "explanation": "Oba čitanja struct elemenata ovde daju kopije. Promene a i b ne menjaju elemente kolekcija.",
+    "originalNumber": 37,
+    "lessonId": "csharp-osnove",
+    "sourceTestId": "csharp-osnove-1",
+    "tags": [
+      "generics",
+      "collections",
+      "value-vs-reference",
+      "program-output"
+    ]
+  },
+  {
+    "id": "csharp-osnove-q38",
+    "type": "short",
+    "prompt": "<p>Šta se ispisuje?</p><pre><code>string a = new string('x', 1);\nstring b = new string('x', 1);\nstring c = a;\nc += \"y\";\nConsole.Write($\"${a == b}|${object.ReferenceEquals(a, b)}|${a}\");</code></pre>",
+    "answers": [
+      "true|false|x"
+    ],
+    "displayAnswer": "True|False|x",
+    "explanation": "String == poredi sadržaj, ReferenceEquals identitet, a += pravi novi string i ne menja a.",
+    "originalNumber": 38,
+    "lessonId": "csharp-osnove",
+    "sourceTestId": "csharp-osnove-1",
+    "tags": [
+      "method-hiding",
+      "strings",
+      "value-vs-reference",
+      "program-output"
+    ]
+  },
+  {
+    "id": "csharp-osnove-q39",
+    "type": "short",
+    "prompt": "<p>Šta se ispisuje?</p><pre><code>int? a = 5;\nint? b = null;\nobject? x = a;\nobject? y = b;\nConsole.Write($\"${x.GetType().Name}|${y == null}|${b.GetValueOrDefault()}\");</code></pre>",
+    "answers": [
+      "int32|true|0"
+    ],
+    "displayAnswer": "Int32|True|0",
+    "explanation": "Nenull int? se boxuje kao int (System.Int32), null nullable se boxuje kao null, a GetValueOrDefault vraća 0.",
+    "originalNumber": 39,
+    "lessonId": "csharp-osnove",
+    "sourceTestId": "csharp-osnove-1",
+    "tags": [
+      "nullable",
+      "program-output"
+    ]
+  },
+  {
+    "id": "csharp-osnove-q40",
+    "type": "short",
+    "prompt": "<p>Šta se ispisuje?</p><pre><code>int[] a = { 10, 20, 30, 40 };\nint[] b = a[1..^1];\nint p = b.Where(x => x &gt; 20).Count();\nint q = b.Select(x => x &gt; 20).Count();\nConsole.Write($\"${string.Join(\"\", b)}|${p}|${q}\");</code></pre>",
+    "answers": [
+      "2030|1|2"
+    ],
+    "displayAnswer": "2030|1|2",
+    "explanation": "Opseg 1..^1 daje 20 i 30. Where zadržava samo 30, dok Select daje po jedan bool za oba elementa.",
+    "originalNumber": 40,
+    "lessonId": "csharp-osnove",
+    "sourceTestId": "csharp-osnove-1",
+    "tags": [
+      "linq",
+      "program-output"
+    ]
+  },
+  {
+    "id": "objektni-model-q01",
+    "type": "choice",
+    "prompt": "<p>Koja tvrđenja o podrazumevanoj dostupnosti u C# su tačna?</p><pre><code>class A\n{\n    int x;\n    class B { }\n}</code></pre>",
+    "options": [
+      "Top-level klasa <code>A</code> je podrazumevano <code>internal</code>.",
+      "Polje <code>x</code> je podrazumevano <code>private</code>.",
+      "Ugnježdena klasa <code>B</code> je podrazumevano <code>internal</code>.",
+      "Ugnježdena klasa <code>B</code> je podrazumevano <code>private</code>.",
+      "Premeštanje klase u drugi namespace menja njenu dostupnost."
+    ],
+    "correct": [
+      0,
+      1,
+      3
+    ],
+    "explanation": "Top-level tip bez modifikatora je internal, dok su član klase i ugnježdeni tip bez modifikatora private. Namespace nije granica dostupnosti.",
+    "originalNumber": 1,
+    "lessonId": "objektni-model",
+    "sourceTestId": "objektni-model-1",
+    "tags": [
+      "accessibility"
+    ]
+  },
+  {
+    "id": "objektni-model-q02",
+    "type": "choice",
+    "prompt": "<p>Koje naredbe unutar metode <code>B.Test</code> su ispravne?</p><pre><code>class A\n{\n    protected int x;\n}\n\nclass B : A\n{\n    public void Test(A a, B b, C c)\n    {\n        // ponuđene naredbe\n    }\n}\n\nclass C : B { }</code></pre>",
+    "options": [
+      "<code>a.x = 1;</code>",
+      "<code>b.x = 2;</code>",
+      "<code>c.x = 3;</code>",
+      "<code>x = 4;</code>",
+      "<code>new A().x = 5;</code>"
+    ],
+    "correct": [
+      1,
+      2,
+      3
+    ],
+    "explanation": "U izvedenoj klasi protected članu može se pristupiti kroz this ili izraz statičkog tipa B, odnosno tipa izvedenog iz B. Izraz statičkog tipa A ne zadovoljava receiver pravilo.",
+    "originalNumber": 2,
+    "lessonId": "objektni-model",
+    "sourceTestId": "objektni-model-1",
+    "tags": [
+      "accessibility",
+      "inheritance"
+    ]
+  },
+  {
+    "id": "objektni-model-q03",
+    "type": "choice",
+    "prompt": "<p>Koji pristupi poljima su dozvoljeni? Assembly B referencira assembly A.</p><pre><code>// Assembly A\npublic class Baza\n{\n    protected internal int pi;\n    private protected int pp;\n}\n\nclass Posmatrac\n{\n    void Test(Baza b)\n    {\n        // pristupi iz opcija a i b\n    }\n}\n\n// Assembly B\npublic class Izvedena : Baza\n{\n    void Test(Izvedena d, Baza b)\n    {\n        // pristupi iz opcija c-f\n    }\n}</code></pre>",
+    "options": [
+      "<code>b.pi = 1;</code> unutar klase <code>Posmatrac</code>",
+      "<code>b.pp = 2;</code> unutar klase <code>Posmatrac</code>",
+      "<code>d.pi = 3;</code> unutar klase <code>Izvedena</code>",
+      "<code>b.pi = 4;</code> unutar klase <code>Izvedena</code>",
+      "<code>d.pp = 5;</code> unutar klase <code>Izvedena</code>",
+      "<code>b.pp = 6;</code> unutar klase <code>Izvedena</code>"
+    ],
+    "correct": [
+      0,
+      2
+    ],
+    "explanation": "Posmatrac koristi internal granu protected internal člana. Izvedena u drugom assembly-ju koristi protected granu, ali samo kroz receiver tipa Izvedena. Private protected nije dostupan iz izvedene klase u drugom assembly-ju.",
+    "originalNumber": 3,
+    "lessonId": "objektni-model",
+    "sourceTestId": "objektni-model-1",
+    "tags": [
+      "accessibility",
+      "inheritance"
+    ]
+  },
+  {
+    "id": "objektni-model-q04",
+    "type": "choice",
+    "prompt": "<p>Koji članovi mogu biti deklarisani u klasi <code>Servis</code>? Svaku opciju posmatraj zasebno.</p><pre><code>internal class TajniTip { }\n\npublic class Servis\n{\n    // jedna od ponuđenih deklaracija\n}</code></pre>",
+    "options": [
+      "<code>private TajniTip M1() =&gt; new TajniTip();</code>",
+      "<code>internal TajniTip M2() =&gt; new TajniTip();</code>",
+      "<code>public object M3() =&gt; new TajniTip();</code>",
+      "<code>public TajniTip M4() =&gt; new TajniTip();</code>",
+      "<code>protected TajniTip M5() =&gt; new TajniTip();</code>"
+    ],
+    "correct": [
+      0,
+      1,
+      2
+    ],
+    "explanation": "Javni ili protected potpis ne sme izložiti internal tip korisnicima kojima taj tip nije dostupan. Private i internal članovi ne prelaze tu granicu, a M3 javno izlaže samo object.",
+    "originalNumber": 4,
+    "lessonId": "objektni-model",
+    "sourceTestId": "objektni-model-1",
+    "tags": [
+      "accessibility"
+    ]
+  },
+  {
+    "id": "objektni-model-q05",
+    "type": "choice",
+    "prompt": "<p>Koja tvrđenja o nasleđivanju klasa su tačna?</p>",
+    "options": [
+      "Klasa može neposredno naslediti najviše jednu klasu.",
+      "Privatno polje baze postoji u baznom delu izvedenog objekta, ali izvedena klasa nema direktan pristup tom polju.",
+      "Konstruktori bazne klase se ne nasleđuju.",
+      "Klasa može implementirati više interfejsa.",
+      "Upcast pravi kopiju objekta bez članova izvedene klase."
+    ],
+    "correct": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "explanation": "C# podržava jednostruko nasleđivanje klasa i višestruku implementaciju interfejsa. Privatno stanje baze ostaje deo objekta, konstruktori se ne nasleđuju, a upcast ne kopira niti menja objekat.",
+    "originalNumber": 5,
+    "lessonId": "objektni-model",
+    "sourceTestId": "objektni-model-1",
+    "tags": [
+      "accessibility",
+      "inheritance",
+      "constructors",
+      "interfaces",
+      "casting",
+      "value-vs-reference"
+    ]
+  },
+  {
+    "id": "objektni-model-q06",
+    "type": "choice",
+    "prompt": "<p>Koja tvrđenja o sledećim konverzijama su tačna?</p><pre><code>class A { }\nclass B : A { }\nclass C : B { }\nclass D : A { }\n\nA a = new C();</code></pre>",
+    "options": [
+      "<code>B b = (B)a;</code> se kompajlira i uspeva pri izvršavanju.",
+      "<code>C c = (C)a;</code> se kompajlira i uspeva pri izvršavanju.",
+      "<code>D d = (D)a;</code> se ne kompajlira.",
+      "<code>D d = (D)a;</code> se kompajlira, ali baca <code>InvalidCastException</code>.",
+      "<code>D? d = a as D;</code> daje <code>null</code>.",
+      "<code>B b = a;</code> je implicitno dozvoljeno."
+    ],
+    "correct": [
+      0,
+      1,
+      3,
+      4
+    ],
+    "explanation": "Stvarni tip objekta je C, pa downcast u B ili C uspeva. Cast u nepovezanu granu D je dozvoljen pri kompilaciji, ali pada u runtime-u; as umesto toga vraća null.",
+    "originalNumber": 6,
+    "lessonId": "objektni-model",
+    "sourceTestId": "objektni-model-1",
+    "tags": [
+      "inheritance",
+      "virtual-dispatch",
+      "casting",
+      "exceptions",
+      "nullable",
+      "compile-time",
+      "runtime"
+    ]
+  },
+  {
+    "id": "objektni-model-q07",
+    "type": "choice",
+    "prompt": "<p>Šta važi za sledeći kod?</p><pre><code>class A { }\nclass B : A\n{\n    public int Broj =&gt; 5;\n}\n\nA a = new A();\nB? b = a as B;</code></pre>",
+    "options": [
+      "Promenljiva <code>b</code> sadrži novi objekat tipa <code>B</code>.",
+      "Promenljiva <code>b</code> ima vrednost <code>null</code>.",
+      "Sam operator <code>as</code> baca <code>InvalidCastException</code>.",
+      "<code>Console.Write(b.Broj);</code> može baciti <code>NullReferenceException</code>.",
+      "<code>a is B</code> daje <code>true</code>."
+    ],
+    "correct": [
+      1,
+      3
+    ],
+    "explanation": "Neuspešan as cast vraća null. Operator as ne baca InvalidCastException, ali naknadno dereferenciranje rezultata može izazvati NullReferenceException.",
+    "originalNumber": 7,
+    "lessonId": "objektni-model",
+    "sourceTestId": "objektni-model-1",
+    "tags": [
+      "casting",
+      "exceptions",
+      "nullable",
+      "value-vs-reference",
+      "program-output"
+    ]
+  },
+  {
+    "id": "objektni-model-q08",
+    "type": "choice",
+    "prompt": "<p>Koje izvedene klase su ispravne? Svaku deklaraciju posmatraj zasebno uz datu klasu <code>A</code>.</p><pre><code>class A\n{\n    public A(int x) { }\n}</code></pre>",
+    "options": [
+      "<code>class B : A { }</code>",
+      "<code>class C : A { public C() : base(0) { } }</code>",
+      "<code>class D : A { public D(int x) { } }</code>",
+      "<code>class E : A { public E(int x) : base(x) { } }</code>",
+      "<code>class F : A { public F() : this(1) { } public F(int x) { } }</code>"
+    ],
+    "correct": [
+      1,
+      3
+    ],
+    "explanation": "A nema parameterless konstruktor. Svaki konstruktorski put izvedene klase zato mora eksplicitno pozvati A(int). Kod F oba konstruktora na kraju pokušavaju implicitni base(), koji ne postoji.",
+    "originalNumber": 8,
+    "lessonId": "objektni-model",
+    "sourceTestId": "objektni-model-1",
+    "tags": [
+      "inheritance",
+      "constructors"
+    ]
+  },
+  {
+    "id": "objektni-model-q09",
+    "type": "choice",
+    "prompt": "<p>Koje deklaracije ili naredbe su ispravne?</p><pre><code>class A\n{\n    private A() { }\n    protected A(int x) { }\n    public A(string tekst) { }\n}</code></pre>",
+    "options": [
+      "<code>class B : A { public B() : base(1) { } }</code>",
+      "<code>class B : A { public B(int x) : base() { } }</code>",
+      "<code>A a = new A(\"tekst\");</code>",
+      "<code>A a = new A();</code>",
+      "<code>class B : A { }</code>"
+    ],
+    "correct": [
+      0,
+      2
+    ],
+    "explanation": "Izvedena klasa može pozvati protected A(int), ali ne i private A(). Spoljašnji kod može koristiti javni A(string). Implicitni konstruktor izvedene klase takođe bi pokušao nedostupni base().",
+    "originalNumber": 9,
+    "lessonId": "objektni-model",
+    "sourceTestId": "objektni-model-1",
+    "tags": [
+      "accessibility",
+      "inheritance",
+      "constructors"
+    ]
+  },
+  {
+    "id": "objektni-model-q10",
+    "type": "choice",
+    "prompt": "<p>Šta se ispisuje?</p><pre><code>class A\n{\n    public A() : this(2) { Console.Write(\"A\"); }\n    public A(int x) { Console.Write(x); }\n}\n\nclass B : A\n{\n    public B() : base() { Console.Write(\"B\"); }\n    public B(int y) : this() { Console.Write(y); }\n}\n\nnew B(5);</code></pre>",
+    "options": [
+      "<code>5B2A</code>",
+      "<code>2AB5</code>",
+      "<code>2A5B</code>",
+      "<code>AB25</code>",
+      "Kod nije ispravan"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Lanac je B(int) → B() → A() → A(int). Tela se završavaju obrnutim redom: A(int), A(), B(), B(int), pa je ispis 2AB5.",
+    "originalNumber": 10,
+    "lessonId": "objektni-model",
+    "sourceTestId": "objektni-model-1",
+    "tags": [
+      "inheritance",
+      "constructors",
+      "program-output"
+    ]
+  },
+  {
+    "id": "objektni-model-q11",
+    "type": "choice",
+    "prompt": "<p>Šta se ispisuje pri kreiranju objekta?</p><pre><code>class Trag\n{\n    public static string Tekst = \"\";\n\n    public static int Dodaj(string s)\n    {\n        Tekst += s;\n        return 0;\n    }\n}\n\nclass A\n{\n    private int a = Trag.Dodaj(\"A\");\n    public A() { Trag.Tekst += \"a\"; }\n}\n\nclass B : A\n{\n    private int b = Trag.Dodaj(\"B\");\n    public B() { Trag.Tekst += \"b\"; }\n}\n\nnew B();\nConsole.Write(Trag.Tekst);</code></pre>",
+    "options": [
+      "<code>ABab</code>",
+      "<code>BAab</code>",
+      "<code>AaBb</code>",
+      "<code>BbAa</code>",
+      "Redosled nije određen"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Za new B() prvo se izvršava initializer polja izvedene klase, zatim initializer baze, pa tela konstruktora baze i izvedene klase: B, A, a, b.",
+    "originalNumber": 11,
+    "lessonId": "objektni-model",
+    "sourceTestId": "objektni-model-1",
+    "tags": [
+      "inheritance",
+      "constructors",
+      "static-initialization",
+      "program-output",
+      "runtime"
+    ]
+  },
+  {
+    "id": "objektni-model-q12",
+    "type": "choice",
+    "prompt": "<p>Šta se ispisuje?</p><pre><code>class K\n{\n    private static int x = Stampaj(\"P\");\n\n    static K()\n    {\n        Console.Write(\"S\");\n    }\n\n    public K()\n    {\n        Console.Write(\"I\");\n    }\n\n    private static int Stampaj(string s)\n    {\n        Console.Write(s);\n        return 0;\n    }\n}\n\nnew K();\nnew K();</code></pre>",
+    "options": [
+      "<code>PSII</code>",
+      "<code>PSIPSI</code>",
+      "<code>SPii</code>",
+      "<code>IIPS</code>",
+      "Kod nije ispravan jer statički konstruktor nema modifikator pristupa"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Statičko polje i statički konstruktor izvršavaju se najviše jednom pre prve upotrebe tipa. Instance konstruktor zatim radi za svaki new.",
+    "originalNumber": 12,
+    "lessonId": "objektni-model",
+    "sourceTestId": "objektni-model-1",
+    "tags": [
+      "constructors",
+      "static-initialization",
+      "program-output",
+      "runtime"
+    ]
+  },
+  {
+    "id": "objektni-model-q13",
+    "type": "choice",
+    "prompt": "<p>Šta se ispisuje?</p><pre><code>class A\n{\n    public virtual string M() =&gt; \"A\";\n}\n\nclass B : A\n{\n    public override string M() =&gt; base.M() + \"B\";\n}\n\nclass C : B { }\n\nA x = new C();\nConsole.Write(x.M());</code></pre>",
+    "options": [
+      "<code>A</code>",
+      "<code>B</code>",
+      "<code>AB</code>",
+      "<code>ABC</code>",
+      "Kod nije ispravan"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Virtualni dispatch bira B.M za stvarni tip C. Poziv base.M() unutar override-a neposredno poziva A.M, pa je rezultat AB.",
+    "originalNumber": 13,
+    "lessonId": "objektni-model",
+    "sourceTestId": "objektni-model-1",
+    "tags": [
+      "inheritance",
+      "virtual-dispatch",
+      "program-output"
+    ]
+  },
+  {
+    "id": "objektni-model-q14",
+    "type": "choice",
+    "prompt": "<p>Šta se ispisuje?</p><pre><code>class A\n{\n    public int x = 1;\n    public string M() =&gt; \"A\";\n}\n\nclass B : A\n{\n    public new int x = 2;\n    public new string M() =&gt; \"B\";\n}\n\nA a = new B();\nB b = (B)a;\nConsole.Write($\"${a.x}${b.x}${a.M()}${b.M()}\");</code></pre>",
+    "options": [
+      "<code>11AA</code>",
+      "<code>12AB</code>",
+      "<code>22BB</code>",
+      "<code>12BB</code>",
+      "Kod nije ispravan"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Polja i skriveni članovi biraju se prema statičkom tipu izraza. Referenca a koristi A.x i A.M, dok b koristi članove deklarisane u B.",
+    "originalNumber": 14,
+    "lessonId": "objektni-model",
+    "sourceTestId": "objektni-model-1",
+    "tags": [
+      "method-hiding",
+      "program-output"
+    ]
+  },
+  {
+    "id": "objektni-model-q15",
+    "type": "choice",
+    "prompt": "<p>Šta se ispisuje?</p><pre><code>class A\n{\n    public virtual string M() =&gt; \"A\";\n}\n\nclass B : A\n{\n    public new virtual string M() =&gt; \"B\";\n}\n\nclass C : B\n{\n    public override string M() =&gt; \"C\";\n}\n\nA a = new C();\nB b = new C();\nConsole.Write(a.M() + b.M());</code></pre>",
+    "options": [
+      "<code>AC</code>",
+      "<code>CC</code>",
+      "<code>AB</code>",
+      "<code>BC</code>",
+      "Kod nije ispravan"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "B.new virtual otvara novi virtualni slot. Referenca tipa A koristi originalni A slot, dok referenca tipa B koristi novi slot koji C override-uje.",
+    "originalNumber": 15,
+    "lessonId": "objektni-model",
+    "sourceTestId": "objektni-model-1",
+    "tags": [
+      "virtual-dispatch",
+      "method-hiding",
+      "program-output"
+    ]
+  },
+  {
+    "id": "objektni-model-q16",
+    "type": "choice",
+    "prompt": "<p>Šta se ispisuje?</p><pre><code>class A\n{\n    public virtual string M(object x) =&gt; \"A\";\n}\n\nclass B : A\n{\n    public override string M(object x) =&gt; \"O\";\n    public string M(string x) =&gt; \"S\";\n}\n\nA a = new B();\nB b = (B)a;\nConsole.Write(a.M(\"x\") + b.M(\"x\"));</code></pre>",
+    "options": [
+      "<code>AA</code>",
+      "<code>AS</code>",
+      "<code>OS</code>",
+      "<code>SS</code>",
+      "Poziv <code>a.M(\"x\")</code> je dvosmislen"
+    ],
+    "correct": [
+      2
+    ],
+    "explanation": "Za a je pri kompilaciji dostupan samo potpis M(object), a runtime bira B override. Za b overload resolution bira precizniji M(string).",
+    "originalNumber": 16,
+    "lessonId": "objektni-model",
+    "sourceTestId": "objektni-model-1",
+    "tags": [
+      "accessibility",
+      "virtual-dispatch",
+      "overload-resolution",
+      "program-output",
+      "runtime"
+    ]
+  },
+  {
+    "id": "objektni-model-q17",
+    "type": "choice",
+    "prompt": "<p>Koje metode mogu biti dodate istoj klasi uz postojeću deklaraciju?</p><pre><code>void M(int x) { }</code></pre>",
+    "options": [
+      "<code>int M(int x) =&gt; x;</code>",
+      "<code>static void M(int x) { }</code>",
+      "<code>void M(ref int x) { }</code>",
+      "<code>void M(string x) { }</code>",
+      "<code>void M(int x = 0) { }</code>",
+      "<code>void M&lt;T&gt;(int x) { }</code>"
+    ],
+    "correct": [
+      2,
+      3,
+      5
+    ],
+    "explanation": "Povratni tip, static i podrazumevana vrednost nisu deo potpisa. By-value i ref se razlikuju, kao i tip parametra ili broj generičkih parametara metode.",
+    "originalNumber": 17,
+    "lessonId": "objektni-model",
+    "sourceTestId": "objektni-model-1",
+    "tags": [
+      "generics",
+      "value-vs-reference",
+      "overload-resolution"
+    ]
+  },
+  {
+    "id": "objektni-model-q18",
+    "type": "choice",
+    "prompt": "<p>Šta se ispisuje pozivom <code>Test()</code>?</p><pre><code>static void M() =&gt; Console.Write(\"0\");\nstatic void M(int x = 0) =&gt; Console.Write(\"1\");\nstatic void M(long x) =&gt; Console.Write(\"L\");\n\nstatic void Test()\n{\n    M();\n    M(1);\n    M(1L);\n}</code></pre>",
+    "options": [
+      "<code>011</code>",
+      "<code>01L</code>",
+      "<code>11L</code>",
+      "Prvi poziv je dvosmislen",
+      "Deklaracije <code>M()</code> i <code>M(int x = 0)</code> su u konfliktu"
+    ],
+    "correct": [
+      1
+    ],
+    "explanation": "Oba overload-a mogu učestvovati u M(), ali je overload bez parametara bolji. Argument int bira M(int), a long bira M(long).",
+    "originalNumber": 18,
+    "lessonId": "objektni-model",
+    "sourceTestId": "objektni-model-1",
+    "tags": [
+      "numeric-types",
+      "overload-resolution",
+      "program-output"
+    ]
+  },
+  {
+    "id": "objektni-model-q19",
+    "type": "choice",
+    "prompt": "<p>Koja tvrđenja o apstraktnim klasama su tačna?</p>",
+    "options": [
+      "Apstraktna klasa može imati konstruktor.",
+      "Apstraktna klasa može sadržati obične metode sa implementacijom.",
+      "Apstraktna metoda nema telo.",
+      "Svaka apstraktna klasa mora deklarisati bar jednu apstraktnu metodu.",
+      "Apstraktni član je implicitno virtualan.",
+      "Apstraktna klasa se može direktno instancirati ako nema apstraktne članove."
+    ],
+    "correct": [
+      0,
+      1,
+      2,
+      4
+    ],
+    "explanation": "Apstraktna klasa može imati stanje, konstruktore i konkretne metode, čak i bez apstraktnih članova. Ne može se direktno instancirati, a apstraktni član je već virtualan.",
+    "originalNumber": 19,
+    "lessonId": "objektni-model",
+    "sourceTestId": "objektni-model-1",
+    "tags": [
+      "virtual-dispatch",
+      "constructors",
+      "abstract-classes"
+    ]
+  },
+  {
+    "id": "objektni-model-q20",
+    "type": "choice",
+    "prompt": "<p>Koje deklaracije su ispravne? Svaku opciju posmatraj zasebno.</p><pre><code>interface I\n{\n    void M();\n}\n\nabstract class Osnova : I { }</code></pre>",
+    "options": [
+      "<code>abstract class A : I { }</code>",
+      "<code>abstract class B : I { public abstract void M(); }</code>",
+      "<code>class C : I { void M() { } }</code>",
+      "<code>class D : Osnova { public void M() { } }</code>",
+      "<code>class E : Osnova { }</code>"
+    ],
+    "correct": [
+      0,
+      1,
+      3
+    ],
+    "explanation": "Apstraktna klasa sme odložiti implementaciju interfejsa. Implicitna implementacija mora biti public, a prva konkretna izvedena klasa mora obezbediti preostali član.",
+    "originalNumber": 20,
+    "lessonId": "objektni-model",
+    "sourceTestId": "objektni-model-1",
+    "tags": [
+      "inheritance",
+      "interfaces",
+      "abstract-classes"
+    ]
+  },
+  {
+    "id": "objektni-model-q21",
+    "type": "choice",
+    "prompt": "<p>Koje izvedene klase su ispravne? Svaku opciju posmatraj zasebno.</p><pre><code>abstract class A\n{\n    public abstract int X { get; set; }\n    public abstract int Y { get; }\n}</code></pre>",
+    "options": [
+      "<code>class B : A { public override int X { get; set; } public override int Y =&gt; 1; }</code>",
+      "<code>class C : A { public override int X { get; } public override int Y =&gt; 1; }</code>",
+      "<code>abstract class D : A { public override int Y =&gt; 2; }</code>",
+      "<code>class E : A { public int X { get; set; } public override int Y =&gt; 1; }</code>",
+      "<code>class F : A { public override int X { get; set; } }</code>"
+    ],
+    "correct": [
+      0,
+      2
+    ],
+    "explanation": "Konkretna klasa mora override-ovati oba člana i obezbediti zahtevane accessore. Apstraktna D sme ostaviti X neimplementiranim. Član bez override ne implementira apstraktni property.",
+    "originalNumber": 21,
+    "lessonId": "objektni-model",
+    "sourceTestId": "objektni-model-1",
+    "tags": [
+      "accessibility",
+      "inheritance",
+      "virtual-dispatch",
+      "abstract-classes",
+      "properties-indexers"
+    ]
+  },
+  {
+    "id": "objektni-model-q22",
+    "type": "choice",
+    "prompt": "<p>Koji pozivi su ispravni?</p><pre><code>interface IA { void M(); }\ninterface IB { void M(); }\n\nclass K : IA, IB\n{\n    void IA.M() =&gt; Console.Write(\"A\");\n    void IB.M() =&gt; Console.Write(\"B\");\n}\n\nK k = new K();</code></pre>",
+    "options": [
+      "<code>k.M();</code>",
+      "<code>((IA)k).M();</code>",
+      "<code>((IB)k).M();</code>",
+      "<code>IA a = k; a.M();</code>",
+      "<code>((object)k).M();</code>",
+      "<code>k.IA.M();</code>"
+    ],
+    "correct": [
+      1,
+      2,
+      3
+    ],
+    "explanation": "Eksplicitno implementirani član dostupan je samo kroz odgovarajuću interfejsnu referencu. On nije običan javni član klase K.",
+    "originalNumber": 22,
+    "lessonId": "objektni-model",
+    "sourceTestId": "objektni-model-1",
+    "tags": [
+      "accessibility",
+      "interfaces",
+      "program-output"
+    ]
+  },
+  {
+    "id": "objektni-model-q23",
+    "type": "choice",
+    "prompt": "<p>Koja tvrđenja o <code>sealed</code> tipovima i članovima su tačna?</p>",
+    "options": [
+      "Sealed klasa može naslediti nezapečaćenu klasu.",
+      "Sealed klasa ne može implementirati interfejs.",
+      "Iz sealed klase se ne može izvesti nova klasa.",
+      "Klasa može istovremeno biti deklarisana kao <code>abstract sealed</code>.",
+      "Posle <code>sealed override</code> moguće je deklarisati nepovezan skriveni član pomoću <code>new</code>.",
+      "<code>sealed override</code> automatski pečati celu klasu."
+    ],
+    "correct": [
+      0,
+      2,
+      4
+    ],
+    "explanation": "Sealed klasa može naslediti klasu i implementirati interfejse, ali ne može imati izvedene klase. Sealed override zatvara samo dati virtualni slot i ne zabranjuje novi skriveni član.",
+    "originalNumber": 23,
+    "lessonId": "objektni-model",
+    "sourceTestId": "objektni-model-1",
+    "tags": [
+      "inheritance",
+      "virtual-dispatch",
+      "method-hiding",
+      "interfaces",
+      "abstract-classes"
+    ]
+  },
+  {
+    "id": "objektni-model-q24",
+    "type": "choice",
+    "prompt": "<p>Koja tvrđenja o partial klasama su tačna?</p>",
+    "options": [
+      "Svi delovi moraju pripadati istom assembly-ju i modulu.",
+      "Svi delovi iste klase moraju imati ključnu reč <code>partial</code>.",
+      "Delovi iste klase mogu biti u različitim namespace-ovima.",
+      "Interfejsi navedeni u različitim delovima objedinjuju se.",
+      "Delovi ne smeju navesti različite bazne klase.",
+      "Redosled field initializer-a između različitih delova nije određen."
+    ],
+    "correct": [
+      0,
+      1,
+      3,
+      4,
+      5
+    ],
+    "explanation": "Partial delovi se spajaju samo kada predstavljaju isti tip u istom assembly-ju, modulu i namespace-u. Interfejsi se objedinjuju, baza mora biti saglasna, a na redosled initializer-a između datoteka ne treba računati.",
+    "originalNumber": 24,
+    "lessonId": "objektni-model",
+    "sourceTestId": "objektni-model-1",
+    "tags": [
+      "accessibility",
+      "inheritance",
+      "constructors",
+      "static-initialization",
+      "interfaces",
+      "partial-classes"
+    ]
+  },
+  {
+    "id": "objektni-model-q25",
+    "type": "choice",
+    "prompt": "<p>Koji dodatni partial delovi mogu biti definisani uz postojeći deo? Svaku opciju posmatraj zasebno.</p><pre><code>partial class K\n{\n    public int broj;\n    public K(int broj) { this.broj = broj; }\n    public virtual int M() =&gt; broj;\n}</code></pre>",
+    "options": [
+      "<code>partial class K { private string broj = \"\"; }</code>",
+      "<code>partial class K { public static int M() =&gt; 0; }</code>",
+      "<code>partial class K { public byte M() =&gt; 1; }</code>",
+      "<code>partial class K { public int M(int x = 0) =&gt; broj + x; }</code>",
+      "<code>partial class K { public K() : this(0) { } }</code>",
+      "<code>partial class K { public abstract void N(); }</code>"
+    ],
+    "correct": [
+      3,
+      4
+    ],
+    "explanation": "Spojeni tip ne može imati duplikat polja ili metode istog potpisa; povratni tip i static ne razlikuju potpis. Overload M(int) i novi konstruktor su dozvoljeni. Neapstraktna klasa ne može imati apstraktan član.",
+    "originalNumber": 25,
+    "lessonId": "objektni-model",
+    "sourceTestId": "objektni-model-1",
+    "tags": [
+      "virtual-dispatch",
+      "constructors",
+      "abstract-classes",
+      "partial-classes",
+      "numeric-types",
+      "overload-resolution"
+    ]
+  },
+  {
+    "id": "objektni-model-q26",
+    "type": "choice",
+    "prompt": "<p>Koje konstrukcije zadovoljavaju navedena generička ograničenja?</p><pre><code>class Reference&lt;T&gt; where T : class { }\nclass Vrednosti&lt;T&gt; where T : struct { }\n\nenum Boja { Crvena, Plava }</code></pre>",
+    "options": [
+      "<code>Reference&lt;string&gt;</code>",
+      "<code>Reference&lt;int&gt;</code>",
+      "<code>Reference&lt;int?&gt;</code>",
+      "<code>Vrednosti&lt;int&gt;</code>",
+      "<code>Vrednosti&lt;int?&gt;</code>",
+      "<code>Vrednosti&lt;Boja&gt;</code>"
+    ],
+    "correct": [
+      0,
+      3,
+      5
+    ],
+    "explanation": "Class prihvata reference tipove. Struct prihvata nenullable value tipove, uključujući int i enum, ali izričito ne prihvata nullable value tip kao int?.",
+    "originalNumber": 26,
+    "lessonId": "objektni-model",
+    "sourceTestId": "objektni-model-1",
+    "tags": [
+      "generics",
+      "nullable",
+      "value-vs-reference"
+    ]
+  },
+  {
+    "id": "objektni-model-q27",
+    "type": "choice",
+    "prompt": "<p>Koji tipovi mogu biti argument za <code>Fabrika&lt;T&gt;</code>?</p><pre><code>class Fabrika&lt;T&gt; where T : new() { }\n\nclass A { public A() { } }\nclass B { internal B() { } }\nabstract class C { public C() { } }</code></pre>",
+    "options": [
+      "<code>Fabrika&lt;A&gt;</code>",
+      "<code>Fabrika&lt;B&gt;</code>",
+      "<code>Fabrika&lt;C&gt;</code>",
+      "<code>Fabrika&lt;string&gt;</code>",
+      "<code>Fabrika&lt;int&gt;</code>",
+      "<code>Fabrika&lt;int?&gt;</code>"
+    ],
+    "correct": [
+      0,
+      4,
+      5
+    ],
+    "explanation": "Klasni argument mora biti konkretan i imati javni parameterless konstruktor. Value tipovi, uključujući nullable value tip uz samostalni new() constraint, zadovoljavaju konstrukcioni zahtev.",
+    "originalNumber": 27,
+    "lessonId": "objektni-model",
+    "sourceTestId": "objektni-model-1",
+    "tags": [
+      "accessibility",
+      "constructors",
+      "abstract-classes",
+      "generics",
+      "nullable"
+    ]
+  },
+  {
+    "id": "objektni-model-q28",
+    "type": "choice",
+    "prompt": "<p>Koje deklaracije generičkih klasa imaju ispravan skup i redosled ograničenja?</p><pre><code>class Baza { }\ninterface I { }</code></pre>",
+    "options": [
+      "<code>class G&lt;T&gt; where T : Baza, I, new() { }</code>",
+      "<code>class G&lt;T&gt; where T : I, Baza, new() { }</code>",
+      "<code>class G&lt;T&gt; where T : class, I, new() { }</code>",
+      "<code>class G&lt;T&gt; where T : new(), I { }</code>",
+      "<code>class G&lt;T&gt; where T : struct, new() { }</code>",
+      "<code>class G&lt;T&gt; where T : class, struct { }</code>"
+    ],
+    "correct": [
+      0,
+      2
+    ],
+    "explanation": "Bazna klasa ili class/struct constraint ide prvi, interfejsi slede, a new() mora biti poslednji. Struct već podrazumeva konstrukcioni zahtev i ne kombinuje se sa new().",
+    "originalNumber": 28,
+    "lessonId": "objektni-model",
+    "sourceTestId": "objektni-model-1",
+    "tags": [
+      "inheritance",
+      "interfaces",
+      "generics",
+      "value-vs-reference"
+    ]
+  },
+  {
+    "id": "objektni-model-q29",
+    "type": "choice",
+    "prompt": "<p>Koja tvrđenja su tačna?</p><pre><code>static T Prvi&lt;T&gt;(T a, T b) =&gt; a;\nstatic T Napravi&lt;T&gt;() =&gt; default!;\n\nclass A { }\nclass B : A { }</code></pre>",
+    "options": [
+      "<code>int x = Prvi(1, 2);</code> zaključuje <code>T</code> kao <code>int</code>.",
+      "<code>string s = Napravi();</code> zaključuje <code>T</code> iz leve strane.",
+      "<code>string s = Napravi&lt;string&gt;();</code> je ispravno.",
+      "<code>List&lt;A&gt; a = new List&lt;B&gt;();</code> je ispravno.",
+      "<code>IEnumerable&lt;A&gt; a = new List&lt;B&gt;();</code> je ispravno.",
+      "<code>List&lt;T&gt;</code> je kovarijantna generička klasa."
+    ],
+    "correct": [
+      0,
+      2,
+      4
+    ],
+    "explanation": "Inference koristi argumente poziva, ne proizvoljno očekivani povratni tip. List<T> je invariantna, dok je IEnumerable<out T> kovarijantan.",
+    "originalNumber": 29,
+    "lessonId": "objektni-model",
+    "sourceTestId": "objektni-model-1",
+    "tags": [
+      "generics",
+      "collections"
+    ]
+  },
+  {
+    "id": "objektni-model-q30",
+    "type": "choice",
+    "prompt": "<p>Koji tipovi mogu biti argument za klasu <code>Fabrika&lt;T&gt;</code>?</p><pre><code>class Baza { }\n\nclass Fabrika&lt;T&gt;\n    where T : Baza, IComparable&lt;T&gt;, new()\n{ }\n\nclass Dobro : Baza, IComparable&lt;Dobro&gt;\n{\n    public Dobro() { }\n    public int CompareTo(Dobro? drugi) =&gt; 0;\n}\n\nclass BezInterfejsa : Baza\n{\n    public BezInterfejsa() { }\n}\n\nclass Privatan : Baza, IComparable&lt;Privatan&gt;\n{\n    private Privatan() { }\n    public int CompareTo(Privatan? drugi) =&gt; 0;\n}\n\nabstract class Apstraktan : Baza, IComparable&lt;Apstraktan&gt;\n{\n    public Apstraktan() { }\n    public int CompareTo(Apstraktan? drugi) =&gt; 0;\n}\n\nclass Drugaciji : Baza, IComparable&lt;Baza&gt;\n{\n    public Drugaciji() { }\n    public int CompareTo(Baza? drugi) =&gt; 0;\n}</code></pre>",
+    "options": [
+      "<code>Fabrika&lt;Dobro&gt;</code>",
+      "<code>Fabrika&lt;BezInterfejsa&gt;</code>",
+      "<code>Fabrika&lt;Privatan&gt;</code>",
+      "<code>Fabrika&lt;Apstraktan&gt;</code>",
+      "<code>Fabrika&lt;Drugaciji&gt;</code>"
+    ],
+    "correct": [
+      0
+    ],
+    "explanation": "Argument mora naslediti Baza, implementirati baš IComparable<T>, biti konkretan i imati javni parameterless konstruktor. Samo Dobro zadovoljava sve uslove.",
+    "originalNumber": 30,
+    "lessonId": "objektni-model",
+    "sourceTestId": "objektni-model-1",
+    "tags": [
+      "inheritance",
+      "constructors",
+      "interfaces",
+      "abstract-classes",
+      "generics"
+    ]
+  },
+  {
+    "id": "objektni-model-q31",
+    "type": "short",
+    "prompt": "<p>Šta se ispisuje?</p><pre><code>class A\n{\n    protected readonly List&lt;int&gt; L = new();\n\n    public A() : this(3) { L.Add(1); }\n    public A(int x) { L.Add(x); }\n}\n\nclass B : A\n{\n    public B() : base() { L.Add(2); }\n}\n\nclass C : B\n{\n    public C() : base() { L.Add(4); }\n    public C(int x) : this() { L.Add(x); }\n\n    public void Ispisi() =&gt; Console.Write(string.Join(\",\", L));\n}\n\nnew C(5).Ispisi();</code></pre>",
+    "answers": [
+      "3,1,2,4,5"
+    ],
+    "displayAnswer": "3,1,2,4,5",
+    "explanation": "Lanac prolazi kroz A(3), A(), B(), C() i C(5), pa se redom dodaju 3, 1, 2, 4 i 5.",
+    "originalNumber": 31,
+    "lessonId": "objektni-model",
+    "sourceTestId": "objektni-model-1",
+    "tags": [
+      "accessibility",
+      "inheritance",
+      "constructors",
+      "generics",
+      "collections",
+      "program-output"
+    ]
+  },
+  {
+    "id": "objektni-model-q32",
+    "type": "short",
+    "prompt": "<p>Šta se ispisuje?</p><pre><code>class A\n{\n    public virtual string V() =&gt; \"A\";\n    public string H() =&gt; \"A\";\n}\n\nclass B : A\n{\n    public override string V() =&gt; \"B\";\n    public new string H() =&gt; \"B\";\n}\n\nclass C : B\n{\n    public override string V() =&gt; base.V() + \"C\";\n}\n\nA x = new C();\nConsole.Write(x.V() + x.H() + ((B)x).H());</code></pre>",
+    "answers": [
+      "bcab"
+    ],
+    "displayAnswer": "BCAB",
+    "explanation": "Virtualni V bira C.V, koji preko base poziva B.V i daje BC. x.H bira A.H, a nakon cast-a u B bira se skriveni B.H.",
+    "originalNumber": 32,
+    "lessonId": "objektni-model",
+    "sourceTestId": "objektni-model-1",
+    "tags": [
+      "inheritance",
+      "virtual-dispatch",
+      "method-hiding",
+      "casting",
+      "program-output"
+    ]
+  },
+  {
+    "id": "objektni-model-q33",
+    "type": "short",
+    "prompt": "<p>Šta se ispisuje?</p><pre><code>class A { }\nclass B : A { }\n\nA x = new A();\nB? y = x as B;\nConsole.Write(y == null ? \"N|\" : \"D|\");\n\ntry\n{\n    B z = (B)x;\n}\ncatch (Exception e)\n{\n    Console.Write(e.GetType().Name);\n}</code></pre>",
+    "answers": [
+      "n|invalidcastexception"
+    ],
+    "displayAnswer": "N|InvalidCastException",
+    "explanation": "Operator as vraća null, pa se prvo ispisuje N|. Eksplicitni cast istog objekta u B zatim baca InvalidCastException.",
+    "originalNumber": 33,
+    "lessonId": "objektni-model",
+    "sourceTestId": "objektni-model-1",
+    "tags": [
+      "casting",
+      "exceptions",
+      "nullable",
+      "program-output"
+    ]
+  },
+  {
+    "id": "objektni-model-q34",
+    "type": "short",
+    "prompt": "<p>Šta se ispisuje?</p><pre><code>partial class K\n{\n    private int x;\n\n    public K(int x)\n    {\n        this.x = x;\n    }\n\n    public int M() =&gt; x;\n}\n\npartial class K\n{\n    public K() : this(2) { }\n    public int M(int y = 0) =&gt; x + y;\n}\n\nK k = new K();\nConsole.Write(k.M());\nConsole.Write(k.M(3));</code></pre>",
+    "answers": [
+      "25"
+    ],
+    "displayAnswer": "25",
+    "explanation": "Partial delovi čine jednu klasu. Prazan konstruktor postavlja x na 2, M() vraća 2, a M(3) vraća 5.",
+    "originalNumber": 34,
+    "lessonId": "objektni-model",
+    "sourceTestId": "objektni-model-1",
+    "tags": [
+      "constructors",
+      "partial-classes",
+      "program-output"
+    ]
+  },
+  {
+    "id": "objektni-model-q35",
+    "type": "short",
+    "prompt": "<p>Šta se ispisuje?</p><pre><code>static T Podrazumevano&lt;T&gt;() =&gt; default!;\n\nint a = Podrazumevano&lt;int&gt;();\nbool b = Podrazumevano&lt;bool&gt;();\nstring? c = Podrazumevano&lt;string&gt;();\n\nConsole.Write($\"${a}|${b}|${c is null}\");</code></pre>",
+    "answers": [
+      "0|false|true"
+    ],
+    "displayAnswer": "0|False|True",
+    "explanation": "Podrazumevana vrednost int je 0, bool je false, a reference tipa string je null. Operator ! ne pravi objekat, već samo utišava nullable upozorenje.",
+    "originalNumber": 35,
+    "lessonId": "objektni-model",
+    "sourceTestId": "objektni-model-1",
+    "tags": [
+      "casting",
+      "nullable",
+      "value-vs-reference",
+      "program-output"
+    ]
+  },
+  {
+    "id": "objektni-model-q36",
+    "type": "short",
+    "prompt": "<p>Šta se ispisuje?</p><pre><code>interface IA { void M(); }\ninterface IB { void M(); }\n\nclass K : IA, IB\n{\n    void IA.M() =&gt; Console.Write(\"A\");\n    void IB.M() =&gt; Console.Write(\"B\");\n}\n\nK k = new K();\nIA a = k;\nIB b = k;\na.M();\nb.M();</code></pre>",
+    "answers": [
+      "ab"
+    ],
+    "displayAnswer": "AB",
+    "explanation": "Eksplicitne implementacije biraju se prema interfejsnoj referenci kroz koju je član pozvan.",
+    "originalNumber": 36,
+    "lessonId": "objektni-model",
+    "sourceTestId": "objektni-model-1",
+    "tags": [
+      "interfaces",
+      "program-output"
+    ]
+  },
+  {
+    "id": "objektni-model-q37",
+    "type": "short",
+    "prompt": "<p>Šta se ispisuje?</p><pre><code>class A\n{\n    public virtual string M(object x) =&gt; \"A\";\n}\n\nclass B : A\n{\n    public override string M(object x) =&gt; \"B\";\n    public string M(string x) =&gt; \"S\";\n}\n\nA a = new B();\nB b = (B)a;\nConsole.Write(a.M(\"x\") + b.M(\"x\"));</code></pre>",
+    "answers": [
+      "bs"
+    ],
+    "displayAnswer": "BS",
+    "explanation": "Poziv kroz A prvo bira M(object), a runtime zatim B override. Poziv kroz B pri overload resolution-u bira M(string).",
+    "originalNumber": 37,
+    "lessonId": "objektni-model",
+    "sourceTestId": "objektni-model-1",
+    "tags": [
+      "virtual-dispatch",
+      "overload-resolution",
+      "program-output",
+      "runtime"
+    ]
+  },
+  {
+    "id": "objektni-model-q38",
+    "type": "short",
+    "prompt": "<p>Šta se ispisuje?</p><pre><code>class A\n{\n    public virtual string M() =&gt; \"A\";\n}\n\nclass B : A\n{\n    public sealed override string M() =&gt; \"B\";\n}\n\nclass C : B\n{\n    public new string M() =&gt; \"C\";\n}\n\nA a = new C();\nB b = new C();\nC c = new C();\nConsole.Write(a.M() + b.M() + c.M());</code></pre>",
+    "answers": [
+      "bbc"
+    ],
+    "displayAnswer": "BBC",
+    "explanation": "Reference tipa A i B koriste zapečaćeni override B.M. Referenca tipa C bira novi skriveni član C.M.",
+    "originalNumber": 38,
+    "lessonId": "objektni-model",
+    "sourceTestId": "objektni-model-1",
+    "tags": [
+      "virtual-dispatch",
+      "method-hiding",
+      "program-output"
+    ]
+  },
+  {
+    "id": "objektni-model-q39",
+    "type": "short",
+    "prompt": "<p>Šta se ispisuje?</p><pre><code>class K\n{\n    static K()\n    {\n        Console.Write(\"S\");\n    }\n\n    public K()\n    {\n        Console.Write(\"I\");\n    }\n\n    public static void M()\n    {\n        Console.Write(\"M\");\n    }\n}\n\nConsole.Write(\"A\");\nK.M();\nnew K();\nK.M();</code></pre>",
+    "answers": [
+      "asmim"
+    ],
+    "displayAnswer": "ASMIM",
+    "explanation": "Posle A, prvi pristup tipu pokreće statički konstruktor S, pa metodu M. new izvršava samo instance konstruktor I, a poslednji poziv ispisuje M bez ponovnog statičkog konstruktora.",
+    "originalNumber": 39,
+    "lessonId": "objektni-model",
+    "sourceTestId": "objektni-model-1",
+    "tags": [
+      "constructors",
+      "static-initialization",
+      "program-output",
+      "runtime"
+    ]
+  },
+  {
+    "id": "objektni-model-q40",
+    "type": "short",
+    "prompt": "<p>Šta se ispisuje?</p><pre><code>interface I\n{\n    string M();\n}\n\nabstract class A : I\n{\n    protected A()\n    {\n        Console.Write(\"A\");\n    }\n\n    public abstract string M();\n}\n\nclass B : A\n{\n    public B()\n    {\n        Console.Write(\"B\");\n    }\n\n    public override string M() =&gt; \"M\";\n}\n\nI x = new B();\nConsole.Write(x.M());</code></pre>",
+    "answers": [
+      "abm"
+    ],
+    "displayAnswer": "ABM",
+    "explanation": "Pri konstrukciji se prvo izvršava protected konstruktor apstraktne baze, zatim konstruktor B. Poziv kroz interfejs bira B.M i dopisuje M.",
+    "originalNumber": 40,
+    "lessonId": "objektni-model",
+    "sourceTestId": "objektni-model-1",
+    "tags": [
+      "accessibility",
+      "virtual-dispatch",
+      "constructors",
+      "interfaces",
+      "abstract-classes",
+      "program-output",
+      "runtime"
+    ]
+  }
+]
