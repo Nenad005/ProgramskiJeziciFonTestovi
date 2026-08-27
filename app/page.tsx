@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { DashboardSummary } from "@/components/DashboardSummary";
-import { lessons, tests } from "@/content";
+import { lessons, questions, tests } from "@/content";
 
 export default function HomePage() {
   return (
@@ -16,7 +16,7 @@ export default function HomePage() {
           </div>
         </div>
         <div className="hero-mark" aria-hidden="true">
-          <span>80</span>
+          <span>{questions.length}</span>
           <small>pitanja u banci</small>
         </div>
       </section>
