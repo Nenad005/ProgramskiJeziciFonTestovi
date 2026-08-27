@@ -1,9 +1,18 @@
 import rawQuestions from "./questions.generated.json";
 import { lessons, tests } from "./catalog";
+import { apstraktniTipoviIEnkapsulacijaQuestions } from "./questions/apstraktni-tipovi-i-enkapsulacija";
 import { customQuestions } from "./questions/custom";
+import { otherLanguagesQuestions } from "./questions/drugi-jezici";
+import { linqQuestions } from "./questions/linq-i-biblioteka";
 import { questionBankSchema, type Question } from "./schema";
 
-export const questions = questionBankSchema.parse([...rawQuestions, ...customQuestions]);
+export const questions = questionBankSchema.parse([
+  ...rawQuestions,
+  ...customQuestions,
+  ...linqQuestions,
+  ...apstraktniTipoviIEnkapsulacijaQuestions,
+  ...otherLanguagesQuestions
+]);
 
 export const questionById = new Map<string, Question>(
   questions.map((question) => [question.id, question])

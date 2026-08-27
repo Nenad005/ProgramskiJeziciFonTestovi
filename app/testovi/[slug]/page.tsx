@@ -39,7 +39,7 @@ export default async function TestOverviewPage({ params }: PageProps) {
       </div>
       <section className="instruction-panel">
         <h2>Kako test radi</h2>
-        <p>Prvih 30 pitanja mogu imati jedan ili više tačnih odgovora. Poslednjih 10 zahtevaju tačan ispis ili ishod programa.</p>
+        <p>Prvih 30 pitanja mogu imati jedan ili više tačnih odgovora. Poslednjih 10 zahtevaju tačan ispis, ishod ili kratak pojam.</p>
         <p>Test se ocenjuje tek kada ga predaš. Posle predaje videćeš objašnjenje uz svako pitanje, a pogrešni odgovori ulaze u pametno ponavljanje.</p>
       </section>
     </main>
