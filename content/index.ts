@@ -4,12 +4,14 @@ import { apstraktniTipoviIEnkapsulacijaQuestions } from "./questions/apstraktni-
 import { customQuestions } from "./questions/custom";
 import { otherLanguagesQuestions } from "./questions/drugi-jezici";
 import { linqQuestions } from "./questions/linq-i-biblioteka";
+import { teorijaKompajleraQuestions } from "./questions/teorija-kompajlera";
 import { questionBankSchema, type Question } from "./schema";
 
 export const questions = questionBankSchema.parse([
   ...rawQuestions,
   ...customQuestions,
   ...linqQuestions,
+  ...teorijaKompajleraQuestions,
   ...apstraktniTipoviIEnkapsulacijaQuestions,
   ...otherLanguagesQuestions
 ]);

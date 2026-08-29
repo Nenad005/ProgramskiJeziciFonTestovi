@@ -20,6 +20,11 @@ export const lessons = [
     description: "LINQ operatori, indexer-i, extension metode, ref parametri i izuzeci."
   },
   {
+    id: "teorija-kompajlera",
+    title: "Teorija kompajlera",
+    description: "Faze kompajliranja, formalni jezici, međukod, optimizacija i izvršavanje programa."
+  },
+  {
     id: "apstraktni-tipovi-i-enkapsulacija",
     title: "Apstraktni tipovi i enkapsulacija",
     description: "ADT, ugovori, skrivanje informacija i enkapsulacija u različitim jezicima."
@@ -70,6 +75,16 @@ export const tests = [
     lessonIds: ["linq-i-biblioteka"],
     questionIds: Array.from({ length: 40 }, (_, index) =>
       `linq-i-biblioteka-q${String(index + 1).padStart(2, "0")}`
+    )
+  },
+  {
+    id: "teorija-kompajlera-1",
+    slug: "teorija-kompajlera",
+    title: "Teorija kompajlera",
+    description: "Kompletan pripremni test iz pete lekcije.",
+    lessonIds: ["teorija-kompajlera"],
+    questionIds: Array.from({ length: 40 }, (_, index) =>
+      `teorija-kompajlera-q${String(index + 1).padStart(2, "0")}`
     )
   },
   {
