@@ -33,6 +33,11 @@ export const lessons = [
     id: "drugi-jezici",
     title: "Drugi jezici",
     description: "C++, Java, Ada, Lisp, ML, Prolog, Haskell i pi-calculus."
+  },
+  {
+    id: "stari-rokovi",
+    title: "Stari rokovi",
+    description: "Izvorna pitanja sa rokova, uz jasno označene nečitljive ili nepotpune stavke."
   }
 ] as const;
 
@@ -106,5 +111,35 @@ export const tests = [
     questionIds: Array.from({ length: 40 }, (_, index) =>
       `drugi-jezici-q${String(index + 1).padStart(2, "0")}`
     )
+  },
+  {
+    id: "stari-rok-2022-07",
+    slug: "stari-rok-2022-07",
+    title: "Julski rok 2022",
+    description: "Originalni rok iz jula 2022.",
+    lessonIds: ["stari-rokovi"],
+    questionIds: Array.from({ length: 40 }, (_, index) =>
+      `stari-rok-2022-07-q${String(index + 1).padStart(2, "0")}`
+    )
+  },
+  {
+    id: "stari-rok-2023-04",
+    slug: "stari-rok-2023-04",
+    title: "Aprilski rok 2023",
+    description: "Originalni rok iz aprila 2023.",
+    lessonIds: ["stari-rokovi"],
+    questionIds: Array.from({ length: 40 }, (_, index) =>
+      `stari-rok-2023-04-q${String(index + 1).padStart(2, "0")}`
+    )
+  },
+  {
+    id: "stari-rok-2023-06",
+    slug: "stari-rok-2023-06",
+    title: "Junski rok 2023",
+    description: "Originalni rok iz juna 2023; pitanje 19 ne postoji u dostupnom izvoru.",
+    lessonIds: ["stari-rokovi"],
+    questionIds: Array.from({ length: 40 }, (_, index) => index + 1)
+      .filter((number) => number !== 19)
+      .map((number) => `stari-rok-2023-06-q${String(number).padStart(2, "0")}`)
   }
 ] as const;

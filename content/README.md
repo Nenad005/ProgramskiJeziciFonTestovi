@@ -5,6 +5,11 @@ Nova pitanja se dodaju u `questions/custom.ts` ili u dodatne fajlove u istom
 direktorijumu. Svako pitanje mora imati stabilan, globalno jedinstven `id`, jednu
 lekciju i najmanje jedan konceptualni tag.
 
+`old-exams.generated.json` sadrži pitanja iz Markdown transkripata u
+`../transcripts`. Posle izmene transkripata fajl se ponovo generiše komandom
+`npm run content:old-exams`. Nepotpuna pitanja ostaju označena kao neodrediva;
+uvoznik ne dopunjava sadržaj koji ne postoji u izvoru.
+
 Testovi su definisani u `catalog.ts` i samo referenciraju ID-jeve pitanja. Novo
 pitanje može zato pripadati većem broju budućih testova bez kopiranja sadržaja.
 

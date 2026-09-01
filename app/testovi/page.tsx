@@ -10,7 +10,7 @@ export default function TestsPage() {
       <div className="page-heading">
         <span className="eyebrow">Biblioteka znanja</span>
         <h1>Izaberi oblast</h1>
-        <p>Svaki test ima 40 pitanja i čuva nedovršene odgovore na ovom uređaju.</p>
+        <p>Testovi čuvaju nedovršene odgovore na ovom uređaju; broj i format pitanja prikazani su uz svaki test.</p>
       </div>
       <div className="catalog-list">
         {tests.map((test, index) => {

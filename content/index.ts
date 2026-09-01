@@ -1,4 +1,5 @@
 import rawQuestions from "./questions.generated.json";
+import oldExamQuestions from "./old-exams.generated.json";
 import { lessons, tests } from "./catalog";
 import { apstraktniTipoviIEnkapsulacijaQuestions } from "./questions/apstraktni-tipovi-i-enkapsulacija";
 import { customQuestions } from "./questions/custom";
@@ -13,7 +14,8 @@ export const questions = questionBankSchema.parse([
   ...linqQuestions,
   ...teorijaKompajleraQuestions,
   ...apstraktniTipoviIEnkapsulacijaQuestions,
-  ...otherLanguagesQuestions
+  ...otherLanguagesQuestions,
+  ...oldExamQuestions
 ]);
 
 export const questionById = new Map<string, Question>(

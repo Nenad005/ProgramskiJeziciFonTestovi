@@ -1,0 +1,2961 @@
+[
+  {
+    "id": "stari-rok-2022-07-q01",
+    "originalNumber": 1,
+    "lessonId": "stari-rokovi",
+    "sourceTestId": "stari-rok-2022-07",
+    "tags": [
+      "encapsulation",
+      "program-structure",
+      "stari-rok",
+      "2022-07"
+    ],
+    "prompt": "<p>Enkapsulaciona konstrukcija u programskom jeziku C je:</p>",
+    "explanation": "E. Header file",
+    "type": "choice",
+    "options": [
+      "Package",
+      "Klasa",
+      "Assembly",
+      "Namespace",
+      "Header file"
+    ],
+    "correct": [
+      4
+    ]
+  },
+  {
+    "id": "stari-rok-2022-07-q02",
+    "originalNumber": 2,
+    "lessonId": "stari-rokovi",
+    "sourceTestId": "stari-rok-2022-07",
+    "tags": [
+      "abstract-data-types",
+      "stari-rok",
+      "2022-07"
+    ],
+    "prompt": "<p>Karakteristika apstraktnog tipa podataka koja omogućava</p><p><strong>Ponuđeni odgovori iz izvora:</strong></p><ol><li>Skrivanje informacija</li><li>Parametrizacija</li><li>Polimorfizam</li><li>Nasleđivanje</li><li>Enkapsulacija</li></ol>",
+    "explanation": "Indeterminate; the sentence omits what the characteristic is said to enable.",
+    "type": "short",
+    "answers": [
+      "Neodredivo iz izvora",
+      "neodredivo",
+      "nije moguće odrediti"
+    ],
+    "displayAnswer": "Neodredivo iz izvora"
+  },
+  {
+    "id": "stari-rok-2022-07-q03",
+    "originalNumber": 3,
+    "lessonId": "stari-rokovi",
+    "sourceTestId": "stari-rok-2022-07",
+    "tags": [
+      "packages",
+      "access-control",
+      "stari-rok",
+      "2022-07"
+    ],
+    "prompt": "<p>Članice klase u Java paketu (package) koje nemaju modifikator pristupa vidljive su:</p>",
+    "explanation": "B, C, D, and E; default-access members are accessible throughout the same package, including their own class.",
+    "type": "choice",
+    "options": [
+      "za klase van tog paketa",
+      "za članice navedene klase u tom paketu",
+      "za druge klase u tom paketu",
+      "druge klase u tom paketu",
+      "za članice date klase"
+    ],
+    "correct": [
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  {
+    "id": "stari-rok-2022-07-q04",
+    "originalNumber": 4,
+    "lessonId": "stari-rokovi",
+    "sourceTestId": "stari-rok-2022-07",
+    "tags": [
+      "access-control",
+      "friendship",
+      "stari-rok",
+      "2022-07"
+    ],
+    "prompt": "<p>Entiteti označeni <code>private</code> ključnom reči u programskom jeziku C++ vidljivi su:</p>",
+    "explanation": "A, C, and D",
+    "type": "choice",
+    "options": [
+      "za članice date klase",
+      "za članice izvedene klase",
+      "za članice friend klase",
+      "za friend funkcije",
+      "za sve funkcije"
+    ],
+    "correct": [
+      0,
+      2,
+      3
+    ]
+  },
+  {
+    "id": "stari-rok-2022-07-q05",
+    "originalNumber": 5,
+    "lessonId": "stari-rokovi",
+    "sourceTestId": "stari-rok-2022-07",
+    "tags": [
+      "expressions",
+      "stari-rok",
+      "2022-07"
+    ],
+    "prompt": "<p>Koji, od navedenih, predstavljaju izraz (expression)</p><p><strong>Ponuđeni odgovori iz izvora:</strong></p><ol><li><code>(x &gt; 0) ? x</code></li><li><code>100</code></li><li><code>[uncertain: x??]</code></li><li><code>x&gt; (0)/[0]</code></li><li>Nijedan</li></ol>",
+    "explanation": "Indeterminate; B (100) is certainly an expression, while C is unreadable and the language is unspecified.",
+    "type": "short",
+    "answers": [
+      "Neodredivo iz izvora",
+      "neodredivo",
+      "nije moguće odrediti"
+    ],
+    "displayAnswer": "Neodredivo iz izvora"
+  },
+  {
+    "id": "stari-rok-2022-07-q06",
+    "originalNumber": 6,
+    "lessonId": "stari-rokovi",
+    "sourceTestId": "stari-rok-2022-07",
+    "tags": [
+      "lambda-expressions",
+      "stari-rok",
+      "2022-07"
+    ],
+    "prompt": "<p>Lambda izraz predstavlja:</p>",
+    "explanation": "D. funkciju",
+    "type": "choice",
+    "options": [
+      "Tip promenljive",
+      "Apstraktnu klasu",
+      "Selekciju",
+      "funkciju",
+      "Činjenicu"
+    ],
+    "correct": [
+      3
+    ]
+  },
+  {
+    "id": "stari-rok-2022-07-q07",
+    "originalNumber": 7,
+    "lessonId": "stari-rokovi",
+    "sourceTestId": "stari-rok-2022-07",
+    "tags": [
+      "function-application",
+      "stari-rok",
+      "2022-07"
+    ],
+    "prompt": "<p>Na koji način se u programskom jeziku LISP raspisuje primena funkcije <code>c</code> na parametre <code>a</code> i <code>b</code></p>",
+    "explanation": "F. (c a b)",
+    "type": "choice",
+    "options": [
+      "<code>a c b</code>",
+      "<code>[uncertain: blank or illegible choice]</code>",
+      "<code>a b c</code>",
+      "<code>c (a b)</code>",
+      "<code>c a b</code>",
+      "<code>(c a b)</code>"
+    ],
+    "correct": [
+      5
+    ]
+  },
+  {
+    "id": "stari-rok-2022-07-q08",
+    "originalNumber": 8,
+    "lessonId": "stari-rokovi",
+    "sourceTestId": "stari-rok-2022-07",
+    "tags": [
+      "programming-language-concepts",
+      "stari-rok",
+      "2022-07"
+    ],
+    "prompt": "<p>Koje koncepte podržava programski jezik ML:</p><p><strong>Ponuđeni odgovori iz izvora:</strong></p><ol><li>dodeljivanje</li><li>primena funkcije</li><li>unifikacija</li><li>promenljive</li></ol>",
+    "explanation": "B and D are unambiguous. A is also supported by Standard ML through mutable references, while C is type-inference machinery rather than user-level logic unification; without an ML dialect or meaning of \"supports,\" no unique complete set is established. Izvor je nepotpun ili nečitljiv, pa jednoznačno rešenje nije moguće utvrditi bez izmišljanja sadržaja.",
+    "type": "short",
+    "answers": [
+      "Neodredivo iz izvora",
+      "neodredivo",
+      "nije moguće odrediti"
+    ],
+    "displayAnswer": "Neodredivo iz izvora"
+  },
+  {
+    "id": "stari-rok-2022-07-q09",
+    "originalNumber": 9,
+    "lessonId": "stari-rokovi",
+    "sourceTestId": "stari-rok-2022-07",
+    "tags": [
+      "attribute-grammars",
+      "stari-rok",
+      "2022-07"
+    ],
+    "prompt": "<p>Koje su, od navedenih akcija ispravne ako je dato sledeće produkciono pravilo. Svim neterminalima pridruženi su atributi: <code>i</code> (nasleđeni) i <code>s</code> (sintetizovani)</p><p><code>L -&gt; T I</code></p>",
+    "explanation": "D. L.s = T.s",
+    "type": "choice",
+    "options": [
+      "<code>T.i = n; T.n</code>",
+      "<code>L.i = n - 7, n + 3</code>",
+      "<code>L.i = T.L.s</code>",
+      "<code>L.s = T.s</code>",
+      "<code>T.n = L.i.s</code>",
+      "<code>T.s = L.s</code>"
+    ],
+    "correct": [
+      3
+    ]
+  },
+  {
+    "id": "stari-rok-2022-07-q10",
+    "originalNumber": 10,
+    "lessonId": "stari-rokovi",
+    "sourceTestId": "stari-rok-2022-07",
+    "tags": [
+      "compilation",
+      "symbol-tables",
+      "stari-rok",
+      "2022-07"
+    ],
+    "prompt": "<p>U kojoj fazi procesa kompilacije se generiše tablica simbola:</p>",
+    "explanation": "B. Leksička analiza",
+    "type": "choice",
+    "options": [
+      "Generisanje koda",
+      "Leksička analiza",
+      "Semantička analiza",
+      "Sintaksna analiza",
+      "Optimizacija koda"
+    ],
+    "correct": [
+      1
+    ]
+  },
+  {
+    "id": "stari-rok-2022-07-q11",
+    "originalNumber": 11,
+    "lessonId": "stari-rokovi",
+    "sourceTestId": "stari-rok-2022-07",
+    "tags": [
+      "cil",
+      "compilation",
+      "stari-rok",
+      "2022-07"
+    ],
+    "prompt": "<p>CIL (Common Intermediate Language) kod se:</p>",
+    "explanation": "A. kompajlira",
+    "type": "choice",
+    "options": [
+      "kompajlira",
+      "interpretira",
+      "direktno izvršava"
+    ],
+    "correct": [
+      0
+    ]
+  },
+  {
+    "id": "stari-rok-2022-07-q12",
+    "originalNumber": 12,
+    "lessonId": "stari-rokovi",
+    "sourceTestId": "stari-rok-2022-07",
+    "tags": [
+      "l-attributed-grammars",
+      "stari-rok",
+      "2022-07"
+    ],
+    "prompt": "<p>Koje su, od navedenih, karakteristike L-atributske gramatike:</p>",
+    "explanation": "B, C, and D",
+    "type": "choice",
+    "options": [
+      "Atributi se evaluiraju u postorder redosledu obilaska parsnoga stabla",
+      "Koriste se nasleđeni atributi",
+      "Koriste se sintetizovani atributi",
+      "Semantička analiza može da se izvršava za vreme parsiranja"
+    ],
+    "correct": [
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "id": "stari-rok-2022-07-q13",
+    "originalNumber": 13,
+    "lessonId": "stari-rokovi",
+    "sourceTestId": "stari-rok-2022-07",
+    "tags": [
+      "lr-parsing",
+      "stari-rok",
+      "2022-07"
+    ],
+    "prompt": "<p>Koje su, od navedenih, karakteristike LR parsera</p>",
+    "explanation": "A and B",
+    "type": "choice",
+    "options": [
+      "Ulazni niz tokena procesira se sleva na desno",
+      "Koristi postupak redukcije koji je inverzan postupku desne...",
+      "Podrazumeva samo S-atributske gramatike",
+      "Grade parsno stablo od korena prema listovima"
+    ],
+    "correct": [
+      0,
+      1
+    ]
+  },
+  {
+    "id": "stari-rok-2022-07-q14",
+    "originalNumber": 14,
+    "lessonId": "stari-rokovi",
+    "sourceTestId": "stari-rok-2022-07",
+    "tags": [
+      "regular-expressions",
+      "stari-rok",
+      "2022-07"
+    ],
+    "prompt": "<p>Koja slova se se nađu u kućicama, nakon rešavanja sledećih ukrštenih reči:</p><p>Rešenja (tj. reči od 2 slova koje su u skladu sa zadatim regularnim izrazima) se upisuju u pravcu koji je naznačen strelicama.</p><p>Printed figure: a small crossword-like diagram with arrows and regular-expression labels; the labels are <code>[uncertain: A/B]OV(e)*</code>, <code>[uncertain: X(Y|A|Y)*]</code>, <code>N-(M|R)*</code>, and <code>[uncertain: (M+|P)*]</code>.</p><p><strong>Ponuđeni odgovori iz izvora:</strong></p><ol><li>A</li><li>L</li><li>M</li><li>N</li><li>R</li><li>Y</li></ol>",
+    "explanation": "Indeterminate; the diagram and multiple regular-expression labels are unreadable.",
+    "type": "short",
+    "answers": [
+      "Neodredivo iz izvora",
+      "neodredivo",
+      "nije moguće odrediti"
+    ],
+    "displayAnswer": "Neodredivo iz izvora"
+  },
+  {
+    "id": "stari-rok-2022-07-q15",
+    "originalNumber": 15,
+    "lessonId": "stari-rokovi",
+    "sourceTestId": "stari-rok-2022-07",
+    "tags": [
+      "context-free-grammars",
+      "generated-strings",
+      "stari-rok",
+      "2022-07"
+    ],
+    "prompt": "<p>Koji, od navedenih, stringova NISU definisani pomoću date gramatike</p><pre><code class=\"language-text\">A -&gt; BxCy\nB -&gt; BD | D\nC -&gt; B | ByB\nD -&gt; a | b | c | d</code></pre>",
+    "explanation": "A, C, D, E, and F are not generated; B is the only generated string.",
+    "type": "choice",
+    "options": [
+      "<code>eaybbxccydd</code>",
+      "<code>aaxby</code>",
+      "<code>aaaxbbyzydd</code>",
+      "<code>baxcdyd</code>",
+      "<code>abdxbydaa</code>",
+      "<code>axeya</code>"
+    ],
+    "correct": [
+      0,
+      2,
+      3,
+      4,
+      5
+    ]
+  },
+  {
+    "id": "stari-rok-2022-07-q16",
+    "originalNumber": 16,
+    "lessonId": "stari-rokovi",
+    "sourceTestId": "stari-rok-2022-07",
+    "tags": [
+      "generics",
+      "constraints",
+      "value-types",
+      "stari-rok",
+      "2022-07"
+    ],
+    "prompt": "<details><summary>Zajedničke deklaracije sa roka</summary><pre><code class=\"language-csharp\">public enum Tip\n{ Biznis, Privatni}\n\npublic struct Paket\n{\n    public string naziv;\n    public int poruka;\n    public byte minuta;\n    public int kB;\n}\n\npublic class Ugovor {\n    public static string broj;\n    public Tip tip;\n    public Paket paket;\n    public double cena;\n}</code></pre></details><p>Koji tip bi se mogao navesti prilikom instanciranja klase K?</p><pre><code class=\"language-csharp\">class Skup&lt;Neki Tip&gt; where NekiTip : struct { List&lt;NekiTip&gt; elementi = new (list&lt;NekiTip&gt; () ; }</code></pre>",
+    "explanation": "The exact printed declaration does not compile. In a neutral syntax/casing repair, B (Tip), C (Paket), E (bool), and F (char) satisfy where NekiTip : struct.",
+    "type": "choice",
+    "options": [
+      "Ugovor",
+      "Tip",
+      "Paket",
+      "string",
+      "bool",
+      "char"
+    ],
+    "correct": [
+      1,
+      2,
+      4,
+      5
+    ]
+  },
+  {
+    "id": "stari-rok-2022-07-q17",
+    "originalNumber": 17,
+    "lessonId": "stari-rokovi",
+    "sourceTestId": "stari-rok-2022-07",
+    "tags": [
+      "assemblies",
+      "inheritance",
+      "access-control",
+      "stari-rok",
+      "2022-07"
+    ],
+    "prompt": "<p>Koje od navedenih naredbi NIJE ispravno napisati u nastavku Main metode?</p><p>Prvi assembly, namespace N1:</p><pre><code class=\"language-csharp\">public class X\n{\n    protected internal int A;\n    private protected int B;\n    void Metoda () {}\n}</code></pre><p>Drugi assembly (referenca prvi), using N1, namespace N2:</p><pre><code class=\"language-csharp\">class Y : X\n{ int c; }</code></pre><p>Treći assembly (referencira prvi i drugi), using N1; using N2:</p><pre><code class=\"language-csharp\">class Z : Y\n{\n    static void Main()\n    {\n        Z z = new Z();\n    }\n}</code></pre>",
+    "explanation": "The printed setup already fails because internal Y is used as a base class in a different assembly. A also cannot name Y there, while C, D, and E are independently invalid; B's conversion is valid under a neutral repair that makes the inheritance chain accessible.",
+    "type": "choice",
+    "options": [
+      "<code>Y y = new Y ( ) ;</code>",
+      "<code>X x = new Z() ;</code>",
+      "<code>Z.Metoda();</code>",
+      "<code>Console Write ( z. b);</code>",
+      "<code>Console Write ( Z.c);</code>"
+    ],
+    "correct": [
+      0,
+      2,
+      3,
+      4
+    ]
+  },
+  {
+    "id": "stari-rok-2022-07-q18",
+    "originalNumber": 18,
+    "lessonId": "stari-rokovi",
+    "sourceTestId": "stari-rok-2022-07",
+    "tags": [
+      "protected-access",
+      "assemblies",
+      "inheritance",
+      "stari-rok",
+      "2022-07"
+    ],
+    "prompt": "<p>Iz kojih klasa bi se moglo pristupiti polju <code>broj</code>?</p><p>Prvi assembly, namespace N1:</p><pre><code class=\"language-csharp\">public class K\n{ protected int broj; }\npublic class A { class D: H? { } }\npublic class B : K {}</code></pre><p>Drugi assembly (ref. prvi), using N1; namespace N2:</p><pre><code class=\"language-csharp\">class C { }</code></pre><p>Treći assembly (referencira prvi i drugi), using N2; namespace N3:</p><pre><code class=\"language-csharp\">class E: B { }\nclass F: D { }</code></pre><p><strong>Ponuđeni odgovori iz izvora:</strong></p><ol><li>A</li><li>B</li><li>E</li></ol>",
+    "explanation": "Indeterminate; H?, nested D, and cross-assembly accessibility cannot be reconstructed reliably.",
+    "type": "short",
+    "answers": [
+      "Neodredivo iz izvora",
+      "neodredivo",
+      "nije moguće odrediti"
+    ],
+    "displayAnswer": "Neodredivo iz izvora"
+  },
+  {
+    "id": "stari-rok-2022-07-q19",
+    "originalNumber": 19,
+    "lessonId": "stari-rokovi",
+    "sourceTestId": "stari-rok-2022-07",
+    "tags": [
+      "member-calls",
+      "inheritance",
+      "stari-rok",
+      "2022-07"
+    ],
+    "prompt": "<p>Koje od navedenih poziva bi bilo ispravno navesti u Metodi 4?</p><pre><code class=\"language-csharp\">public class X\n{\npublic void Metoda1() {Console.Write(&quot;X&quot;); }\npublic static void Metoda2() {Console.Write(&quot;X&quot;); }\n}\npublic class Y : X { public void Metoda3() { Console.Write (&quot;Y&quot;); } }\npublic class Z : Y { public void Metoda4(){ Console.Write (&quot;Y&quot;); } }</code></pre>",
+    "explanation": "A, B, D, E, and F",
+    "type": "choice",
+    "options": [
+      "<code>Metoda1();</code>",
+      "<code>this.Metoda1();</code>",
+      "<code>this.Metoda1</code>",
+      "<code>Metoda2();</code>",
+      "<code>base.Metoda3();</code>",
+      "<code>Metoda4();</code>"
+    ],
+    "correct": [
+      0,
+      1,
+      3,
+      4,
+      5
+    ]
+  },
+  {
+    "id": "stari-rok-2022-07-q20",
+    "originalNumber": 20,
+    "lessonId": "stari-rokovi",
+    "sourceTestId": "stari-rok-2022-07",
+    "tags": [
+      "namespaces",
+      "name-resolution",
+      "stari-rok",
+      "2022-07"
+    ],
+    "prompt": "<p>Šta se ispisuje na ekranu (celokupan kod se nalazi u istom assembly-ju)?</p><pre><code class=\"language-csharp\">using System; using prvi;\nNamespace prvi;\n{\nclass K { public void M()=&gt;Console.Write(&quot;1&quot;);\nnamespace drugi\n{ class K { public void M()=&gt;Console.Write(&quot;2&quot;)\n}\n...\nprvi.K k1 = new prvi.K (); k1.M();\nprvi.drugi.K k2 = new prvi.drugi.K () ; k2.M();\nK k3 = new K() ; k3.M();</code></pre>",
+    "explanation": "D. Prijavice se greska",
+    "type": "choice",
+    "options": [
+      "122",
+      "221",
+      "Neka druga vrednost",
+      "Prijavice se greska"
+    ],
+    "correct": [
+      3
+    ]
+  },
+  {
+    "id": "stari-rok-2022-07-q21",
+    "originalNumber": 21,
+    "lessonId": "stari-rokovi",
+    "sourceTestId": "stari-rok-2022-07",
+    "tags": [
+      "inheritance",
+      "assignment",
+      "casting",
+      "stari-rok",
+      "2022-07"
+    ],
+    "prompt": "<p>Koje su od navedenih naredbi ispravne?</p><pre><code class=\"language-csharp\">class X { }\nclass Y : X { }\nclass Z : Y { }</code></pre>",
+    "explanation": "A, C, D, E, and F compile; E throws InvalidCastException when executed.",
+    "type": "choice",
+    "options": [
+      "<code>X a = new Y ( );</code>",
+      "<code>Y b = new X ( );</code>",
+      "<code>Z c1 = new Z ( ); X c2 = c1;</code>",
+      "<code>Y d1 = new Z ( ); X d2 = (X)d1;</code>",
+      "<code>X e1 = new X ( ); Y e2 = (Y)e1;</code>",
+      "<code>X f1 = new X ( ); Y f2 = f1 as Y;</code>"
+    ],
+    "correct": [
+      0,
+      2,
+      3,
+      4,
+      5
+    ]
+  },
+  {
+    "id": "stari-rok-2022-07-q22",
+    "originalNumber": 22,
+    "lessonId": "stari-rokovi",
+    "sourceTestId": "stari-rok-2022-07",
+    "tags": [
+      "constructors",
+      "inheritance",
+      "stari-rok",
+      "2022-07"
+    ],
+    "prompt": "<p>Koja je od navedenih klasa ispravna?</p><pre><code class=\"language-csharp\">class X { int x; public X(int i) {x=i;} }</code></pre><p><strong>Ponuđeni odgovori iz izvora:</strong></p><ol><li><code>class A : X {int a;}</code></li><li><code>class B{int b; public B(): base() {b=5;}.}</code></li><li><code>class C : B {int c; public C(){b=5;}}</code></li><li><code>class D : B {int d; public D(int y){d=y}}</code></li><li><code>class E : D {int e; public E (int z) : base(z){e=z;}}</code></li></ol>",
+    "explanation": "None; no listed class is valid in the literal combined source.",
+    "type": "short",
+    "answers": [
+      "Nijedna ponuđena klasa",
+      "nijedna",
+      "nijedan",
+      "none"
+    ],
+    "displayAnswer": "Nijedna ponuđena klasa"
+  },
+  {
+    "id": "stari-rok-2022-07-q23",
+    "originalNumber": 23,
+    "lessonId": "stari-rokovi",
+    "sourceTestId": "stari-rok-2022-07",
+    "tags": [
+      "abstract-classes",
+      "interfaces",
+      "sealed-classes",
+      "stari-rok",
+      "2022-07"
+    ],
+    "prompt": "<p>Koja od navedenih naredbi NIJE ispravna?</p><p><code>interface I { void Metoda(); }</code></p>",
+    "explanation": "C and F are invalid.",
+    "type": "choice",
+    "options": [
+      "<code>abstract class A { public int x=&gt;1;}</code>",
+      "<code>abstract class B { public abstract int M{get;}}</code>",
+      "<code>abstract class C : B, I{ public void Metoda();}</code>",
+      "<code>class D : C{public override int M {get=&gt;1;}}</code>",
+      "<code>sealed class E : D { public int x=&gt;1;}</code>",
+      "<code>class F : E{public int i;}</code>"
+    ],
+    "correct": [
+      2,
+      5
+    ]
+  },
+  {
+    "id": "stari-rok-2022-07-q24",
+    "originalNumber": 24,
+    "lessonId": "stari-rokovi",
+    "sourceTestId": "stari-rok-2022-07",
+    "tags": [
+      "interfaces",
+      "abstract-classes",
+      "instantiation",
+      "stari-rok",
+      "2022-07"
+    ],
+    "prompt": "<p>Koja je od navedenih naredbi ispravna?</p><pre><code class=\"language-csharp\">interface A { void M( ); } abstract class B:A{}</code></pre><p><strong>Ponuđeni odgovori iz izvora:</strong></p><ol><li><code>A a = new C();</code></li><li><code>B b = new D();</code></li><li><code>D c = new C();</code></li><li><code>dynamic d = new A();</code></li></ol>",
+    "explanation": "None as printed; C and D are undeclared, and an interface cannot be instantiated.",
+    "type": "short",
+    "answers": [
+      "Nijedna ponuđena naredba",
+      "nijedna",
+      "nijedan",
+      "none"
+    ],
+    "displayAnswer": "Nijedna ponuđena naredba"
+  },
+  {
+    "id": "stari-rok-2022-07-q25",
+    "originalNumber": 25,
+    "lessonId": "stari-rokovi",
+    "sourceTestId": "stari-rok-2022-07",
+    "tags": [
+      "partial-classes",
+      "members",
+      "overloads",
+      "stari-rok",
+      "2022-07"
+    ],
+    "prompt": "<p>Ako je definisana sledeća parcijalna klasa:</p><pre><code class=\"language-csharp\">partial class K\n{\n    public int broj;\n    public K(int b) {broj = b;}\n    public virtual int M() {return broj;}\n}</code></pre><p>koje od navedenih parcijalnih klasa bi se mogle takođe definisati?</p>",
+    "explanation": "F only",
+    "type": "choice",
+    "options": [
+      "<code>partial class K { public K() : base() }</code>",
+      "<code>partial class K { string broj;}</code>",
+      "<code>partial class K { static int M() =&gt; 0 }</code>",
+      "<code>partial class K { byte M () {return 1;} }</code>",
+      "<code>public partial class x {public int M (int x = 0) {broj=x; return 0 }}</code>",
+      "<code>partial class K{void M1 (int broj) {broj += broj;}}</code>"
+    ],
+    "correct": [
+      5
+    ]
+  },
+  {
+    "id": "stari-rok-2022-07-q26",
+    "originalNumber": 26,
+    "lessonId": "stari-rokovi",
+    "sourceTestId": "stari-rok-2022-07",
+    "tags": [
+      "delegates",
+      "method-signatures",
+      "accessibility",
+      "stari-rok",
+      "2022-07"
+    ],
+    "prompt": "<p>Koje od metoda se NE mogu pridružiti delegatu u Main metodi?</p><pre><code class=\"language-csharp\">Public delegate int. Delegat (int a, short b);\nPublic class Klasa\n{\nPublic int. A (ref int a, short b) =&gt; a + b;\nInt B(int a, short b) =&gt; a + b;\nPublic static int C(int a, short b) =&gt; a+b;\n}\nPublic class Program ; Klasa\n{\nPublic int D(int a, short b) =&gt; a+b;\nPublic static int E(int a, short b) =&gt; a+b;\nPublic int F(short b, int a) =&gt; a+b;\nPublic static void Main()\n{\nProgram p = new Program();\nDelegat dg=\n}\n}</code></pre>",
+    "explanation": "The exact printed program does not compile. Under a neutral punctuation/capitalization repair, A, B, and F cannot be assigned; C, D, and E can.",
+    "type": "choice",
+    "options": [
+      "<code>p.A</code>",
+      "<code>P.B</code>",
+      "<code>C</code>",
+      "<code>p.D</code>",
+      "<code>E</code>",
+      "<code>p.F</code>"
+    ],
+    "correct": [
+      0,
+      1,
+      5
+    ]
+  },
+  {
+    "id": "stari-rok-2022-07-q27",
+    "originalNumber": 27,
+    "lessonId": "stari-rokovi",
+    "sourceTestId": "stari-rok-2022-07",
+    "tags": [
+      "currying",
+      "partial-application",
+      "arithmetic",
+      "stari-rok",
+      "2022-07"
+    ],
+    "prompt": "<p>Šta je rezultat izvršavanja sledećeg koda u Haskellu?</p><pre><code class=\"language-haskell\">f a b c d e f = a - b * c + d * e - f\nf1 = f 1\nf2 = f1 2 3\nf3 = f2 4\nf3 5 6</code></pre>",
+    "explanation": "C. 9",
+    "type": "choice",
+    "options": [
+      "-2",
+      "-6",
+      "9",
+      "15",
+      "Neka druga vrednost"
+    ],
+    "correct": [
+      2
+    ]
+  },
+  {
+    "id": "stari-rok-2022-07-q28",
+    "originalNumber": 28,
+    "lessonId": "stari-rokovi",
+    "sourceTestId": "stari-rok-2022-07",
+    "tags": [
+      "polymorphism",
+      "virtual-dispatch",
+      "lists",
+      "stari-rok",
+      "2022-07"
+    ],
+    "prompt": "<p>Šta se ispisuje na ekranu?</p><pre><code class=\"language-csharp\">class A\n{ public virtual void M1() =&gt; Console.Write(1); }\nclass B:A\n{ public override void M1() =&gt; Console.Write(2); }\nClass C : B ()\n\nList&lt;A&gt; 1 = new List&lt;A&gt;();\n1.Add { new C() }; 1.Add {new B() };\nforeach (A x in 1) x.M1();</code></pre><p><strong>Ponuđeni odgovori iz izvora:</strong></p><ol><li>111</li><li>222</li><li>121</li><li>122</li><li>Neka druga vrednost</li></ol>",
+    "explanation": "Compile error; there is no printed output.",
+    "type": "short",
+    "answers": [
+      "Greška pri kompilaciji",
+      "compile error",
+      "compilation error",
+      "kod nije ispravan"
+    ],
+    "displayAnswer": "Greška pri kompilaciji"
+  },
+  {
+    "id": "stari-rok-2022-07-q29",
+    "originalNumber": 29,
+    "lessonId": "stari-rokovi",
+    "sourceTestId": "stari-rok-2022-07",
+    "tags": [
+      "linq",
+      "predicates",
+      "counting",
+      "stari-rok",
+      "2022-07"
+    ],
+    "prompt": "<p>Koji od, navedenih izraza, vraća broj parnih brojeva u listi brojeva?</p>",
+    "explanation": "A, C, and D",
+    "type": "choice",
+    "options": [
+      "<code>int a = lista.Count (x =&gt; x%2==0);</code>",
+      "<code>int b = lista.Select(x =&gt; x%2==0).Count();</code>",
+      "<code>int c = lista.Where(x =&gt; x%2 == 0).Count();</code>",
+      "<code>int d = lista.FindAll (x =&gt; x%2==0).Count();</code>",
+      "<code>int e = lista.All (x =&gt; x%2==0).Count();</code>",
+      "<code>int f = lista.Any(x =&gt; x%2==0).Count();</code>"
+    ],
+    "correct": [
+      0,
+      2,
+      3
+    ]
+  },
+  {
+    "id": "stari-rok-2022-07-q30",
+    "originalNumber": 30,
+    "lessonId": "stari-rokovi",
+    "sourceTestId": "stari-rok-2022-07",
+    "tags": [
+      "delegates",
+      "func-signatures",
+      "stari-rok",
+      "2022-07"
+    ],
+    "prompt": "<p>Koju od navedenih metoda je moguće pridružiti definisanom .... <code>Func&lt;bool, int&gt; F</code>?</p>",
+    "explanation": "D. static int D(bool x) => 0;",
+    "type": "choice",
+    "options": [
+      "<code>static void A(bool x, int y) =&gt; Console.Write(s);</code>",
+      "<code>static void B(int x, bool y) =&gt; Console.Write(s);</code>",
+      "<code>static bool C(int x) =&gt; x % 2 == 0;</code>",
+      "<code>static int D(bool x) =&gt; 0;</code>",
+      "Nijednu"
+    ],
+    "correct": [
+      3
+    ]
+  },
+  {
+    "id": "stari-rok-2022-07-q31",
+    "originalNumber": 31,
+    "lessonId": "stari-rokovi",
+    "sourceTestId": "stari-rok-2022-07",
+    "tags": [
+      "linq",
+      "anonymous-types",
+      "integer-division",
+      "stari-rok",
+      "2022-07"
+    ],
+    "prompt": "<p>Šta se ispisuje na ekranu?</p><pre><code class=\"language-csharp\">int[] niz = {92, 48, 101, 37, 58};\nvar a = niz.Select (x =&gt; new (P = x, O = x/101);\n           .Last (x =&gt; x.P &lt;60);\nConsole.Write($&quot;{a.O}:{a.P}&quot;);</code></pre>",
+    "explanation": "Compile error; the printed code does not output 0:58.",
+    "type": "short",
+    "answers": [
+      "Greška pri kompilaciji",
+      "compile error",
+      "compilation error",
+      "kod nije ispravan"
+    ],
+    "displayAnswer": "Greška pri kompilaciji"
+  },
+  {
+    "id": "stari-rok-2022-07-q32",
+    "originalNumber": 32,
+    "lessonId": "stari-rokovi",
+    "sourceTestId": "stari-rok-2022-07",
+    "tags": [
+      "linq",
+      "distinct",
+      "average",
+      "stari-rok",
+      "2022-07"
+    ],
+    "prompt": "<p>Šta se ispisuje na ekranu?</p><pre><code class=\"language-csharp\">int[] niz = {1, 2, 3, 4, 5, 2, 3};\nvar v = niz.Select(x=&gt;x+x).Distinct().Average();\nConsole.Write(v);</code></pre>",
+    "explanation": "6",
+    "type": "short",
+    "answers": [
+      "6"
+    ],
+    "displayAnswer": "6"
+  },
+  {
+    "id": "stari-rok-2022-07-q33",
+    "originalNumber": 33,
+    "lessonId": "stari-rokovi",
+    "sourceTestId": "stari-rok-2022-07",
+    "tags": [
+      "delegates",
+      "lambdas",
+      "runtime-type-tests",
+      "stari-rok",
+      "2022-07"
+    ],
+    "prompt": "<p>Koja je vrednost promenljive <code>b</code> nakon izvršavanja sledećeg koda?</p><pre><code class=\"language-csharp\">class Osoba()\nclass Student : Osoba()\n\nclass Program\n{\nstatic int M(int x, int y) =&gt; x * y;\nstatic int Primeni(int y, Func&lt;int, int&gt; f) =&gt; f(y);\nstatic Func&lt;int, int&gt; F1(int z) =&gt; x =&gt; M(x,z);\nstatic Func&lt;int, int&gt; F2() =&gt; x =&gt; x * x;\nstatic Func&lt;int, int&gt; Odredi(Osoba o) =&gt; (o is Student) ?F1(20) :F2();\n    static void Main(){\n        Osoba a = new Student();\n        var b = Primeni(10, Odredi(a));\n    }\n}</code></pre>",
+    "explanation": "Compile error; b is never assigned in the printed program.",
+    "type": "short",
+    "answers": [
+      "Greška pri kompilaciji",
+      "compile error",
+      "compilation error",
+      "kod nije ispravan"
+    ],
+    "displayAnswer": "Greška pri kompilaciji"
+  },
+  {
+    "id": "stari-rok-2022-07-q34",
+    "originalNumber": 34,
+    "lessonId": "stari-rokovi",
+    "sourceTestId": "stari-rok-2022-07",
+    "tags": [
+      "inheritance",
+      "overriding",
+      "hiding",
+      "arrays",
+      "stari-rok",
+      "2022-07"
+    ],
+    "prompt": "<p>Šta se ispisuje na ekranu?</p><pre><code class=\"language-csharp\">public class A\n{\n    public static int[] niz = new int [5];\n    public virtual void Prva (int i){niz[i]+=5;}\n    public void Druga (int[] niz){niz[3]=4;}\n}\npublic class B : A { }\npublic class C : B\n{\n    public override void Prva() [uncertain: ...]\n    public new void Druga() [uncertain: ...]\n}\npublic class D : C\n{ public override void Prva() [uncertain: ...] }\n\nA x = new C{}; x.Prva(); x.Druga();\nB y = new B{}; y.Prva(); y.Druga();\nC z = new D{}; z.Prva(); z.Druga();\nforeach(int broj is A.niz) Console.Write(broj);</code></pre>",
+    "explanation": "Indeterminate; essential method signatures/bodies and calls are obscured or malformed.",
+    "type": "short",
+    "answers": [
+      "Neodredivo iz izvora",
+      "neodredivo",
+      "nije moguće odrediti"
+    ],
+    "displayAnswer": "Neodredivo iz izvora"
+  },
+  {
+    "id": "stari-rok-2022-07-q35",
+    "originalNumber": 35,
+    "lessonId": "stari-rokovi",
+    "sourceTestId": "stari-rok-2022-07",
+    "tags": [
+      "constructors",
+      "constructor-chaining",
+      "arrays",
+      "stari-rok",
+      "2022-07"
+    ],
+    "prompt": "<p>Šta se ispisuje na ekranu?</p><pre><code class=\"language-csharp\">public class A\n{\n    public int() niz = new int[6];\n    public A () : this(7) { niz [5] = 1; }\n    public A (int i) : base() { niz[4] = 1; }\n}\npublic class B : A { }\npublic class C : B\n{\npublic class C() : this(8) { niz[3] = 2; }\npublic C (int i) {niz[2] = i;}\n}\npublic class D : C\n{\npublic class D(int i) : this() {niz[2] = i;}\npublic class D() {niz[0] = 3;}\n}\nD d = new D(3);\nforeach (int broj in d.niz) Console.Write(broj);\nOdgovor napisati na obrascu za odgovore</code></pre>",
+    "explanation": "Compile error; the printed program has no output.",
+    "type": "short",
+    "answers": [
+      "Greška pri kompilaciji",
+      "compile error",
+      "compilation error",
+      "kod nije ispravan"
+    ],
+    "displayAnswer": "Greška pri kompilaciji"
+  },
+  {
+    "id": "stari-rok-2022-07-q36",
+    "originalNumber": 36,
+    "lessonId": "stari-rokovi",
+    "sourceTestId": "stari-rok-2022-07",
+    "tags": [
+      "events",
+      "delegates",
+      "state-changes",
+      "stari-rok",
+      "2022-07"
+    ],
+    "prompt": "<p>Koja je vrednost promenljive <code>bilans</code> nakon izvršavanja sledećeg koda?</p><pre><code class=\"language-csharp\">public delegate void Obrada(double suma)\npublic class Racun\n{\nstring broj double sranje;\npublic Racun(string b, double s) {broj = b, stanje =s;}\npublic event Obrada Dogodjaj;\npublic void Promeni(double iznos)\n{\nif (stanje + iznos &lt; 0) return;\nStanje += iznos;\nif(Dogadjaj != null) Dogadjaj(iznos);\n}\n}\npublic class Banka\n{\nstatic double bilans = 725;\nstatic void Azuriraj (double i)=&gt; bilans+=i;\nstatic void Main()\n{\nRacun r1= new Racun(&quot;111&quot;, 0);\nRacun r2=new Racun(&quot;222&quot;, 0);\nr1.Promeni(100);\nr1.Dogadjaj += Azuriraj;\nr2.Promeni(200);\nr1.(-175); r1.Promeni(-350);\n}</code></pre>",
+    "explanation": "Compile error; no bilans value results from the printed code.",
+    "type": "short",
+    "answers": [
+      "Greška pri kompilaciji",
+      "compile error",
+      "compilation error",
+      "kod nije ispravan"
+    ],
+    "displayAnswer": "Greška pri kompilaciji"
+  },
+  {
+    "id": "stari-rok-2022-07-q37",
+    "originalNumber": 37,
+    "lessonId": "stari-rokovi",
+    "sourceTestId": "stari-rok-2022-07",
+    "tags": [
+      "multicast-delegates",
+      "ref-parameters",
+      "loops",
+      "stari-rok",
+      "2022-07"
+    ],
+    "prompt": "<p>Šta se ispisuje na ekranu?</p><pre><code class=\"language-csharp\">public delegate void Del(int a, ref int b)\npublic class K\n{\n    int k = 10;\n    public void A(int e, ref int f)\n    { e +=2; f += 3; k += e, k += f;}\n    public void B(int e, ref int f)\n    {e -= 2; f -=3;}\n    public void C(int e, ref int f)\n    {e *= 2; f *= 3;}\n    static void Main()\n    {\n        K x = new K(); K y = new K (1);\n        Del dg = x.A;\n        for (int i = 7; i &gt;= 1; i--)\n        {\n            if(i%6 == 0) dg += x.B;\n            if(i%5 == 0) dg = y.B;\n            if(i%4 == 0) dg += y.C;\n            if(i%3 == 0) dg -= x.C;\n            if(i%2 == 0) dg += x.A;\n        }\n        int a = 2; int b = 2;\n        dg(a, ref b);\n        Console. Write($&quot;(x.k):(y.k)&quot;);\n    }\n}</code></pre>",
+    "explanation": "Compile error; the printed code does not output 21:10.",
+    "type": "short",
+    "answers": [
+      "Greška pri kompilaciji",
+      "compile error",
+      "compilation error",
+      "kod nije ispravan"
+    ],
+    "displayAnswer": "Greška pri kompilaciji"
+  },
+  {
+    "id": "stari-rok-2022-07-q38",
+    "originalNumber": 38,
+    "lessonId": "stari-rokovi",
+    "sourceTestId": "stari-rok-2022-07",
+    "tags": [
+      "extension-methods",
+      "delegates",
+      "indexers",
+      "exceptions",
+      "stari-rok",
+      "2022-07"
+    ],
+    "prompt": "<p>Šta je rezultat izvršavanja sledećeg koda?</p><pre><code class=\"language-csharp\">public delegate void Operacija(ref int x);\nclass Skup{\npublic int[] niz = {16,5,4,3,2}\npublic int this[int pozicija] { get {return niz{1-pozicija};}\nstatic class Prosirenja\n{ public static void Mapiraj(this Skup s, Operacija op){ for (int i=1; i&lt;4; i++) op(ref s.niz[i]); } }\nclass Program\n{ static void Povecaj (ref int x) {x+=5;}\n  static void Smanji (ref int x) {x-=3;}\n  static void Main()\n  { Skup x = new Skup(); Operacija o = Smanji; o += Povecaj; x.Mapiraj(o);\n    try { for (int i = -3; i&lt;= 0; i++) Console.Write(x[1]); }\n    catch(Exception){Console.Write(&quot;X&quot;);}\n  }\n}</code></pre>",
+    "explanation": "Compile error; no values are printed.",
+    "type": "short",
+    "answers": [
+      "Greška pri kompilaciji",
+      "compile error",
+      "compilation error",
+      "kod nije ispravan"
+    ],
+    "displayAnswer": "Greška pri kompilaciji"
+  },
+  {
+    "id": "stari-rok-2022-07-q39",
+    "originalNumber": 39,
+    "lessonId": "stari-rokovi",
+    "sourceTestId": "stari-rok-2022-07",
+    "tags": [
+      "unification",
+      "rules",
+      "arithmetic",
+      "stari-rok",
+      "2022-07"
+    ],
+    "prompt": "<p>Ako je dat sledeći kod u Prolog-u?</p><pre><code class=\"language-prolog\">Autom(ma, a 1.5). autom (m, b, 2) autom (b, c, 4.5)\nVozom (m,d,5) vozom,(b,c,0.5) vozom(a,d,6)\nAvionom(b,f,4) vozom(c,e,3.5) avionom (m,e,5)\nPut (X,Y,Z) :- autom (X,A,Z1), vozom(A,B,Z2), avionom (B,Y,Z) Z is Z1 + Z2 + Z3</code></pre><p>Sa kojim vrednostima će se unificirati promenljiva Q tokom izvršavanja upita <code>?- put (m, P, Q)</code></p>",
+    "explanation": "The printed Prolog has syntax/variable errors and yields no Q value as written. Under the natural punctuation and Z3 repair, the query has no solution because neither reachable intermediate node d nor c has an avionom fact.",
+    "type": "short",
+    "answers": [
+      "Sintaksna greška",
+      "syntax error",
+      "kod nije ispravan"
+    ],
+    "displayAnswer": "Sintaksna greška"
+  },
+  {
+    "id": "stari-rok-2022-07-q40",
+    "originalNumber": 40,
+    "lessonId": "stari-rokovi",
+    "sourceTestId": "stari-rok-2022-07",
+    "tags": [
+      "recursion",
+      "lists",
+      "guards",
+      "stari-rok",
+      "2022-07"
+    ],
+    "prompt": "<p>Šta je rezultat izvršavanja sledećeg koda u Haskell-u?</p><pre><code class=\"language-haskell\">funkcija [element] = 2\nfunkcija (prvi:drugi:rep)\nPrvi &gt; drugi = funkcija (drugi:rep)\nPrvi &lt;= drugi = prvi + drugi + funkcija rep\nFunkcija [4,1,2,5,7,6]</code></pre>",
+    "explanation": "Compile error as printed; a conventionally repaired guarded definition would evaluate to 17.",
+    "type": "short",
+    "answers": [
+      "Greška pri kompilaciji",
+      "compile error",
+      "compilation error",
+      "kod nije ispravan"
+    ],
+    "displayAnswer": "Greška pri kompilaciji"
+  },
+  {
+    "id": "stari-rok-2023-04-q01",
+    "originalNumber": 1,
+    "lessonId": "stari-rokovi",
+    "sourceTestId": "stari-rok-2023-04",
+    "tags": [
+      "c++",
+      "abstract-data-types",
+      "interfaces",
+      "stari-rok",
+      "2023-04"
+    ],
+    "prompt": "<p>Metoda koja obezbeđuje vidljivost interfejsa ATP u C++ je</p>",
+    "explanation": "d",
+    "type": "choice",
+    "options": [
+      "Implementaciona datoteka",
+      "Specifikacioni package",
+      "Public modifikator pristupa",
+      "Public klauzula",
+      "Ništa od navedenog"
+    ],
+    "correct": [
+      3
+    ]
+  },
+  {
+    "id": "stari-rok-2023-04-q02",
+    "originalNumber": 2,
+    "lessonId": "stari-rokovi",
+    "sourceTestId": "stari-rok-2023-04",
+    "tags": [
+      "abstract-data-types",
+      "encapsulation",
+      "stari-rok",
+      "2023-04"
+    ],
+    "prompt": "<p>Najvažnije karakteristike apstraktnog tipa podataka su</p>",
+    "explanation": "a, e",
+    "type": "choice",
+    "options": [
+      "Skrivanje informacija",
+      "Parametrizacija",
+      "Polimorfizam",
+      "Nasleđivanje",
+      "Enkapsulacija"
+    ],
+    "correct": [
+      0,
+      4
+    ]
+  },
+  {
+    "id": "stari-rok-2023-04-q03",
+    "originalNumber": 3,
+    "lessonId": "stari-rokovi",
+    "sourceTestId": "stari-rok-2023-04",
+    "tags": [
+      "c++",
+      "access-control",
+      "friendship",
+      "stari-rok",
+      "2023-04"
+    ],
+    "prompt": "<p>Entiteti označeni private klauzulom u PJ C++ su vidljivi</p>",
+    "explanation": "a, c, d",
+    "type": "choice",
+    "options": [
+      "Za članice date klase",
+      "Za članice izvedene klase",
+      "Za članice friend klase",
+      "Za friend funkcije",
+      "Za sve funkcije"
+    ],
+    "correct": [
+      0,
+      2,
+      3
+    ]
+  },
+  {
+    "id": "stari-rok-2023-04-q04",
+    "originalNumber": 4,
+    "lessonId": "stari-rokovi",
+    "sourceTestId": "stari-rok-2023-04",
+    "tags": [
+      "encapsulation",
+      "modules",
+      "assemblies",
+      "stari-rok",
+      "2023-04"
+    ],
+    "prompt": "<p>Koji od navedenih koncepata predstavljaju enkapsulacione konstrukcije</p>",
+    "explanation": "a, c; also b only if Aklasa is a typo for klasa",
+    "type": "choice",
+    "options": [
+      "Package",
+      "Aklasa",
+      "Assembly",
+      "Namespace",
+      "Header file"
+    ],
+    "correct": [
+      0,
+      2
+    ]
+  },
+  {
+    "id": "stari-rok-2023-04-q05",
+    "originalNumber": 5,
+    "lessonId": "stari-rokovi",
+    "sourceTestId": "stari-rok-2023-04",
+    "tags": [
+      "expressions",
+      "conditional-and-null-coalescing-operators",
+      "stari-rok",
+      "2023-04"
+    ],
+    "prompt": "<p>Koji od navedenih predstavlja izraze (expression)</p>",
+    "explanation": "b, c, d under C# syntax",
+    "type": "choice",
+    "options": [
+      "<code>(x&gt;0)?x</code>",
+      "<code>100</code>",
+      "<code>X??y</code>",
+      "<code>(x&gt;0)?x:0</code>",
+      "Nijedan"
+    ],
+    "correct": [
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "id": "stari-rok-2023-04-q06",
+    "originalNumber": 6,
+    "lessonId": "stari-rokovi",
+    "sourceTestId": "stari-rok-2023-04",
+    "tags": [
+      "logic-programming",
+      "prolog-concepts",
+      "stari-rok",
+      "2023-04"
+    ],
+    "prompt": "<p>Koje koncepte podržava PJ Prolog?</p>",
+    "explanation": "c, f",
+    "type": "choice",
+    "options": [
+      "Dodeljivanje",
+      "Primena funkcija",
+      "Unifikacija",
+      "Razmena poruka",
+      "Selekcija",
+      "Promenljive"
+    ],
+    "correct": [
+      2,
+      5
+    ]
+  },
+  {
+    "id": "stari-rok-2023-04-q07",
+    "originalNumber": 7,
+    "lessonId": "stari-rokovi",
+    "sourceTestId": "stari-rok-2023-04",
+    "tags": [
+      "lisp-syntax",
+      "lists",
+      "function-application",
+      "stari-rok",
+      "2023-04"
+    ],
+    "prompt": "<p>Šta predstavlja sledeći kod u PJ LISP <code>(a b c)</code></p>",
+    "explanation": "c, f",
+    "type": "choice",
+    "options": [
+      "Atom",
+      "Promenljivu",
+      "Prostu listu",
+      "Ugnježdenu listu",
+      "Definiciju funkcije",
+      "Primenu funkcije"
+    ],
+    "correct": [
+      2,
+      5
+    ]
+  },
+  {
+    "id": "stari-rok-2023-04-q08",
+    "originalNumber": 8,
+    "lessonId": "stari-rokovi",
+    "sourceTestId": "stari-rok-2023-04",
+    "tags": [
+      "attribute-grammars",
+      "inherited-and-synthesized-attributes",
+      "stari-rok",
+      "2023-04"
+    ],
+    "prompt": "<p>Koja od navedenih tvrđenja su tačna</p><pre><code class=\"language-text\">L -&gt; L₁ B    L₁ x &lt;- L x + 1\n             L₁ y &lt;- L x + B y</code></pre>",
+    "explanation": "a, c",
+    "type": "choice",
+    "options": [
+      "x je nasleđeni atribut",
+      "x je sintetizovani atribut",
+      "y je nasleđeni atribut",
+      "y je sintetizovani atribut",
+      "Nijedno"
+    ],
+    "correct": [
+      0,
+      2
+    ]
+  },
+  {
+    "id": "stari-rok-2023-04-q09",
+    "originalNumber": 9,
+    "lessonId": "stari-rokovi",
+    "sourceTestId": "stari-rok-2023-04",
+    "tags": [
+      "compilers",
+      "intermediate-code-generation",
+      "stari-rok",
+      "2023-04"
+    ],
+    "prompt": "<p>U kojoj fazi kompilacije se generiše međukod</p>",
+    "explanation": "c",
+    "type": "choice",
+    "options": [
+      "Generisanje koda",
+      "Leksička analiza",
+      "Semantička analiza",
+      "Sintaksna analiza",
+      "Optimizacija koda"
+    ],
+    "correct": [
+      2
+    ]
+  },
+  {
+    "id": "stari-rok-2023-04-q10",
+    "originalNumber": 10,
+    "lessonId": "stari-rokovi",
+    "sourceTestId": "stari-rok-2023-04",
+    "tags": [
+      "parser-generators",
+      "lr-parsing",
+      "stari-rok",
+      "2023-04"
+    ],
+    "prompt": "<p>Koji softverski alat omogućava generisanje LR parsera?</p>",
+    "explanation": "b, c",
+    "type": "choice",
+    "options": [
+      "Lex",
+      "Yacc",
+      "Bison",
+      "ANTLR"
+    ],
+    "correct": [
+      1,
+      2
+    ]
+  },
+  {
+    "id": "stari-rok-2023-04-q11",
+    "originalNumber": 11,
+    "lessonId": "stari-rokovi",
+    "sourceTestId": "stari-rok-2023-04",
+    "tags": [
+      "attribute-grammars",
+      "s-attributed-definitions",
+      "stari-rok",
+      "2023-04"
+    ],
+    "prompt": "<p>Koje od navedenih NISU karakteristike S-atributske gramatike?</p>",
+    "explanation": "b",
+    "type": "choice",
+    "options": [
+      "Koriste se sintetizovani atributi",
+      "Koriste se nasleđeni atributi",
+      "Semantička analiza može da se izvršava za vreme parsiranja"
+    ],
+    "correct": [
+      1
+    ]
+  },
+  {
+    "id": "stari-rok-2023-04-q12",
+    "originalNumber": 12,
+    "lessonId": "stari-rokovi",
+    "sourceTestId": "stari-rok-2023-04",
+    "tags": [
+      "lexical-analysis",
+      "syntax",
+      "semantics",
+      "grammars",
+      "stari-rok",
+      "2023-04"
+    ],
+    "prompt": "<p>Koja od navedenih NISU tačna tvrđenja?</p>",
+    "explanation": "a, b, c, d, e",
+    "type": "choice",
+    "options": [
+      "Leksam predstavlja grupu tokena",
+      "Semantika određuje validnost strukture jezičkih konstrukcija",
+      "Leksička struktura jezika određuje da li su leksemi u skladu sa sintaksom",
+      "Skener prevodi tekst programa u parsno stablo",
+      "Jezik definisan regularnim izrazom ne može se uvek izraziti BNF gramatikom"
+    ],
+    "correct": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  {
+    "id": "stari-rok-2023-04-q13",
+    "originalNumber": 13,
+    "lessonId": "stari-rokovi",
+    "sourceTestId": "stari-rok-2023-04",
+    "tags": [
+      "ll-parsing",
+      "parser-behavior",
+      "stari-rok",
+      "2023-04"
+    ],
+    "prompt": "<p>Koje od navedenih NISU karakteristike LL parsera</p>",
+    "explanation": "b, c, e; d is too malformed to classify confidently",
+    "type": "choice",
+    "options": [
+      "Ulazni niz tokena procesira se sleva na desno",
+      "Koristi postupak redukcije koji je inverzan postupku desne derivacije",
+      "Podržavaju samo S-atributske gramatike",
+      "Greške parsera nastale od korena prema listovima",
+      "Generišu se pomoću Bison softverskog alata"
+    ],
+    "correct": [
+      1,
+      2,
+      4
+    ]
+  },
+  {
+    "id": "stari-rok-2023-04-q14",
+    "originalNumber": 14,
+    "lessonId": "stari-rokovi",
+    "sourceTestId": "stari-rok-2023-04",
+    "tags": [
+      "regular-expressions",
+      "language-equivalence",
+      "stari-rok",
+      "2023-04"
+    ],
+    "prompt": "<p>Koji od navedenih regularnih izraza NISU ekvivalentni datom izrazu <code>(0|1)(01)*</code></p>",
+    "explanation": "a, b, c, d, e, f",
+    "type": "choice",
+    "options": [
+      "<code>[10]+</code>",
+      "<code>0?1?0*1*</code>",
+      "<code>(1|0)?(10)+</code>",
+      "<code>[01]?(1|0)</code>",
+      "<code>(0|1)(10)*</code>",
+      "<code>(1|0)*1|0</code>"
+    ],
+    "correct": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ]
+  },
+  {
+    "id": "stari-rok-2023-04-q15",
+    "originalNumber": 15,
+    "lessonId": "stari-rokovi",
+    "sourceTestId": "stari-rok-2023-04",
+    "tags": [
+      "context-free-grammars",
+      "derivation",
+      "stari-rok",
+      "2023-04"
+    ],
+    "prompt": "<p>Koji od navedenih stringova NISU definisani pomoću date gramatike</p><pre><code class=\"language-text\">A -&gt; BxOyB\nB -&gt; BD | D\nC -&gt; B | ByB\nD -&gt; a | b | c | d</code></pre>",
+    "explanation": "a, b, c, d, e, f as printed; if O is replaced by C, then a, b, e, f",
+    "type": "choice",
+    "options": [
+      "<code>eaxbbxcycdd</code>",
+      "<code>aaxby</code>",
+      "<code>aaxbybccydd</code>",
+      "<code>baxcdycd</code>",
+      "<code>abdxbbxyada</code>",
+      "<code>axeya</code>"
+    ],
+    "correct": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ]
+  },
+  {
+    "id": "stari-rok-2023-04-q16",
+    "originalNumber": 16,
+    "lessonId": "stari-rokovi",
+    "sourceTestId": "stari-rok-2023-04",
+    "tags": [
+      "c#-generics",
+      "type-constraints",
+      "value-types",
+      "stari-rok",
+      "2023-04"
+    ],
+    "prompt": "<details><summary>Zajedničke deklaracije sa roka</summary><pre><code class=\"language-csharp\">public enum Tip { Otvoreno, Zatvoreno, Dopuna}\npublic enum Oznaka { A,B,C,D,E,F}\npublic struct Poeni\n{\n    public int tacno;\n    public double netacno;\n}\npublic struct Odgovor\n{\n    public Oznaka? oznaka;\n    public string tekst;\n}\npublic class Pitanje\n{\n    public byte rb;\n    public string tekst;\n    public Tip tip;\n    public Poeni poeni;\n    public Odgovor resenje;\n}</code></pre></details><p>Koji tip bi se mogao navesti prilikom instanciranja klase Skup?</p><pre><code class=\"language-csharp\">class Skup&lt;NekiTip&gt; where NekiTip:struct{ List&lt;NekiTip&gt; elementi = new List&lt;NekiTip&gt;();}</code></pre>",
+    "explanation": "b, d as printed; also c under the neutral Bool-to-bool normalization",
+    "type": "choice",
+    "options": [
+      "Odgovor?",
+      "Poeni",
+      "Bool",
+      "Tip",
+      "string",
+      "Pitanje"
+    ],
+    "correct": [
+      1,
+      3
+    ]
+  },
+  {
+    "id": "stari-rok-2023-04-q17",
+    "originalNumber": 17,
+    "lessonId": "stari-rokovi",
+    "sourceTestId": "stari-rok-2023-04",
+    "tags": [
+      "c#-assemblies",
+      "inheritance",
+      "access-modifiers",
+      "stari-rok",
+      "2023-04"
+    ],
+    "prompt": "<p>Koje od navedenih naredbi NE bi bilo ispravno navesti u nastavku Main metode?</p><pre><code class=\"language-csharp\">// Prvi assembly\nnamespace N1\n{\n    public class X\n    {\n        int a;\n        protected internal int b;\n        public void Metoda(){}\n    }\n}\n\n// Drugi assembly (referencira prvi)\nusing N1;\nnamespace N2\n{\n    public class Y : X\n    {\n        private protected int c;\n        internal int C =&gt; c;\n    }\n}\n\n// Treći assembly (referencira prvi i drugi)\nusing N1; using N2;\nclass Z : Y\n{\n    static void Main()\n    {\n        Z z = new Z();\n        ...\n    }\n}</code></pre>",
+    "explanation": "b, d",
+    "type": "choice",
+    "options": [
+      "<code>z.Metoda();</code>",
+      "<code>Console.Write(z.a);</code>",
+      "<code>Console.Write(z.b);</code>",
+      "<code>Console.Write(z.c);</code>"
+    ],
+    "correct": [
+      1,
+      3
+    ]
+  },
+  {
+    "id": "stari-rok-2023-04-q18",
+    "originalNumber": 18,
+    "lessonId": "stari-rokovi",
+    "sourceTestId": "stari-rok-2023-04",
+    "tags": [
+      "c#-protected-members",
+      "inheritance",
+      "assemblies",
+      "stari-rok",
+      "2023-04"
+    ],
+    "prompt": "<p>Iz kojih klasa bi se moglo pristupiti polju <code>broj</code>?</p><pre><code class=\"language-csharp\">namespace N1\n{\n    public class A\n    {\n        protected int broj;\n    }\n    public class B : A { }\n}\n\n// Drugi assembly\nusing N1;\nnamespace N2\n{\n    class C { }\n    class D : B { }\n}\n\n// Treći assembly\nusing N2;\nnamespace N3\n{\n    class E : B { }\n    class F : D { }\n}</code></pre><p>A &amp;nbsp;&amp;nbsp;&amp;nbsp; B &amp;nbsp;&amp;nbsp;&amp;nbsp; C &amp;nbsp;&amp;nbsp;&amp;nbsp; D &amp;nbsp;&amp;nbsp;&amp;nbsp; E &amp;nbsp;&amp;nbsp;&amp;nbsp; F</p>",
+    "explanation": "A, B, D; E and F do not compile as printed, and C is unrelated",
+    "type": "choice",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E",
+      "F"
+    ],
+    "correct": [
+      0,
+      1,
+      3
+    ]
+  },
+  {
+    "id": "stari-rok-2023-04-q19",
+    "originalNumber": 19,
+    "lessonId": "stari-rokovi",
+    "sourceTestId": "stari-rok-2023-04",
+    "tags": [
+      "c++-namespaces",
+      "name-lookup",
+      "stari-rok",
+      "2023-04"
+    ],
+    "prompt": "<p>Nakon izvršenja kod koda u C++ će se na ekranu ispisati 4?</p><pre><code class=\"language-cpp\">namespace prvi\n{\n    int vrednost() { return 5; }\n    namespace drugi { int vrednost() { return 4; } }\n}</code></pre>",
+    "explanation": "B, F",
+    "type": "choice",
+    "options": [
+      "<code>using drugi::vrednost; cout &lt;&lt; vrednost();</code>",
+      "<code>using namespace prvi::drugi; cout &lt;&lt; vrednost();</code>",
+      "<code>cout &lt;&lt; vrednost();</code>",
+      "<code>cout &lt;&lt; prvi::vrednost();</code>",
+      "<code>cout &lt;&lt; drugi::vrednost();</code>",
+      "<code>cout &lt;&lt; prvi::drugi::vrednost();</code>"
+    ],
+    "correct": [
+      1,
+      5
+    ]
+  },
+  {
+    "id": "stari-rok-2023-04-q20",
+    "originalNumber": 20,
+    "lessonId": "stari-rokovi",
+    "sourceTestId": "stari-rok-2023-04",
+    "tags": [
+      "c#-inheritance",
+      "casting",
+      "reference-conversion",
+      "stari-rok",
+      "2023-04"
+    ],
+    "prompt": "<p>Koje su od navedenih naredbi ispravne?</p><pre><code class=\"language-csharp\">class X { public int x; }\nclass Y : X { }\nclass Z : Y { }</code></pre>",
+    "explanation": "a, c, d, e, f compile; only a, c, d complete without a runtime exception",
+    "type": "choice",
+    "options": [
+      "<code>X a = new Y();</code>",
+      "<code>Y b = new X();</code>",
+      "<code>Z c1 = new Z(); X c2 = c1;</code>",
+      "<code>Y d1 = new Y(); X d2 = (X)d1;</code>",
+      "<code>X e1 = new X(); Y e2 = (Y)e1;</code>",
+      "<code>X f1 = new X(); Y f2 = f1 as Y; f2.x = 5;</code>"
+    ],
+    "correct": [
+      0,
+      2,
+      3,
+      4,
+      5
+    ]
+  },
+  {
+    "id": "stari-rok-2023-04-q21",
+    "originalNumber": 21,
+    "lessonId": "stari-rokovi",
+    "sourceTestId": "stari-rok-2023-04",
+    "tags": [
+      "c#-constructors",
+      "inheritance",
+      "stari-rok",
+      "2023-04"
+    ],
+    "prompt": "<p>Koja od navedenih klasa je ispravna?</p><pre><code class=\"language-csharp\">class X { int x; public X(int i) { x = i; } }</code></pre>",
+    "explanation": "b, c, e",
+    "type": "choice",
+    "options": [
+      "<code>class A : X { int a; }</code>",
+      "<code>class B { internal int b; public B() : base() =&gt; b = 5; }</code>",
+      "<code>class C : B { public static int c; public C(int x) { } }</code>",
+      "<code>class D : A { int d; public D(int y) { d = y; } }</code>",
+      "<code>class E : C { int e; public E(int z) : base(c) { e = z; } }</code>"
+    ],
+    "correct": [
+      1,
+      2,
+      4
+    ]
+  },
+  {
+    "id": "stari-rok-2023-04-q22",
+    "originalNumber": 22,
+    "lessonId": "stari-rokovi",
+    "sourceTestId": "stari-rok-2023-04",
+    "tags": [
+      "c#-abstract-classes",
+      "interfaces",
+      "sealed-classes",
+      "stari-rok",
+      "2023-04"
+    ],
+    "prompt": "<p>Koja od navedenih klasa NIJE ispravna?</p><pre><code class=\"language-csharp\">interface I { void Metoda(); }</code></pre>",
+    "explanation": "a, f",
+    "type": "choice",
+    "options": [
+      "<code>abstract class A : I { public int x =&gt; 1; }</code>",
+      "<code>abstract class B { public abstract int M { get; } }</code>",
+      "<code>abstract class C : B, I { public void Metoda() { } }</code>",
+      "<code>class D : C { public override int M { get =&gt; 1; } }</code>",
+      "<code>sealed class E : D { public override int M =&gt; 0; }</code>",
+      "<code>class F : E { public int f; }</code>"
+    ],
+    "correct": [
+      0,
+      5
+    ]
+  },
+  {
+    "id": "stari-rok-2023-04-q23",
+    "originalNumber": 23,
+    "lessonId": "stari-rokovi",
+    "sourceTestId": "stari-rok-2023-04",
+    "tags": [
+      "c#-interfaces",
+      "abstract-classes",
+      "instantiation",
+      "stari-rok",
+      "2023-04"
+    ],
+    "prompt": "<p>Koja od navedenih naredbi NIJE ispravna?</p><pre><code class=\"language-csharp\">interface A { void M(); }\nabstract class B : A { public void M() { } }\nclass C : B { }\nsealed class D : C { }</code></pre>",
+    "explanation": "c, d",
+    "type": "choice",
+    "options": [
+      "<code>var a = new C();</code>",
+      "<code>B b = new D();</code>",
+      "<code>A c = new B();</code>",
+      "<code>object d = new A();</code>",
+      "<code>dynamic e = new D();</code>"
+    ],
+    "correct": [
+      2,
+      3
+    ]
+  },
+  {
+    "id": "stari-rok-2023-04-q24",
+    "originalNumber": 24,
+    "lessonId": "stari-rokovi",
+    "sourceTestId": "stari-rok-2023-04",
+    "tags": [
+      "c#-local-functions",
+      "definite-assignment",
+      "increment",
+      "stari-rok",
+      "2023-04"
+    ],
+    "prompt": "<p>Šta se ispisuje na ekranu?</p><pre><code class=\"language-csharp\">public static int M(int x)\n{\n    int y;\n    F();\n    return ++y;\n    void F() =&gt; y = x + 2;\n}\nConsole.WriteLine(M(2));</code></pre>",
+    "explanation": "d (5)",
+    "type": "choice",
+    "options": [
+      "0",
+      "1",
+      "3",
+      "5",
+      "Neka druga vrednost",
+      "Kod nije ispravan"
+    ],
+    "correct": [
+      3
+    ]
+  },
+  {
+    "id": "stari-rok-2023-04-q25",
+    "originalNumber": 25,
+    "lessonId": "stari-rokovi",
+    "sourceTestId": "stari-rok-2023-04",
+    "tags": [
+      "c#-partial-classes",
+      "member-signatures",
+      "stari-rok",
+      "2023-04"
+    ],
+    "prompt": "<p>Ako je definisana sledeća parcijalna klasa, koje od navedenih parcijalnih klasa se NE BI mogle definisati?</p><pre><code class=\"language-csharp\">partial class K\n{\n    public int broj;\n    public K(int b) { broj = b; }\n    public virtual int M() { return broj; }\n}</code></pre>",
+    "explanation": "a, b, c, d, f",
+    "type": "choice",
+    "options": [
+      "<code>partial class K { public K() : base() }</code>",
+      "<code>partial class K { string broj; }</code>",
+      "<code>partial class K { static int M() =&gt; 0; }</code>",
+      "<code>partial class K { byte M() { return -1; } }</code>",
+      "<code>public partial class K { public int M(int x = 0) { broj = x; return 0; } }</code>",
+      "<code>partial class K { abstract void M1(int broj); }</code>"
+    ],
+    "correct": [
+      0,
+      1,
+      2,
+      3,
+      5
+    ]
+  },
+  {
+    "id": "stari-rok-2023-04-q26",
+    "originalNumber": 26,
+    "lessonId": "stari-rokovi",
+    "sourceTestId": "stari-rok-2023-04",
+    "tags": [
+      "c#-delegates",
+      "method-group-conversion",
+      "ref-parameters",
+      "stari-rok",
+      "2023-04"
+    ],
+    "prompt": "<p>Koje metode se NE mogu pridružiti delegatu Main metode?</p><pre><code class=\"language-csharp\">public delegate int Delegat(ref int a, int b);\npublic class Klasa\n{\n    public int A(out int a, int b) =&gt; a = b;\n    private protected int B(ref int a, int b) =&gt; a + b;\n    public static int C(ref int a, short b) =&gt; a + b;\n}\n\npublic class Program : Klasa\n{\n    public int D(ref int a, short b) =&gt; a + b;\n    public static int E(in int a, int b) =&gt; a + b;\n    public int F(short b, ref int a) =&gt; a + b;\n\n    public static void Main()\n    {\n        Program p = new Program();\n        Delegat dg = ?;\n    }\n}</code></pre>",
+    "explanation": "a, b, c, d, e, f",
+    "type": "choice",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "<code>p.D</code>",
+      "<code>Klasa.E</code>",
+      "F"
+    ],
+    "correct": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ]
+  },
+  {
+    "id": "stari-rok-2023-04-q27",
+    "originalNumber": 27,
+    "lessonId": "stari-rokovi",
+    "sourceTestId": "stari-rok-2023-04",
+    "tags": [
+      "prolog",
+      "unification",
+      "query-execution",
+      "stari-rok",
+      "2023-04"
+    ],
+    "prompt": "<p>Ako je dat sledeći kod u Prologu, sa kojim vrednostima će se unificirati promenljiva X tokom izvršavanja upita <code>?-p(m,X)</code>.</p><pre><code class=\"language-prolog\">[uncertain: p(X,a) :- q(X,b).]\n[uncertain: p(X,b) :- q(X,c).]\n[uncertain: one short p/2 clause ending in c]\n[uncertain: q(X,Y) :- p(X,Y), ...]\n[uncertain: q(X,Y) :- q(X,Z), ...]\n[uncertain: remaining clauses in the embedded screenshot]</code></pre><p>a &amp;nbsp;&amp;nbsp;&amp;nbsp; b &amp;nbsp;&amp;nbsp;&amp;nbsp; c &amp;nbsp;&amp;nbsp;&amp;nbsp; d &amp;nbsp;&amp;nbsp;&amp;nbsp; e &amp;nbsp;&amp;nbsp;&amp;nbsp; f</p>",
+    "explanation": "Indeterminate from the incomplete and uncertain clauses",
+    "type": "short",
+    "answers": [
+      "Neodredivo iz izvora",
+      "neodredivo",
+      "nije moguće odrediti"
+    ],
+    "displayAnswer": "Neodredivo iz izvora"
+  },
+  {
+    "id": "stari-rok-2023-04-q28",
+    "originalNumber": 28,
+    "lessonId": "stari-rokovi",
+    "sourceTestId": "stari-rok-2023-04",
+    "tags": [
+      "haskell",
+      "currying",
+      "partial-application",
+      "stari-rok",
+      "2023-04"
+    ],
+    "prompt": "<p>Šta ilustruje sledeći kod u Haskellu? (slika je jako mutna, moguće da ima neka greška)</p><pre><code class=\"language-haskell\">f a b c d e f = a - b * c * d * e - f\nf1 = f 1 2</code></pre>",
+    "explanation": "c, d, f; not e",
+    "type": "choice",
+    "options": [
+      "Kompoziciju",
+      "Konstrukciju",
+      "Primenu funkcije",
+      "Funkcije višeg reda",
+      "Funkciju kao parametar",
+      "Funkciju kao rezultat"
+    ],
+    "correct": [
+      2,
+      3,
+      5
+    ]
+  },
+  {
+    "id": "stari-rok-2023-04-q29",
+    "originalNumber": 29,
+    "lessonId": "stari-rokovi",
+    "sourceTestId": "stari-rok-2023-04",
+    "tags": [
+      "c#",
+      "linq",
+      "filtering-and-maxima",
+      "stari-rok",
+      "2023-04"
+    ],
+    "prompt": "<p>Koji od navedenih izraza vraća najveći parni broj niza pozitivnih brojeva?</p><pre><code class=\"language-csharp\">A. int a = niz.Max(x =&gt; x % 2 == 0);\nB. int b = niz.Max(x =&gt; (x % 2 == 0) ? x : 0);\nC. int c = niz.Where(x =&gt; x % 2 == 0).Max();\nD. int d = niz.Select(x =&gt; (x % 2 == 0) ? x : 0).Max();\nE. int e = niz.Select(x =&gt; x % 2 == 0).Max();\nF. int f = niz.All(x =&gt; (x % 2 == 0) ? x : 0).Max();</code></pre>",
+    "explanation": "B, C, D, assuming the positive sequence contains an even value",
+    "type": "choice",
+    "options": [
+      "<code>int a = niz.Max(x =&gt; x % 2 == 0);</code>",
+      "<code>int b = niz.Max(x =&gt; (x % 2 == 0) ? x : 0);</code>",
+      "<code>int c = niz.Where(x =&gt; x % 2 == 0).Max();</code>",
+      "<code>int d = niz.Select(x =&gt; (x % 2 == 0) ? x : 0).Max();</code>",
+      "<code>int e = niz.Select(x =&gt; x % 2 == 0).Max();</code>",
+      "<code>int f = niz.All(x =&gt; (x % 2 == 0) ? x : 0).Max();</code>"
+    ],
+    "correct": [
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "id": "stari-rok-2023-04-q30",
+    "originalNumber": 30,
+    "lessonId": "stari-rokovi",
+    "sourceTestId": "stari-rok-2023-04",
+    "tags": [
+      "c#-delegates",
+      "generic-delegate-signatures",
+      "stari-rok",
+      "2023-04"
+    ],
+    "prompt": "<p>Koje od navedenih su ispravne naredbe?</p><pre><code class=\"language-csharp\">static bool M1(int x) =&gt; x % 2 == 0;</code></pre><p><strong>Ponuđeni odgovori iz izvora:</strong></p><ol><li><code>Predicate&lt;int&gt; A = M;</code></li><li><code>Predicate&lt;int,bool&gt; B = M;</code></li><li><code>Action&lt;bool, int&gt; C = M;</code></li><li><code>Func&lt;bool, int&gt; E = M;</code></li><li><code>Func&lt;int, bool&gt; F = M;</code></li></ol>",
+    "explanation": "none as printed",
+    "type": "short",
+    "answers": [
+      "Nijedna ponuđena naredba",
+      "nijedna",
+      "nijedan",
+      "none"
+    ],
+    "displayAnswer": "Nijedna ponuđena naredba"
+  },
+  {
+    "id": "stari-rok-2023-04-q31",
+    "originalNumber": 31,
+    "lessonId": "stari-rokovi",
+    "sourceTestId": "stari-rok-2023-04",
+    "tags": [
+      "c#-closures",
+      "captured-variables",
+      "stari-rok",
+      "2023-04"
+    ],
+    "prompt": "<p>Šta se ispisuje na ekranu?</p><pre><code class=\"language-csharp\">public static int M(int x)\n{\n    int y = 0;\n    Func&lt;int&gt; f = () =&gt; { int z = 1; return x + y + z; };\n    y = 2;\n    return f();\n}\nConsole.WriteLine(M(1)+M(2));</code></pre>",
+    "explanation": "9",
+    "type": "short",
+    "answers": [
+      "9"
+    ],
+    "displayAnswer": "9"
+  },
+  {
+    "id": "stari-rok-2023-04-q32",
+    "originalNumber": 32,
+    "lessonId": "stari-rokovi",
+    "sourceTestId": "stari-rok-2023-04",
+    "tags": [
+      "c#",
+      "linq",
+      "integer-division",
+      "anonymous-types",
+      "stari-rok",
+      "2023-04"
+    ],
+    "prompt": "<p>Šta se ispisuje na ekranu?</p><pre><code class=\"language-csharp\">int[] niz = {92, 48, 101, 37, 210, 58};\nvar a = niz.Select((x,i) =&gt; new {P = i/3, O = x/5});\n.Last(x =&gt; x.P &lt; 0.5);\nConsole.Write($&quot;{a.O}:{a.P}&quot;);</code></pre>",
+    "explanation": "compile error as printed; under the neutral line-break repair, 20:0",
+    "type": "short",
+    "answers": [
+      "Greška pri kompilaciji",
+      "compile error",
+      "compilation error",
+      "kod nije ispravan"
+    ],
+    "displayAnswer": "Greška pri kompilaciji"
+  },
+  {
+    "id": "stari-rok-2023-04-q33",
+    "originalNumber": 33,
+    "lessonId": "stari-rokovi",
+    "sourceTestId": "stari-rok-2023-04",
+    "tags": [
+      "c#",
+      "delegates",
+      "lambdas",
+      "runtime-type-tests",
+      "stari-rok",
+      "2023-04"
+    ],
+    "prompt": "<p>Šta se ispisuje na ekranu</p><pre><code class=\"language-csharp\">public class A { }\nclass B : A { }\nclass C : A { }\nclass Program {\n    static int M(int x, int y) =&gt; x - y;\n    static Func&lt;int, int&gt; F1(int z) =&gt; x =&gt; M(z, x);\n    static Func&lt;int, int&gt; F2() =&gt; x =&gt; x * 3;\n    static Func&lt;int, int&gt; Odredi(A o) =&gt; (o is B) ? F1(7) : F2();\n    static void Main() {\n        List&lt;A&gt; l = new List&lt;A&gt;();\n        l.Add(new C()); l.Add(new B()); l.Add(new A());\n        foreach (A x in l) Console.Write(Odredi(x)(20));\n    }\n}</code></pre>",
+    "explanation": "60-1360",
+    "type": "short",
+    "answers": [
+      "60-1360"
+    ],
+    "displayAnswer": "60-1360"
+  },
+  {
+    "id": "stari-rok-2023-04-q34",
+    "originalNumber": 34,
+    "lessonId": "stari-rokovi",
+    "sourceTestId": "stari-rok-2023-04",
+    "tags": [
+      "c#",
+      "virtual-dispatch",
+      "method-hiding",
+      "inheritance",
+      "stari-rok",
+      "2023-04"
+    ],
+    "prompt": "<p>Šta se ispisuje na ekranu?</p><pre><code class=\"language-csharp\">public class A {\n    public int x = 10;\n    public virtual int Prva() { x += 2; return 1; }\n    public int Druga() { return 3; }\n}\npublic class B : A { }\npublic class C : B {\n    public override int Prva() { x += 4; return 7; }\n    public new int Druga() { return 5; }\n}\npublic class D : C {\n    public override int Prva() {\n        x += 6; return 9;\n    }\n}\n...\nint broj = 15;\nA a = new B(); broj += a.Prva() - a.Druga();\nB b = new C(); broj += b.Prva() - b.Druga();\nC c = new D(); broj += c.Prva() - c.Druga();\nConsole.WriteLine(broj+a.x+b.x+c.x);</code></pre>",
+    "explanation": "63",
+    "type": "short",
+    "answers": [
+      "63"
+    ],
+    "displayAnswer": "63"
+  },
+  {
+    "id": "stari-rok-2023-04-q35",
+    "originalNumber": 35,
+    "lessonId": "stari-rokovi",
+    "sourceTestId": "stari-rok-2023-04",
+    "tags": [
+      "c#",
+      "constructor-chaining",
+      "inheritance",
+      "arrays",
+      "stari-rok",
+      "2023-04"
+    ],
+    "prompt": "<p>Šta se ispisuje na ekranu?</p><pre><code class=\"language-csharp\">public class A\n{\n    public int[] niz = new int[7];\n    public A() : this(7) { niz[5] = 1; }\n    public A(int i) : base() { niz[4] = i; }\n}\npublic class B : A { }\npublic class C : B\n{\n    public C() { niz[3] = 2; }\n    public C(int i) : this() { niz[2] = i; }\n}\npublic class D : C\n{\n    public D(int i) : this() { niz[1] = i; }\n    public D() { niz[0] = 4; }\n}\n...\nD d = new D(2);\nforeach (int broj in d.niz) { Console.Write(broj); }</code></pre>",
+    "explanation": "4202710",
+    "type": "short",
+    "answers": [
+      "4202710"
+    ],
+    "displayAnswer": "4202710"
+  },
+  {
+    "id": "stari-rok-2023-04-q36",
+    "originalNumber": 36,
+    "lessonId": "stari-rokovi",
+    "sourceTestId": "stari-rok-2023-04",
+    "tags": [
+      "c#",
+      "events",
+      "delegates",
+      "state-changes",
+      "stari-rok",
+      "2023-04"
+    ],
+    "prompt": "<p>Šta se ispisuje na ekranu?</p><pre><code class=\"language-csharp\">public delegate void Obrada(double suma);\npublic class Racun\n{\n    string broj; public double stanje;\n    public Racun(string b, double s) { broj = b; stanje = s; }\n    public static event Obrada Dogadjaj;\n    public void promeni(double iznos)\n    {\n        if (stanje + iznos &lt; 0) return;\n        stanje += iznos;\n        if (Dogadjaj != null)\n        {\n            Dogadjaj(iznos);\n        }\n    }\n}\npublic class Banka\n{\n    static double bilans = 1500;\n    static void Azuriraj(double i) =&gt; bilans += i;\n    static void Main()\n    {\n        Racun r1 = new Racun(&quot;111&quot;, 0);\n        Racun r2 = new Racun(&quot;222&quot;, 0);\n        r1.promeni(2000); //ovde je delegat null\n        Racun.Dogadjaj += Azuriraj;\n        r2.promeni(200);\n        r2.promeni(-1500);\n        r1.promeni(-175);\n        r1.promeni(-1500);\n        Console.WriteLine(bilans);\n    }\n}</code></pre>",
+    "explanation": "25",
+    "type": "short",
+    "answers": [
+      "25"
+    ],
+    "displayAnswer": "25"
+  },
+  {
+    "id": "stari-rok-2023-04-q37",
+    "originalNumber": 37,
+    "lessonId": "stari-rokovi",
+    "sourceTestId": "stari-rok-2023-04",
+    "tags": [
+      "c#",
+      "multicast-delegates",
+      "ref-parameters",
+      "stari-rok",
+      "2023-04"
+    ],
+    "prompt": "<p>Šta se ispisuje na ekranu?</p><pre><code class=\"language-csharp\">public delegate void Del(int a, ref int b, int c);\npublic class Program\n{\n    public static void Plus(int e, ref int f, int g)\n    { e += g; f += g; }\n    public static void Minus(int e, ref int f, int g)\n    { e -= g; f -= g; }\n    public static void Puta(int e, ref int f, int g)\n    { e *= g; f *= g; }\n    static void Main()\n    {\n        Del dg = Minus;\n        dg += Puta;\n        dg = Plus;\n        dg += Plus;\n        dg += Minus;\n        dg += Plus;\n        dg -= Plus;\n\n        int x = 8, y = 4, z = 5;\n        dg(x, ref y, z);\n        Console.WriteLine(x - y);\n    }\n}</code></pre>",
+    "explanation": "-1",
+    "type": "short",
+    "answers": [
+      "-1"
+    ],
+    "displayAnswer": "-1"
+  },
+  {
+    "id": "stari-rok-2023-04-q38",
+    "originalNumber": 38,
+    "lessonId": "stari-rokovi",
+    "sourceTestId": "stari-rok-2023-04",
+    "tags": [
+      "c#",
+      "indexers",
+      "extension-methods",
+      "delegates",
+      "exceptions",
+      "stari-rok",
+      "2023-04"
+    ],
+    "prompt": "<p>Šta se ispisuje na ekranu?</p><pre><code class=\"language-csharp\">public delegate void Operacija(ref int x);\nclass Skup\n{\n    public int[] niz = {2,4,6,8,10};\n    public int this[int pozicija] { get { return niz[^(pozicija-1)]; } }\n}\nstatic class Prosirenja\n{\n    public static void Mapiraj(this Skup s, Operacija op) {\n        for (int i=1; i&lt;4; i++)\n            op(ref s.niz[i]);\n    }\n}\nclass Program\n{\n    static void Povecaj(ref int x) { x *= 4; }\n    static void Smanji(ref int x) { x -= 3; }\n    static void Main()\n    {\n        Skup x = new Skup(); Operacija o = Smanji; o = Povecaj; x.Mapiraj(o);\n        try { for (int i=-5; i&lt;=2; i+=2) { Console.Write(x[-i]); } }\n        catch (Exception) { Console.Write(&quot;X&quot;); }\n    }\n}</code></pre>",
+    "explanation": "1632X",
+    "type": "short",
+    "answers": [
+      "1632X"
+    ],
+    "displayAnswer": "1632X"
+  },
+  {
+    "id": "stari-rok-2023-04-q39",
+    "originalNumber": 39,
+    "lessonId": "stari-rokovi",
+    "sourceTestId": "stari-rok-2023-04",
+    "tags": [
+      "prolog",
+      "unification",
+      "backtracking",
+      "arithmetic",
+      "stari-rok",
+      "2023-04"
+    ],
+    "prompt": "<p>Ako je dat sledeći kod u Prologu, sa kojim vrednostima će se unificirati promenljiva Q tokom izvršavanja upita <code>?-put(P,Q,C)</code></p><pre><code class=\"language-prolog\">autom(m,b,3). autom(c,e,2). autom(e,c,4.5).\nvozom(a,d,5). vozom(b,e,0.5). vozom(c,a,6).\navionom(b,f,4). avionom(e,b,3.5). avionom(e,c,5).\n\nput(X,Y,Z):-autom(X,A,Z1), vozom(A,B,Z2), avionom(B,Y,Z3), autom(Y,B,Z4),\nZ is Z1+Z2-Z3+Z4.</code></pre>",
+    "explanation": "Q = c, with P = m and C = 0.5",
+    "type": "short",
+    "answers": [
+      "c"
+    ],
+    "displayAnswer": "c"
+  },
+  {
+    "id": "stari-rok-2023-04-q40",
+    "originalNumber": 40,
+    "lessonId": "stari-rokovi",
+    "sourceTestId": "stari-rok-2023-04",
+    "tags": [
+      "haskell",
+      "infinite-lists",
+      "recursion",
+      "guards",
+      "stari-rok",
+      "2023-04"
+    ],
+    "prompt": "<p>Šta se ispisuje na ekranu ako je dat kod u Haskellu?</p><pre><code class=\"language-haskell\">raspon n = n+1 : raspon(n-3)\nfunkcija[element] = 1\nfunkcija(prvi:drugi:rep)\n    |drugi&gt;0 = funkcija(drugi:rep) + prvi\n    |drugi&lt;0 = 2\nfunkcija(raspon 10)</code></pre>",
+    "explanation": "26 if the final line is evaluated interactively; the exact text is not a printing Haskell module",
+    "type": "short",
+    "answers": [
+      "26"
+    ],
+    "displayAnswer": "26"
+  },
+  {
+    "id": "stari-rok-2023-06-q01",
+    "originalNumber": 1,
+    "lessonId": "stari-rokovi",
+    "sourceTestId": "stari-rok-2023-06",
+    "tags": [
+      "apstraktni-tipovi-podataka",
+      "stari-rok",
+      "2023-06"
+    ],
+    "prompt": "<p>Korisniku apstraktnog tipa podataka NISU vidljivi:</p>",
+    "explanation": "b and d.",
+    "type": "choice",
+    "options": [
+      "naziv tipa ______",
+      "reprezentacija tipa ______",
+      "operacije ______",
+      "______ implementacija operacije"
+    ],
+    "correct": [
+      1,
+      3
+    ]
+  },
+  {
+    "id": "stari-rok-2023-06-q02",
+    "originalNumber": 2,
+    "lessonId": "stari-rokovi",
+    "sourceTestId": "stari-rok-2023-06",
+    "tags": [
+      "ada",
+      "reference-qualification",
+      "stari-rok",
+      "2023-06"
+    ],
+    "prompt": "<p>U PJ Ada, eliminisanje potrebe za eksplicitnom kvalifikacijom referenci na __ obezbeđuje se:</p>",
+    "explanation": "d, the use clause.",
+    "type": "choice",
+    "options": [
+      "include kaluzulom",
+      "import kaluzulom",
+      "with kaluzulom",
+      "use kaluzulom",
+      "using kaluzulom"
+    ],
+    "correct": [
+      3
+    ]
+  },
+  {
+    "id": "stari-rok-2023-06-q03",
+    "originalNumber": 3,
+    "lessonId": "stari-rokovi",
+    "sourceTestId": "stari-rok-2023-06",
+    "tags": [
+      "c#",
+      "encapsulation",
+      "stari-rok",
+      "2023-06"
+    ],
+    "prompt": "<p>Enkapsulaciona konstrukcija u programskom jeziku C# je:</p>",
+    "explanation": "c, Assembly.",
+    "type": "choice",
+    "options": [
+      "Klasa",
+      "Package",
+      "Assembly",
+      "Namespace",
+      "Header datoteka (implementaciona datoteka)"
+    ],
+    "correct": [
+      2
+    ]
+  },
+  {
+    "id": "stari-rok-2023-06-q04",
+    "originalNumber": 4,
+    "lessonId": "stari-rokovi",
+    "sourceTestId": "stari-rok-2023-06",
+    "tags": [
+      "encapsulation-constructs",
+      "stari-rok",
+      "2023-06"
+    ],
+    "prompt": "<p>Koja su, od navedenih, enkapsulaciona imena?</p>",
+    "explanation": "b and d.",
+    "type": "choice",
+    "options": [
+      "Header datoteka (implementaciona datoteka u C++)",
+      "Package u Java",
+      "Assembly (sklop) u C#",
+      "Namespace u C#"
+    ],
+    "correct": [
+      1,
+      3
+    ]
+  },
+  {
+    "id": "stari-rok-2023-06-q05",
+    "originalNumber": 5,
+    "lessonId": "stari-rokovi",
+    "sourceTestId": "stari-rok-2023-06",
+    "tags": [
+      "lambda-expressions",
+      "stari-rok",
+      "2023-06"
+    ],
+    "prompt": "<p>Lambda izraz predstavlja:</p>",
+    "explanation": "c, a function.",
+    "type": "choice",
+    "options": [
+      "tip promenljive",
+      "Apstraktnu klasu",
+      "Funkciju",
+      "Selekciju",
+      "Činjenicu"
+    ],
+    "correct": [
+      2
+    ]
+  },
+  {
+    "id": "stari-rok-2023-06-q06",
+    "originalNumber": 6,
+    "lessonId": "stari-rokovi",
+    "sourceTestId": "stari-rok-2023-06",
+    "tags": [
+      "pi-calculus",
+      "stari-rok",
+      "2023-06"
+    ],
+    "prompt": "<p>Koje koncepte podržava Pi Scala?</p>",
+    "explanation": "b, d, and f.",
+    "type": "choice",
+    "options": [
+      "Dodeljivanje",
+      "Primena funkcija",
+      "Unifikacija",
+      "Razmena poruka",
+      "Selekcija",
+      "Promenljive"
+    ],
+    "correct": [
+      1,
+      3,
+      5
+    ]
+  },
+  {
+    "id": "stari-rok-2023-06-q07",
+    "originalNumber": 7,
+    "lessonId": "stari-rokovi",
+    "sourceTestId": "stari-rok-2023-06",
+    "tags": [
+      "lisp-lists",
+      "atoms",
+      "stari-rok",
+      "2023-06"
+    ],
+    "prompt": "<p>Koliko elemenata sadrži sledeća lista (definisana u PJ LISP)</p><pre><code class=\"language-lisp\">((1(2 3)) 4 5(6 7 8)9)</code></pre><p>Atom</p>",
+    "explanation": "c, 5 top-level elements.",
+    "type": "choice",
+    "options": [
+      "9",
+      "7",
+      "5",
+      "4",
+      "3",
+      "1"
+    ],
+    "correct": [
+      2
+    ]
+  },
+  {
+    "id": "stari-rok-2023-06-q08",
+    "originalNumber": 8,
+    "lessonId": "stari-rokovi",
+    "sourceTestId": "stari-rok-2023-06",
+    "tags": [
+      "attribute-grammars",
+      "semantic-actions",
+      "stari-rok",
+      "2023-06"
+    ],
+    "prompt": "<p>Koje su, od navedenih, semantičkih akcija ispravne ako je dato sledeće produktivno pravilo: L -&gt; T L₁</p><pre><code class=\"language-text\">L.x &lt;- L.x + 1\nL₁.y &lt;- L₁.x + B.y</code></pre><p>(ne vide se ponuđeni odgovori)</p>",
+    "explanation": "Indeterminate because the offered answers are missing and the visible action text references absent B.",
+    "type": "short",
+    "answers": [
+      "Neodredivo iz izvora",
+      "neodredivo",
+      "nije moguće odrediti"
+    ],
+    "displayAnswer": "Neodredivo iz izvora"
+  },
+  {
+    "id": "stari-rok-2023-06-q09",
+    "originalNumber": 9,
+    "lessonId": "stari-rokovi",
+    "sourceTestId": "stari-rok-2023-06",
+    "tags": [
+      "compilation",
+      "symbol-tables",
+      "stari-rok",
+      "2023-06"
+    ],
+    "prompt": "<p>U kojoj fazi kompilacije se generiše tablica simbola</p>",
+    "explanation": "b, lexical analysis.",
+    "type": "choice",
+    "options": [
+      "Generisanje koda",
+      "Leksička analiza",
+      "Semantička analiza",
+      "Sintaksna analiza",
+      "Optimizacija koda"
+    ],
+    "correct": [
+      1
+    ]
+  },
+  {
+    "id": "stari-rok-2023-06-q10",
+    "originalNumber": 10,
+    "lessonId": "stari-rokovi",
+    "sourceTestId": "stari-rok-2023-06",
+    "tags": [
+      "java-compilation-and-execution",
+      "stari-rok",
+      "2023-06"
+    ],
+    "prompt": "<p>Java kod se:</p>",
+    "explanation": "a and b.",
+    "type": "choice",
+    "options": [
+      "Kompajlira",
+      "Interpretira",
+      "Direktno izvršava"
+    ],
+    "correct": [
+      0,
+      1
+    ]
+  },
+  {
+    "id": "stari-rok-2023-06-q11",
+    "originalNumber": 11,
+    "lessonId": "stari-rokovi",
+    "sourceTestId": "stari-rok-2023-06",
+    "tags": [
+      "ll-parsing",
+      "stari-rok",
+      "2023-06"
+    ],
+    "prompt": "<p>Koje od navedenih NISU karakteristike LL parsera?</p>",
+    "explanation": "a and c as printed.",
+    "type": "choice",
+    "options": [
+      "Ulazni niz/tokena procesira se sdesna na levo",
+      "Koriste se nasleđeni atributi",
+      "Greške parsno stablo od korena prema listovima"
+    ],
+    "correct": [
+      0,
+      2
+    ]
+  },
+  {
+    "id": "stari-rok-2023-06-q12",
+    "originalNumber": 12,
+    "lessonId": "stari-rokovi",
+    "sourceTestId": "stari-rok-2023-06",
+    "tags": [
+      "lexical",
+      "syntactic",
+      "and-semantic-analysis",
+      "stari-rok",
+      "2023-06"
+    ],
+    "prompt": "<p>Koja od navedenih NISU tačna tvrđenja?</p>",
+    "explanation": "a, b, d, and e are false.",
+    "type": "choice",
+    "options": [
+      "Token uvek predstavlja tačno jedan leksem",
+      "Semantika određuje validnost strukture jezičkih konstrukcija",
+      "Sintaksna struktura jezika određuje da li su leksemi u skladu sa sintaksom",
+      "Skener prevodi tekst programa u parsno stablo",
+      "Jezik definisan regularnim izrazom ne može se uvek izraziti BNF gramatikom"
+    ],
+    "correct": [
+      0,
+      1,
+      3,
+      4
+    ]
+  },
+  {
+    "id": "stari-rok-2023-06-q13",
+    "originalNumber": 13,
+    "lessonId": "stari-rokovi",
+    "sourceTestId": "stari-rok-2023-06",
+    "tags": [
+      "s-attributed-grammars",
+      "stari-rok",
+      "2023-06"
+    ],
+    "prompt": "<p>Koje, od navedenih, karakteristike S-atributske gramatike?</p>",
+    "explanation": "a, c, and e.",
+    "type": "choice",
+    "options": [
+      "Atributi se evaluiraju u postorder redosledu obilaska parsnog stabla",
+      "Koriste se samo nasleđeni atributi",
+      "Koriste se samo sintetizovani atributi",
+      "Semantička analiza ne može da se izvršava za vreme parsiranja",
+      "Podržane su u LL parserima"
+    ],
+    "correct": [
+      0,
+      2,
+      4
+    ]
+  },
+  {
+    "id": "stari-rok-2023-06-q14",
+    "originalNumber": 14,
+    "lessonId": "stari-rokovi",
+    "sourceTestId": "stari-rok-2023-06",
+    "tags": [
+      "regular-expressions",
+      "stari-rok",
+      "2023-06"
+    ],
+    "prompt": "<p>Koji od navedenih regularnih izraza NISU ekvivalentni datom izrazu <code>(b|a)|ab)*</code></p><p><strong>Ponuđeni odgovori iz izvora:</strong></p><ol><li><code>(ab)*</code></li><li><code>b|a|ab|+</code></li><li><code>(ab)?(a|b)</code></li><li><code>[ba](a|b)</code></li><li><code>(a|b)?|ab|</code></li><li><code>(a|b)*a|b</code></li></ol>",
+    "explanation": "Indeterminate because the source expression and choices are syntactically malformed.",
+    "type": "short",
+    "answers": [
+      "Neodredivo iz izvora",
+      "neodredivo",
+      "nije moguće odrediti"
+    ],
+    "displayAnswer": "Neodredivo iz izvora"
+  },
+  {
+    "id": "stari-rok-2023-06-q15",
+    "originalNumber": 15,
+    "lessonId": "stari-rokovi",
+    "sourceTestId": "stari-rok-2023-06",
+    "tags": [
+      "context-free-grammars",
+      "generated-strings",
+      "stari-rok",
+      "2023-06"
+    ],
+    "prompt": "<p>Koji od navedenih stringova NISU definisani pomoću date gramatike</p><pre><code class=\"language-text\">S -&gt; T | f\nT -&gt; afTb | aS</code></pre>",
+    "explanation": "a, b, c, d, and e are not generated.",
+    "type": "choice",
+    "options": [
+      "<code>aaabb</code>",
+      "<code>aabbb</code>",
+      "<code>aabb</code>",
+      "<code>abb</code>",
+      "<code>aabbbbb</code>"
+    ],
+    "correct": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  {
+    "id": "stari-rok-2023-06-q16",
+    "originalNumber": 16,
+    "lessonId": "stari-rokovi",
+    "sourceTestId": "stari-rok-2023-06",
+    "tags": [
+      "generics",
+      "type-arguments",
+      "stari-rok",
+      "2023-06"
+    ],
+    "prompt": "<details><summary>Zajedničke deklaracije sa roka</summary><pre><code class=\"language-csharp\">public enum Tip { Otvoreno, Zatvoreno, Dopuna}\npublic enum Oznaka {A,B,C,D,E,F}\npublic struct Poeni\n{\n    public int tacno;\n    public double netacno;\n}\npublic struct Odgovor\n{\n    public Oznaka? oznaka;\n    public string tekst;\n}\npublic class Pitanje\n{\n    public byte br;\n    public string tekst;\n    public Tip tip;\n    public Poeni poeni;\n    public Odgovor resenje;\n}</code></pre></details><p>Koji tip bi se mogao navesti prilikom instanciranja klase Skup?</p><pre><code class=\"language-csharp\">class Skup&lt;NekiTip&gt; where NekiTip:class { List&lt;NekiTip&gt; elementi = new List&lt;NekiTip&gt;(); }</code></pre>",
+    "explanation": "b, e, and f (Object, string, and Pitanje).",
+    "type": "choice",
+    "options": [
+      "Odgovor?",
+      "Object",
+      "Bool",
+      "Tip",
+      "string",
+      "Pitanje"
+    ],
+    "correct": [
+      1,
+      4,
+      5
+    ]
+  },
+  {
+    "id": "stari-rok-2023-06-q17",
+    "originalNumber": 17,
+    "lessonId": "stari-rokovi",
+    "sourceTestId": "stari-rok-2023-06",
+    "tags": [
+      "assemblies",
+      "inheritance",
+      "access-modifiers",
+      "stari-rok",
+      "2023-06"
+    ],
+    "prompt": "<p>Koje od navedenih naredbi NE bi bilo ispravno napisati u nastavku Main metode?</p><p>Prvi assembly</p><pre><code class=\"language-csharp\">namespace N1\n{\n    public class X\n    {\n        int a;\n        private protected int b;\n        public void Metoda() { }\n    }\n}</code></pre><p>Drugi assembly (referencira prvi)</p><pre><code class=\"language-csharp\">using N1;\nnamespace N2\n{\n    public class Y : X\n    {\n        protected int c;\n        internal int c =&gt; c;\n    }\n}</code></pre><p>Treći assembly (referencira prvi i drugi)</p><pre><code class=\"language-csharp\">using N1; using N2;\nclass Z : Y\n{\n    static void Main ()\n    {\n        Z z = new Z ();\n    }\n}</code></pre><p><strong>Ponuđeni odgovori iz izvora:</strong></p><ol><li><code>z.Metoda();</code></li><li><code>Console.Write(z.a);</code></li><li><code>Console.Write(z.b);</code></li><li><code>Console.Write(z.c);</code></li><li><code>Console.Write(z.d);</code></li></ol>",
+    "explanation": "The printed code does not compile before any option is appended.",
+    "type": "short",
+    "answers": [
+      "Greška pri kompilaciji",
+      "compile error",
+      "compilation error",
+      "kod nije ispravan"
+    ],
+    "displayAnswer": "Greška pri kompilaciji"
+  },
+  {
+    "id": "stari-rok-2023-06-q18",
+    "originalNumber": 18,
+    "lessonId": "stari-rokovi",
+    "sourceTestId": "stari-rok-2023-06",
+    "tags": [
+      "assemblies",
+      "protected-internal-access",
+      "stari-rok",
+      "2023-06"
+    ],
+    "prompt": "<p>Iz kojih klasa bi se moglo pristupiti polju broj?</p><p>Prvi assembly</p><pre><code class=\"language-csharp\">namespace N1\n{\n    public class F\n    {\n        protected internal int broj;\n    }\n    public class E : F { }\n}</code></pre><p>Drugi assembly (referencira prvi)</p><pre><code class=\"language-csharp\">using N1;\nnamespace N2\n{\n    class D { }\n    class C : E { }\n}</code></pre><p>Treći assembly (referencira prvi i drugi)</p><pre><code class=\"language-csharp\">using N2;\nnamespace N3\n{\n    class B : E { }\n    class A : C { }\n}</code></pre><p><strong>Ponuđeni odgovori iz izvora:</strong></p><ol><li>a</li><li>b</li><li>c</li><li>d</li><li>e</li><li>f</li></ol>",
+    "explanation": "The printed third assembly does not compile. Considered independently as an accessibility question after only qualifying B's base as N1.E, B, C, E, and F can access broj; A still cannot be declared because C is internal to the second assembly. Izvor je nepotpun ili nečitljiv, pa jednoznačno rešenje nije moguće utvrditi bez izmišljanja sadržaja.",
+    "type": "short",
+    "answers": [
+      "Neodredivo iz izvora",
+      "neodredivo",
+      "nije moguće odrediti"
+    ],
+    "displayAnswer": "Neodredivo iz izvora"
+  },
+  {
+    "id": "stari-rok-2023-06-q20",
+    "originalNumber": 20,
+    "lessonId": "stari-rokovi",
+    "sourceTestId": "stari-rok-2023-06",
+    "tags": [
+      "inheritance",
+      "assignments",
+      "stari-rok",
+      "2023-06"
+    ],
+    "prompt": "<p>Koje su od navedenih naredbi ispravne?</p><pre><code class=\"language-csharp\">class X { public int x; }\nclass Y : X { }\nclass Z : Y { }</code></pre>",
+    "explanation": "b, c, d, e, and f compile; e throws InvalidCastException when executed, while f yields null.",
+    "type": "choice",
+    "options": [
+      "<code>Y b = new X();</code>",
+      "<code>X a = new Y();</code>",
+      "<code>Z c1 = new Z(); X c2 = c1;</code>",
+      "<code>Y d1 = new Y(); X d2 = (X)d1;</code>",
+      "<code>X e1 = new X(); Y e2 = (Y)e1;</code>",
+      "<code>X f1 = new X(); Y f2 = f1 as Y;</code>"
+    ],
+    "correct": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ]
+  },
+  {
+    "id": "stari-rok-2023-06-q21",
+    "originalNumber": 21,
+    "lessonId": "stari-rokovi",
+    "sourceTestId": "stari-rok-2023-06",
+    "tags": [
+      "constructors",
+      "inheritance",
+      "stari-rok",
+      "2023-06"
+    ],
+    "prompt": "<p>Koja od navedenih klasa NIJE ispravna?</p><pre><code class=\"language-csharp\">class X { int x; public X(int i) { x = i; } }</code></pre>",
+    "explanation": "a and e are invalid.",
+    "type": "choice",
+    "options": [
+      "<code>class A : X { int a; }</code>",
+      "<code>class B { internal int b; public B() : base() =&gt; b = 5; }</code>",
+      "<code>class C : A { public static int c; public C(int x) { } }</code>",
+      "<code>class D : A { int d; public D(int y) { d = y; } }</code>",
+      "<code>class E : B { int e; public E(int z) : base(b) { e = z; } }</code>",
+      "Sve su ispravne"
+    ],
+    "correct": [
+      0,
+      4
+    ]
+  },
+  {
+    "id": "stari-rok-2023-06-q22",
+    "originalNumber": 22,
+    "lessonId": "stari-rokovi",
+    "sourceTestId": "stari-rok-2023-06",
+    "tags": [
+      "interfaces",
+      "abstract-classes",
+      "properties",
+      "stari-rok",
+      "2023-06"
+    ],
+    "prompt": "<p>Koja od navedenih klasa NIJE ispravna?</p><pre><code class=\"language-csharp\">interface I { void Metoda(); }</code></pre>",
+    "explanation": "a and f are invalid.",
+    "type": "choice",
+    "options": [
+      "<code>abstract class A : I { public abstract int M { get; } }</code>",
+      "<code>abstract class B : A { public int x =&gt; 1; }</code>",
+      "<code>abstract class C : B, I { public void Metoda() { } }</code>",
+      "<code>class D : C { public override int M { get =&gt; 1; } }</code>",
+      "<code>sealed class E : D { public override int M =&gt; 0; }</code>",
+      "<code>class F : E { public int f; }</code>"
+    ],
+    "correct": [
+      0,
+      5
+    ]
+  },
+  {
+    "id": "stari-rok-2023-06-q23",
+    "originalNumber": 23,
+    "lessonId": "stari-rokovi",
+    "sourceTestId": "stari-rok-2023-06",
+    "tags": [
+      "interfaces",
+      "abstract-classes",
+      "dynamic-typing",
+      "stari-rok",
+      "2023-06"
+    ],
+    "prompt": "<p>Koja od navedenih naredbi NIJE ispravna?</p><pre><code class=\"language-csharp\">interface A { void M(); }\nabstract class B : A { public void M() { } }\nclass C : B { }\nclass D : C { }</code></pre>",
+    "explanation": "c and d.",
+    "type": "choice",
+    "options": [
+      "<code>var a = new C();</code>",
+      "<code>B b = new D();</code>",
+      "<code>A c = new B();</code>",
+      "<code>object d = new A();</code>",
+      "<code>dynamic e = new D();</code>"
+    ],
+    "correct": [
+      2,
+      3
+    ]
+  },
+  {
+    "id": "stari-rok-2023-06-q24",
+    "originalNumber": 24,
+    "lessonId": "stari-rokovi",
+    "sourceTestId": "stari-rok-2023-06",
+    "tags": [
+      "local-functions",
+      "anonymous-types",
+      "scope",
+      "stari-rok",
+      "2023-06"
+    ],
+    "prompt": "<p>Šta se ispisuje na ekranu?</p><pre><code class=\"language-csharp\">public static int M(int x)\n{\n    int y;\n    F();\n    return ++y;\n    void F() {var a = new (P = 2, O = x + 2); y = a.O - a.P;}\n}\nConsole.WriteLine( M(2));</code></pre>",
+    "explanation": "f, the code is invalid.",
+    "type": "choice",
+    "options": [
+      "0",
+      "1",
+      "3",
+      "5",
+      "Neka druga vrednost",
+      "Kod nije ispravan"
+    ],
+    "correct": [
+      5
+    ]
+  },
+  {
+    "id": "stari-rok-2023-06-q25",
+    "originalNumber": 25,
+    "lessonId": "stari-rokovi",
+    "sourceTestId": "stari-rok-2023-06",
+    "tags": [
+      "partial-classes",
+      "constructors",
+      "members",
+      "stari-rok",
+      "2023-06"
+    ],
+    "prompt": "<p>Ako je definisana sledeća parcijalna klasa, koje od navedenih parcijalnih klasa se NE BI mogle definisati?</p><pre><code class=\"language-csharp\">partial class K\n{\n    public int broj;\n    public K(int b) { broj = b; }\n    public virtual int M() { return broj; }\n}</code></pre>",
+    "explanation": "a, b, c, and f cannot be defined.",
+    "type": "choice",
+    "options": [
+      "<code>partial class K { public K():base()}</code>",
+      "<code>partial class K { string broj; }</code>",
+      "<code>partial class K { static int M() =&gt; 0; }</code>",
+      "<code>partial class K { public K() : this (1) {} }</code>",
+      "<code>public partial class K { public int M(int x = 0) { broj = x; return 0; } }</code>",
+      "<code>partial class K { abstract void M1(int broj); }</code>"
+    ],
+    "correct": [
+      0,
+      1,
+      2,
+      5
+    ]
+  },
+  {
+    "id": "stari-rok-2023-06-q26",
+    "originalNumber": 26,
+    "lessonId": "stari-rokovi",
+    "sourceTestId": "stari-rok-2023-06",
+    "tags": [
+      "delegates",
+      "method-groups",
+      "stari-rok",
+      "2023-06"
+    ],
+    "prompt": "<p>Koje metode se NE mogu pridružiti delegatu Main metode?</p><pre><code class=\"language-csharp\">public delegate int Delegat(ref int a, int b);\npublic class Klasa\n{\n    public int A(out int a, int b) =&gt; a = b;\n    protected int B(ref int a, int b) =&gt; a + b;\n    public static int C(ref int a, int b) =&gt; a + b;\n}\npublic class Program : Klasa\n{\n    public int D(ref int a, short b) =&gt; a+b;\n    public static int E(in int a, int b) =&gt; a + b;\n    public int F(short b, ref int a) =&gt; a + b;\n    public static void Main()\n    {\n        Program p = new Program();\n        Delegat dg = ...\n    }\n}</code></pre><p><strong>Ponuđeni odgovori iz izvora:</strong></p><ol><li>A</li><li>B</li><li>C</li><li>p.D</li><li>Klasa.E</li><li>.</li></ol>",
+    "explanation": "A, B, D, and E cannot be assigned; C can; F is indeterminate because its option text is unreadable.",
+    "type": "short",
+    "answers": [
+      "Neodredivo iz izvora",
+      "neodredivo",
+      "nije moguće odrediti"
+    ],
+    "displayAnswer": "Neodredivo iz izvora"
+  },
+  {
+    "id": "stari-rok-2023-06-q27",
+    "originalNumber": 27,
+    "lessonId": "stari-rokovi",
+    "sourceTestId": "stari-rok-2023-06",
+    "tags": [
+      "prolog",
+      "unification",
+      "stari-rok",
+      "2023-06"
+    ],
+    "prompt": "<p>Ako je dat sledeći kod u Prologu, sa kojim vrednostima će se unificirati promenljiva X tokom izvršavanja upita <code>?-t(m,X)</code>.</p><pre><code class=\"language-prolog\">p(b,a).      p(m,b).      p(m,c).      p(b,f).\nq(e,d).      q(m,f).      r(m,e).      r(e,m).\ns(X,Y) :- p(X,Y).         s(X,Y) :- r(X,Y).\nt(X,Y) :- s(X,Z), s(Z,Y).</code></pre>",
+    "explanation": "X = a, f, and m (only A and F are offered).",
+    "type": "choice",
+    "options": [
+      "a",
+      "b",
+      "c",
+      "d",
+      "e",
+      "f"
+    ],
+    "correct": [
+      0,
+      5
+    ]
+  },
+  {
+    "id": "stari-rok-2023-06-q28",
+    "originalNumber": 28,
+    "lessonId": "stari-rokovi",
+    "sourceTestId": "stari-rok-2023-06",
+    "tags": [
+      "currying",
+      "partial-application",
+      "arithmetic",
+      "stari-rok",
+      "2023-06"
+    ],
+    "prompt": "<p>Šta je rezultat izvršavanja sledećeg koda u Haskellu?</p><pre><code class=\"language-haskell\">f a b c d e = a - b * c + d * e\nf1 = f 1\nf2 = f1 2\nf3 = f2 3\nf3 4 5</code></pre>",
+    "explanation": "d, 15.",
+    "type": "choice",
+    "options": [
+      "-2",
+      "-6",
+      "-10",
+      "15",
+      "Neka druga vrednost"
+    ],
+    "correct": [
+      3
+    ]
+  },
+  {
+    "id": "stari-rok-2023-06-q29",
+    "originalNumber": 29,
+    "lessonId": "stari-rokovi",
+    "sourceTestId": "stari-rok-2023-06",
+    "tags": [
+      "linq",
+      "counting-even-values",
+      "stari-rok",
+      "2023-06"
+    ],
+    "prompt": "<p>Koji od navedenih izraza vraća najveći parni broj niza pozitivnih brojeva?</p><p><strong>Ponuđeni odgovori iz izvora:</strong></p><ol><li><code>int a = lista.Count (x=&gt; x%2==0);</code></li><li><code>int b = lista.Select (x=&gt; x%2==0).Count();</code></li><li><code>int c = lista.Where (x=&gt; x%2==0).Count();</code></li><li><code>int d = lista.FindAll (x=&gt; x%2==0).Count();</code></li><li><code>int e = lista.All (x=&gt; x%2==0).Count();</code></li><li><code>int b = lista.Any (x=&gt; x%2==0).Count();</code></li></ol>",
+    "explanation": "None of the expressions returns the largest even element.",
+    "type": "short",
+    "answers": [
+      "Nijedan ponuđeni izraz",
+      "nijedna",
+      "nijedan",
+      "none"
+    ],
+    "displayAnswer": "Nijedan ponuđeni izraz"
+  },
+  {
+    "id": "stari-rok-2023-06-q30",
+    "originalNumber": 30,
+    "lessonId": "stari-rokovi",
+    "sourceTestId": "stari-rok-2023-06",
+    "tags": [
+      "delegates",
+      "method-group-conversions",
+      "stari-rok",
+      "2023-06"
+    ],
+    "prompt": "<p>Koje od navedenih su ispravne naredbe?</p><pre><code class=\"language-csharp\">static bool M(int x) =&gt; x % 2 == 0;</code></pre>",
+    "explanation": "b and d.",
+    "type": "choice",
+    "options": [
+      "<code>Func&lt;bool, int&gt; A = M;</code>",
+      "<code>Func&lt;int,bool&gt; B = M;</code>",
+      "<code>Action&lt;int,bool&gt; C = M;</code>",
+      "<code>Predicate&lt;int&gt; D = M;</code>",
+      "Nijedna"
+    ],
+    "correct": [
+      1,
+      3
+    ]
+  },
+  {
+    "id": "stari-rok-2023-06-q31",
+    "originalNumber": 31,
+    "lessonId": "stari-rokovi",
+    "sourceTestId": "stari-rok-2023-06",
+    "tags": [
+      "closures",
+      "local-functions",
+      "stari-rok",
+      "2023-06"
+    ],
+    "prompt": "<p>Šta se ispisuje na ekranu?</p><pre><code class=\"language-csharp\">public static int M(int x)\n{\n    int y = 1;\n    Func&lt;int&gt; f = () =&gt; { int z = 1; y++; return x + y + z; };\n    y = 3;\n    return f();\n}\nConsole.Write(M(1)+M(2));</code></pre>",
+    "explanation": "13.",
+    "type": "short",
+    "answers": [
+      "13"
+    ],
+    "displayAnswer": "13"
+  },
+  {
+    "id": "stari-rok-2023-06-q32",
+    "originalNumber": 32,
+    "lessonId": "stari-rokovi",
+    "sourceTestId": "stari-rok-2023-06",
+    "tags": [
+      "linq",
+      "indexed-select",
+      "average",
+      "stari-rok",
+      "2023-06"
+    ],
+    "prompt": "<p>Šta se ispisuje na ekranu?</p><pre><code class=\"language-csharp\">int[] niz = {1, 2, 3, 4, 5, 2, 3};\nvar v = niz.Distinct ()\n    .Select ((x, i) =&gt; (i%2==0) ? 1:x*2)\n    .Average ();\nConsole.Write(v);</code></pre>",
+    "explanation": "3.",
+    "type": "short",
+    "answers": [
+      "3"
+    ],
+    "displayAnswer": "3"
+  },
+  {
+    "id": "stari-rok-2023-06-q33",
+    "originalNumber": 33,
+    "lessonId": "stari-rokovi",
+    "sourceTestId": "stari-rok-2023-06",
+    "tags": [
+      "functions-returning-functions",
+      "polymorphism",
+      "stari-rok",
+      "2023-06"
+    ],
+    "prompt": "<p>Šta se ispisuje na ekranu?</p><pre><code class=\"language-csharp\">class A { }\nclass B : A { }\nclass C : B { }\nclass Program {\n    static int M(int x, int y) =&gt; x + y;\n    static Func&lt;int, int&gt; F1(int a) =&gt; x =&gt; M(a, x);\n    static Func&lt;int, int&gt; F2() =&gt; x =&gt; x * 1;\n    static Func&lt;int, int&gt; Odredi(A o) =&gt; (o is B) ? F1(5):F2();\n    static void Main() {\n        List&lt;A&gt; l = new List&lt;A&gt;();\n        l.Add(new A()); l.Add(new B()); l.Add(new C());\n        foreach (A x in l) Console.Write(Odredi(x)(2));\n    }\n}</code></pre>",
+    "explanation": "277.",
+    "type": "short",
+    "answers": [
+      "277"
+    ],
+    "displayAnswer": "277"
+  },
+  {
+    "id": "stari-rok-2023-06-q34",
+    "originalNumber": 34,
+    "lessonId": "stari-rokovi",
+    "sourceTestId": "stari-rok-2023-06",
+    "tags": [
+      "virtual-methods",
+      "method-hiding",
+      "runtime-dispatch",
+      "stari-rok",
+      "2023-06"
+    ],
+    "prompt": "<p>Šta se ispisuje na ekranu?</p><pre><code class=\"language-csharp\">public class A {\n    public int x = 10;\n    public virtual int Prva() { x += 2; return 1; }\n    public int Druga() { return 3; }\n}\npublic class B : A { }\npublic class C : B {\n    public new int Druga() { return 5; }\n}\npublic class D : C {\n    public override int Prva() { x += 6; return 9; }\n}\n.....\nint broj = 20;\nA a=new B(); broj += a.Prva() - a.Druga();\nB b = new C(); broj += b.Prva() - b.Druga();\nC c = new D(); broj += c.Prva() - c.Druga();\nConsole.Write (broj+a.x+b.x+c.x);</code></pre>",
+    "explanation": "60.",
+    "type": "short",
+    "answers": [
+      "60"
+    ],
+    "displayAnswer": "60"
+  },
+  {
+    "id": "stari-rok-2023-06-q35",
+    "originalNumber": 35,
+    "lessonId": "stari-rokovi",
+    "sourceTestId": "stari-rok-2023-06",
+    "tags": [
+      "constructor-chaining",
+      "static-fields",
+      "inheritance",
+      "stari-rok",
+      "2023-06"
+    ],
+    "prompt": "<p>Šta se ispisuje na ekranu?</p><pre><code class=\"language-csharp\">public class A\n{\n    public List&lt;int&gt; lista = new list&lt;int&gt;();\n    public A() : this(7) { lista.Add (1); }\n    public A(int i) : base() lista.Add (i+2); }\n}\npublic class B : A { }\npublic class C : B\n{\n    public C() {lista.Add (3); }\n    public C(int i):this() {lista.Add (i+4); }\n}\npublic class D : C\n{\n    public D(int i): base(){lista.Add (i+5); }\n    public D():this(1) {lista.Add (6); }\n}\n...\nD d = new D();\nforeach (int broj in d.lista) { Console.Write(broj); }</code></pre>",
+    "explanation": "The printed code has compile errors and prints nothing.",
+    "type": "short",
+    "answers": [
+      "Greška pri kompilaciji",
+      "compile error",
+      "compilation error",
+      "kod nije ispravan"
+    ],
+    "displayAnswer": "Greška pri kompilaciji"
+  },
+  {
+    "id": "stari-rok-2023-06-q36",
+    "originalNumber": 36,
+    "lessonId": "stari-rokovi",
+    "sourceTestId": "stari-rok-2023-06",
+    "tags": [
+      "delegates",
+      "events",
+      "state-updates",
+      "stari-rok",
+      "2023-06"
+    ],
+    "prompt": "<p>Koja je vrednost promenljive bilans</p><pre><code class=\"language-csharp\">public delegate void Obrada(double suma);\npublic class Racun\n{\n    string broj; double stanje;\n    public Racun(string b, double s) { broj = b; stanje = s; }\n    public event Obrada Dogadjaj;\n    public void promeni(double iznos)\n    {\n        if (stanje + iznos &lt; 0) return;\n        stanje += iznos;\n        if (Dogadjaj != null)\n        {\n            Dogadjaj(iznos);\n        }\n    }\n}\npublic class Banka\n{\n    static double bilans = 500;\n    static void Azuriraj(double i) =&gt; bilans += i;\n    static void Main()\n    {\n        Racun r1 = new Racun(&quot;111&quot;, 0);\n        Racun r2 = new Racun(&quot;222&quot;, 0);\n        r1.promeni(100);\n        r1.Dogadjaj += Azuriraj;\n        r2.promeni(200);\n        r1.promeni(50);\n        r2.promeni(-350);\n        r1.promeni(-550);\n    }\n}</code></pre>",
+    "explanation": "bilans is 550.",
+    "type": "short",
+    "answers": [
+      "550"
+    ],
+    "displayAnswer": "550"
+  },
+  {
+    "id": "stari-rok-2023-06-q37",
+    "originalNumber": 37,
+    "lessonId": "stari-rokovi",
+    "sourceTestId": "stari-rok-2023-06",
+    "tags": [
+      "multicast-delegates",
+      "ref-parameters",
+      "stari-rok",
+      "2023-06"
+    ],
+    "prompt": "<p>Šta se ispisuje na ekranu?</p><pre><code class=\"language-csharp\">public delegate void Del(int a, ref int b, int c);\npublic class Program\n{\n    public static void Plus(int e, ref int f, int g)\n    { e += g; f += g; }\n    public static void Minus(int e, ref int f, int g)\n    { e -= g; f -= g; }\n    public static void Puta(int e, ref int f, int g)\n    { e *= g; f *= g; }\n    static void Main()\n    {\n        Del dg = Minus;\n        dg += Puta;\n        dg = Plus;\n        dg += Plus;\n        dg += Minus;\n        dg += Plus;\n        dg -= Plus;\n\n        int x = 8, y = 4, z = 5;\n        dg(x, ref y, z);\n        Console.WriteLine(x - y);\n    }\n}</code></pre>",
+    "explanation": "-1.",
+    "type": "short",
+    "answers": [
+      "-1"
+    ],
+    "displayAnswer": "-1"
+  },
+  {
+    "id": "stari-rok-2023-06-q38",
+    "originalNumber": 38,
+    "lessonId": "stari-rokovi",
+    "sourceTestId": "stari-rok-2023-06",
+    "tags": [
+      "delegates",
+      "index-from-end-operator",
+      "exceptions",
+      "stari-rok",
+      "2023-06"
+    ],
+    "prompt": "<p>Šta se ispisuje na ekranu?</p><pre><code class=\"language-csharp\">public delegate void Operacija (ref int x);\nclass Skup\n{\n    public int [] niz = {2,4,6,8,10};\n    public int this[int pozicija] { get { return niz[^(pozicija-2)]; } }\n}\nstatic class Prosirenja\n{\n    public static void Mapiraj (this Skup s, Operacija op) {\n        for (int i=1; i&lt;4; i++)\n            op(ref s.niz[i]);\n    }\n}\nclass Program\n{\n    static void Povecaj(ref int x) { x+=4; }\n    static void Smanji(ref int x) { x-=3; }\n    static void Main()\n    {\n        Skup x = new Skup(); Operacija o = Smanji; o = Povecaj; x.Mapiraj(o);\n        try {for (int i = -5; i&lt;=-2; i+=2){ Console.Write (x[-i]); } }\n        catch (Exception) { Console.Write(&quot;X&quot;); }\n    }\n}</code></pre>",
+    "explanation": "1010.",
+    "type": "short",
+    "answers": [
+      "1010"
+    ],
+    "displayAnswer": "1010"
+  },
+  {
+    "id": "stari-rok-2023-06-q39",
+    "originalNumber": 39,
+    "lessonId": "stari-rokovi",
+    "sourceTestId": "stari-rok-2023-06",
+    "tags": [
+      "prolog",
+      "unification",
+      "recursion",
+      "stari-rok",
+      "2023-06"
+    ],
+    "prompt": "<p>Ako je dat sledeći kod u Prologu, sa kojim vrednostima će se unificirati promenljiva Q tokom izvršavanja upita <code>?- t(P, c, Q)</code></p><pre><code class=\"language-prolog\">p(m,b,3). p(c,e,2). p(e,c,4.5).\nq(a,d,5). q(b,e,2). q(c,a,6).\nr(b,f,4). r(e,b,3.5). r(m,g,5).\n\ns(X,Y,V) :- p(X,Y,V).\ns(X,Y,V) :- r(X,Y,V).\nt(X,Y,Z) :- s(X,A,Z1), q(A,B,Z2), s(Y,B,Z3), Z is Z1 + Z2 + Z3.</code></pre>",
+    "explanation": "Q = 7 and Q = 7.5.",
+    "type": "short",
+    "answers": [
+      "7, 7.5",
+      "7 i 7.5",
+      "7; 7.5",
+      "7.5, 7"
+    ],
+    "displayAnswer": "7, 7.5"
+  },
+  {
+    "id": "stari-rok-2023-06-q40",
+    "originalNumber": 40,
+    "lessonId": "stari-rokovi",
+    "sourceTestId": "stari-rok-2023-06",
+    "tags": [
+      "recursion",
+      "pattern-matching",
+      "partial-application",
+      "stari-rok",
+      "2023-06"
+    ],
+    "prompt": "<p>Šta je rezultat izvršavanja sledećeg koda u Haskellu?</p><pre><code class=\"language-haskell\">raspon n = n : raspon(n-2)\nf a b c = a + b * c\nf1 = f 2 3\nfunkcija[element] = 1\nfunkcija(prvi:drugirep)\n    | drugi&gt;=0 = funkcija[drugi:rep] + (f1 prvi)\n    | drugi&lt;0 = 1\nfunkcija(raspon 3)</code></pre>",
+    "explanation": "The printed Haskell code does not compile, so it has no result.",
+    "type": "short",
+    "answers": [
+      "Greška pri kompilaciji",
+      "compile error",
+      "compilation error",
+      "kod nije ispravan"
+    ],
+    "displayAnswer": "Greška pri kompilaciji"
+  }
+]
