@@ -16,6 +16,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           <nav aria-label="Glavna navigacija">
             <Link href="/testovi">Testovi</Link>
             <Link href="/ponavljanje">Ponavljanje</Link>
+            <Link href="/istorija">Istorija</Link>
             <Link href="/napredak">Napredak</Link>
           </nav>
         </header>

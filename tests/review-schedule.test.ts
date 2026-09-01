@@ -17,4 +17,11 @@ describe("review schedule", () => {
     expect(progress.streak).toBe(0);
     expect(isDueForReview(progress, now)).toBe(true);
   });
+
+  it("stores the latest submitted answer", () => {
+    const now = new Date("2026-08-26T10:00:00.000Z");
+    const progress = scheduleReview(undefined, false, now, [1, 3]);
+    expect(progress.lastAnswer).toEqual([1, 3]);
+    expect(progress.attempts - progress.correctAttempts).toBe(1);
+  });
 });

@@ -40,7 +40,11 @@ export function QuizRunner({ testId, title, questions }: QuizRunnerProps) {
     setResults(nextResults);
     completeTest(
       testId,
-      questions.map((question) => ({ questionId: question.id, correct: nextResults[question.id] }))
+      questions.map((question) => ({
+        questionId: question.id,
+        correct: nextResults[question.id],
+        answer: answers[question.id]
+      }))
     );
     window.scrollTo({ top: 0, behavior: "smooth" });
   }

@@ -22,11 +22,11 @@ export function ReviewRunner() {
   const question = reviewedQuestion ?? dueQuestions[0];
 
   function checkAnswer() {
-    if (!question || !isQuestionAnswered(answer)) return;
+    if (!question || answer === undefined || !isQuestionAnswered(answer)) return;
     const correct = gradeQuestion(question, answer);
     setReviewedQuestion(question);
     setResult(correct);
-    recordReview(question.id, correct);
+    recordReview(question.id, correct, answer);
   }
 
   function nextQuestion() {

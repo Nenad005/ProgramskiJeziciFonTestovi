@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { questionById, tests } from "@/content";
 import { resetProgress, useProgress } from "@/lib/progress";
 import { isDueForReview } from "@/lib/review-schedule";
@@ -52,7 +53,7 @@ export function ProgressDashboard() {
       </section>
 
       <section className="panel">
-        <div className="section-heading"><div><span className="eyebrow">Istorija</span><h2>Poslednji pokušaji</h2></div></div>
+        <div className="section-heading"><div><span className="eyebrow">Istorija</span><h2>Poslednji pokušaji</h2></div><Link href="/istorija">Sva pitanja →</Link></div>
         <div className="attempt-list">
           {progress.attempts.slice(0, 10).map((attempt) => {
             const test = tests.find((item) => item.id === attempt.testId);

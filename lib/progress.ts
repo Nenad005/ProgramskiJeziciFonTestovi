@@ -71,14 +71,14 @@ export function saveDraft(testId: string, answers: Record<string, Answer>) {
   });
 }
 
-type Result = { questionId: string; correct: boolean };
+type Result = { questionId: string; correct: boolean; answer?: Answer };
 
 export function completeTest(testId: string, results: Result[]) {
   const progress = readProgress();
   const now = new Date();
   const questions = { ...progress.questions };
-  results.forEach(({ questionId, correct }) => {
-    questions[questionId] = scheduleReview(questions[questionId], correct, now);
+  results.forEach(({ questionId, correct, answer }) => {
+    questions[questionId] = scheduleReview(questions[questionId], correct, now, answer);
   });
 
   const drafts = { ...progress.drafts };
@@ -100,13 +100,13 @@ export function completeTest(testId: string, results: Result[]) {
   });
 }
 
-export function recordReview(questionId: string, correct: boolean) {
+export function recordReview(questionId: string, correct: boolean, answer: Answer) {
   const progress = readProgress();
   writeProgress({
     ...progress,
     questions: {
       ...progress.questions,
-      [questionId]: scheduleReview(progress.questions[questionId], correct)
+      [questionId]: scheduleReview(progress.questions[questionId], correct, new Date(), answer)
     }
   });
 }

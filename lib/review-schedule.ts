@@ -1,3 +1,5 @@
+import type { Answer } from "./grading";
+
 export const REVIEW_INTERVAL_DAYS = [1, 3, 7, 14, 30] as const;
 
 export type ReviewState = {
@@ -5,6 +7,7 @@ export type ReviewState = {
   correctAttempts: number;
   streak: number;
   lastResult: "correct" | "wrong";
+  lastAnswer?: Answer;
   lastAnsweredAt: string;
   nextReviewAt: string;
 };
@@ -12,7 +15,8 @@ export type ReviewState = {
 export function scheduleReview(
   previous: ReviewState | undefined,
   correct: boolean,
-  now = new Date()
+  now = new Date(),
+  answer?: Answer
 ): ReviewState {
   const streak = correct ? (previous?.streak ?? 0) + 1 : 0;
   const nextReview = new Date(now);
@@ -27,6 +31,7 @@ export function scheduleReview(
     correctAttempts: (previous?.correctAttempts ?? 0) + (correct ? 1 : 0),
     streak,
     lastResult: correct ? "correct" : "wrong",
+    ...(answer !== undefined ? { lastAnswer: answer } : {}),
     lastAnsweredAt: now.toISOString(),
     nextReviewAt: nextReview.toISOString()
   };
