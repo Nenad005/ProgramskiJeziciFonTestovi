@@ -3,7 +3,7 @@ import { questionById, questions, tests } from "@/content";
 
 describe("content bank", () => {
   it("contains unique, tagged questions", () => {
-    expect(questions).toHaveLength(399);
+    expect(questions).toHaveLength(385);
     expect(new Set(questions.map((question) => question.id)).size).toBe(questions.length);
     expect(questions.every((question) => question.tags.length > 0)).toBe(true);
   });
@@ -29,11 +29,11 @@ describe("content bank", () => {
     });
   });
 
-  it("contains all three old exams in their source format", () => {
+  it("contains the curated questions from all three old exams", () => {
     const expectedCounts = new Map([
-      ["stari-rok-2022-07", 40],
-      ["stari-rok-2023-04", 40],
-      ["stari-rok-2023-06", 39]
+      ["stari-rok-2022-07", 33],
+      ["stari-rok-2023-04", 36],
+      ["stari-rok-2023-06", 36]
     ]);
 
     expectedCounts.forEach((count, id) => {
@@ -45,5 +45,15 @@ describe("content bank", () => {
     });
 
     expect(questionById.has("stari-rok-2023-06-q19")).toBe(false);
+  });
+
+  it("keeps every included old-exam question up to 30 as choice", () => {
+    const oldQuestions = questions.filter((question) => question.lessonId === "stari-rokovi");
+    expect(
+      oldQuestions
+        .filter((question) => question.originalNumber <= 30)
+        .every((question) => question.type === "choice")
+    ).toBe(true);
+    expect(JSON.stringify(oldQuestions)).not.toMatch(/\[uncertain|neodredivo iz izvora|indeterminate/i);
   });
 });
